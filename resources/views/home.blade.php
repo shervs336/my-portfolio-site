@@ -11,10 +11,9 @@
                     <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
                     <div class="hidden md:flex md:items-center">
-                        <a href="{{ route('home') }}" class=" hover:text-gray-300 mr-4">Home</a>
-                        <a href="#" class=" hover:text-gray-300 mr-4">Blog</a>
-                        <a href="#" class=" hover:text-gray-300 mr-4">About</a>
-                        <a href="#" class=" hover:text-gray-300">Contact</a>
+                        <a href="#home" class=" hover:text-gray-300 mr-4">Home</a>
+                        <a href="#about" class=" hover:text-gray-300 mr-4">About</a>
+                        <a href="#contact" class=" hover:text-gray-300">Contact</a>
                     </div>
 
                     <!-- Mobile menu button -->
@@ -35,15 +34,14 @@
                 <!-- Mobile menu -->
                 <div class="hidden md:hidden">
                     <div class="px-2 pt-2 pb-4">
-                    <a href="{{ route('home') }}" class="block text-white font-semibold hover:text-gray-300 py-2">Home</a>
-                    <a href="#" class="block text-white font-semibold hover:text-gray-300 py-2">Blog</a>
-                    <a href="#" class="block text-white font-semibold hover:text-gray-300 py-2">About</a>
-                    <a href="#" class="block text-white font-semibold hover:text-gray-300 py-2">Contact</a>
+                    <a href="#home" class="block text-white font-semibold hover:text-gray-300 py-2">Home</a>
+                    <a href="#about" class="block text-white font-semibold hover:text-gray-300 py-2">About</a>
+                    <a href="#contact" class="block text-white font-semibold hover:text-gray-300 py-2">Contact</a>
                     </div>
                 </div>
             </nav>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center" id="home">
                 <div class="w-full py-12">
                     <div class="container mx-auto flex items-center justify-between px-4">
                         <div class="w-1/2">
@@ -58,6 +56,41 @@
                         </div>
                         <div class="w-1/2">
                         <!---<img src="smiling-guy.jpg" alt="Image Here" class="w-full h-auto">--->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center" id="about">
+                <div class="w-full py-12">
+                    <div class="container mx-auto flex justify-between">
+                        <div class="w-1/2 flex flex-col px-4">
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-bold text-blue-500 uppercase">About Me</h1>
+                                <h2 class="text-5xl font-bold mt-2">Crafting code, connecting worlds.</h2>
+                                <p class="mt-4 text-gray-400">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-start px-4">
+                            <div class="flex-1">
+                                <h1 class="text-3xl font-medium">Connect with me</h1>
+                                <p class="mt-4 text-gray-400">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
+                                <div class="mt-5 flex space-x-4">
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
