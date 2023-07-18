@@ -96,6 +96,58 @@
                 </div>
             </div>
 
+            <div class="flex justify-center" id="about">
+                <div class="w-full py-12">
+                    <div class="container mx-auto flex justify-between">
+                        <div class="w-full flex flex-col px-4">
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
+                                <h2 class="text-5xl font-bold mt-2 text-center">My Services</h2>
+                                <p class="mt-4 text-gray-400 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
+                                <div class="w-full flex justify-between mt-24 space-x-6">
+                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                                        <div class="">
+                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                                <i class="fa-solid fa-gears"></i>
+                                            </div>
+                                        </div>
+                                        <h2 class="text-3xl font-bold mt-12 text-center">Design</h2>
+                                        <div class="text-center mt-8 text-gray-400 px-8">
+                                            Your Vision, Our Code: Crafting Custom Solutions for Your Programming Needs
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                                        <div class="">
+                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                                <i class="fa-solid fa-hammer"></i>
+                                        </div>
+                                        </div>
+                                        <h2 class="text-3xl font-bold mt-12 text-center">Develop</h2>
+                                        <div class="text-center mt-8 text-gray-400 px-8">
+                                            Turning Ideas into Reality: Empowering Your Business through Customized Programming Solutions
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                                        <div class="">
+                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                                <i class="fa-solid fa-lightbulb"></i>
+                                        </div>
+                                        </div>
+                                        <h2 class="text-3xl font-bold mt-12 text-center">Solution</h2>
+                                        <div class="text-center mt-8 text-gray-400 px-8">
+                                            Elevate, Innovate, Excel: Your Path to Success with Tailored Programming Solutions
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="flex justify-center px-0 mt-16 sm:items-center sm:justify-between">
                 <div class="text-sm text-center text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
