@@ -10,10 +10,17 @@
                     <div class="flex items-center justify-between">
                     <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
-                    <div class="hidden md:flex md:items-center">
-                        <a href="#home" class=" hover:text-gray-300 mr-4">Home</a>
-                        <a href="#about" class=" hover:text-gray-300 mr-4">About</a>
+                    <div class="hidden md:flex md:items-center space-x-4">
+                        <a href="#home" class=" hover:text-gray-300">Home</a>
+                        <a href="#about" class=" hover:text-gray-300">About</a>
                         <a href="#contact" class=" hover:text-gray-300">Contact</a>
+                        @if (Route::has('login'))
+                            
+                            @auth
+                                <a href="#dashboard" class="hover:text-gray-100 hover:bg-blue-900 bg-blue-700 text-white py-2 px-4 rounded-full">Dashboard</a>
+                            @endauth
+                            
+                        @endif
                     </div>
 
                     <!-- Mobile menu button -->
@@ -34,9 +41,9 @@
                 <!-- Mobile menu -->
                 <div class="hidden md:hidden">
                     <div class="px-2 pt-2 pb-4">
-                    <a href="#home" class="block text-white font-semibold hover:text-gray-300 py-2">Home</a>
-                    <a href="#about" class="block text-white font-semibold hover:text-gray-300 py-2">About</a>
-                    <a href="#contact" class="block text-white font-semibold hover:text-gray-300 py-2">Contact</a>
+                        <a href="#home" class="block text-white font-semibold hover:text-gray-300 py-2">Home</a>
+                        <a href="#about" class="block text-white font-semibold hover:text-gray-300 py-2">About</a>
+                        <a href="#contact" class="block text-white font-semibold hover:text-gray-300 py-2">Contact</a>
                     </div>
                 </div>
             </nav>
