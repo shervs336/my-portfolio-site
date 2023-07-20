@@ -27,9 +27,23 @@
     <body class="bg-gray-100">
         <div class="flex w-screen">
             <!-- Sidebar -->
-            <div class="bg-blue-600 text-white w-1/5 h-screen fixed">
-                <h2 class="text-2xl font-semibold my-4">Sidebar</h2>
-                <!-- Add your sidebar content here -->
+            <div class=" w-1/5 flex flex-col items-start h-screen fixed p-4">
+            
+                <h2 class="text-sm font-medium my-4 pb-6 border-b-2 w-full">Sherwin Rhey Condez</h2>
+                <!-- Add your sidebar links here -->
+                <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
+                <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
+                <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-newspaper mr-2"></i> Blogs</a>
+                <!-- You can add more links as needed -->
+
+                <div class="w-full h-2 border-b-2 mb-3"></div>
+
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-right-from-bracket mr-2"></i> Logout</button>
+                </form>
+                
+
             </div>
 
             <!-- Main Content -->
