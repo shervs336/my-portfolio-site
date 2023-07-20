@@ -31,8 +31,8 @@
             
                 <h2 class="text-sm font-medium my-4 pb-6 border-b-2 w-full">Sherwin Rhey Condez</h2>
                 <!-- Add your sidebar links here -->
-                <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
-                <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
+                <a href="{{ route('admin.index') }}" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
+                <a href="{{ route('admin.works.index') }}" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
                 <a href="#" class="text-sm font-medium hover:text-gray-400 py-2"><i class="fa-solid fa-newspaper mr-2"></i> Blogs</a>
                 <!-- You can add more links as needed -->
 
