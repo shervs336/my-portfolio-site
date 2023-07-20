@@ -17,7 +17,7 @@
                         @if (Route::has('login'))
                             
                             @auth
-                                <a href="#dashboard" class="hover:text-gray-100 hover:bg-blue-900 bg-blue-700 text-white py-2 px-4 rounded-full">Dashboard</a>
+                                <a href="{{ route('admin.index') }}" class="hover:text-gray-100 hover:bg-blue-900 bg-blue-700 text-white py-2 px-4 rounded-full">Dashboard</a>
                             @endauth
                             
                         @endif

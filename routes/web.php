@@ -24,8 +24,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::view('/', 'home')->name('home');
 
-Route::group(['prefix' => 'admin', 'name' => 'admin.'], function() {
-    Route::get('/', function() { return redirect()->route('admin.dashboard'); })->name('index');
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', function() { return redirect()->route('admin.dashboard'); })->name('admin.index');
 
     Route::middleware('guest')->group(function () {
         Route::get('login', Login::class)->name('login');
