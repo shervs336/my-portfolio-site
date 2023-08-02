@@ -83,16 +83,16 @@
                                 <h1 class="text-3xl font-medium">Connect with me</h1>
                                 <p class="mt-4 text-gray-400">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
                                 <div class="mt-5 flex space-x-4">
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-facebook"></i>
                                     </a>
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-twitter"></i>
                                     </a>
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-800 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-youtube"></i>
                                     </a>
                                     
