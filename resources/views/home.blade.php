@@ -12,7 +12,7 @@
 
                     <div class="hidden md:flex md:items-center space-x-4">
                         <a href="#home" class=" hover:text-blue-500">Home</a>
-                        <a href="#about" class=" hover:text-blue-500">About</a>s
+                        <a href="#about" class=" hover:text-blue-500">About</a>
                         <a href="#contact" class="hover:text-blue-500">Contact</a>
                         @if (Route::has('login'))
                             
