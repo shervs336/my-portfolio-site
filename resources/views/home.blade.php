@@ -50,8 +50,8 @@
 
             <div class="flex justify-center" id="home">
                 <div class="w-full py-12">
-                    <div class="container mx-auto flex items-center justify-between px-4">
-                        <div class="w-1/2">
+                    <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between px-4 text-justify">
+                        <div class="w-full md:w-1/2">
                         <h1 class="text-1xl font-bold text-blue-500">Hi there <span class="wave">👋</span> I am</h1>
                         <h2 class="text-3xl font-bold mt-2">Sherwin Rhey Condez</h2>
                         <p class="mt-4"><span class="text-gray-400">Professional</span> Full-Stack Developer</p>
@@ -61,27 +61,27 @@
                             <a href="#" class="text-blue-700 font-semibold py-2 px-4 border border-blue-500 rounded">Learn More</a>
                         </div>
                         </div>
-                        <div class="w-1/2">
-                        <!---<img src="smiling-guy.jpg" alt="Image Here" class="w-full h-auto">--->
+                        <div class="w-full md:w-1/2 ">
+                        <img src="{{asset('images/icon.jpg')}}" alt="Image Here" class="w-full h-auto">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex justify-center" id="about">
+            <div class="flex justify-center" id="about" >
                 <div class="w-full py-12">
-                    <div class="container mx-auto flex justify-between">
-                        <div class="w-1/2 flex flex-col px-4">
+                    <div class="container margin:auto mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                        <div class="w-full flex flex-col px-4">
                             <div class="flex-1">
                                 <h1 class="text-2xl font-bold text-blue-500 uppercase">About Me</h1>
                                 <h2 class="text-5xl font-bold mt-2">Crafting code, connecting worlds.</h2>
-                                <p class="mt-4 text-gray-400">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
+                                <p class="mt-4 text-slate-500 text-justify">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
                             </div>
                         </div>
-                        <div class="w-1/2 flex flex-col items-start px-4">
+                        <div class="w-full flex flex-col items-start px-4">
                             <div class="flex-1">
                                 <h1 class="text-3xl font-medium">Connect with me</h1>
-                                <p class="mt-4 text-gray-400">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
+                                <p class="mt-4 text-slate-500 text-justify">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
                                 <div class="mt-5 flex space-x-4">
                                     <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-facebook"></i>
@@ -105,14 +105,15 @@
 
             <div class="flex justify-center" id="about">
                 <div class="w-full py-12">
-                    <div class="container mx-auto flex justify-between">
+                    <div class="container margin:auto mx-auto flex justify-between text-justify">
                         <div class="w-full flex flex-col px-4">
-                            <div class="flex-1">
+                            <div class="flex-1"> 
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Services</h2>
                                 <p class="mt-4 text-gray-400 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
-                                <div class="w-full flex justify-between mt-24 space-x-6">
-                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                   <!--Services-->           
+                                <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
                                             <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-gears"></i>
@@ -124,7 +125,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
                                             <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-hammer"></i>
@@ -136,7 +137,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="w-1/3 rounded-xl shadow-md py-16">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
                                             <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-lightbulb"></i>
