@@ -111,7 +111,8 @@
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Services</h2>
                                 <p class="mt-4 text-gray-400 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
-                   <!--Services-->           
+                 
+                                <!--Services-->           
                                 <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
                                     <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
@@ -156,7 +157,77 @@
                 </div>
             </div>
 
-            <div class="flex justify-center px-0 mt-16 sm:items-center sm:justify-between">
+            <!--Footer-->
+            <footer class="container flex space-y-4 px-4 py-12 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                <div class="w-1/4 ">
+                    <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
+
+                    <div class="mt-3 flex space-x-2">
+                        <a href="#" class="w-10 h-10 border bg-blue-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border bg-sky-400 text-white rounded-full flex items-center justify-center">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border bg-sky-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 borde bg-red-500 text-white rounded-full flex items-center justify-center">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div> 
+                </div>
+                
+
+                <div class="w-1/4">
+                    <h6 class="mb-2.5 font-bold uppercase">Links</h6>
+
+                    <ul class="mb-0 list-none">
+                        <li>
+                            <a href="#!" class="text-slate-400">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-slate-400">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-slate-400">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-slate-400">YouTube</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            <!--Sign-up form-->
+            <div class="w-1/2">
+                <form action="">
+                <div
+                    class=" justify-right gap-4 ">
+                    <div class="w-full md:ml-auto">
+                    <p class="text-secondary-800 dark:text-secondary-200">
+                        <strong>Join my Newsletter</strong>
+                    </p>
+                    </div>
+
+                    <div class="relative" data-te-input-wrapper-init>
+                    <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="exampleFormControlInput1" placeholder="Email address"/>
+                    <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200"
+                        >Email address</label>
+                    </div>
+                        <div class="w-1/3 md:mr-auto">
+                        <button type="button" class="inline-block rounded bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                            data-te-ripple-init data-te-ripple-color="dark">Join</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                    
+            </footer>
+
+  <!--Copyright Section--->
+            <div class="flex justify-center px-4 mt-16 sm:items-center sm:justify-between">
                 <div class="text-sm text-center text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
                         <a href="https://github.com/sponsors/taylorotwell" class="inline-flex items-center group hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">
@@ -171,4 +242,9 @@
             </div>
         </div>
     </div>
+
+ 
+
+
+
 @endsection
