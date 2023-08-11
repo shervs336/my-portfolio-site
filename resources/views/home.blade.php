@@ -158,49 +158,46 @@
             </div>
 
             <!--Footer-->
-            <footer class="container flex space-y-4 px-4 py-12 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-                <div class="w-1/4 ">
+            <footer class="container margin:auto flex space-y-4 px-4 py-12 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                <div class="w-1/4 py-16 px-4">
                     <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
                     <div class="mt-3 flex space-x-2">
-                        <a href="#" class="w-10 h-10 border bg-blue-600 text-white rounded-full flex items-center justify-center">
+                        <a href="#" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border bg-sky-400 text-white rounded-full flex items-center justify-center">
+                        <a href="#" class="w-10 h-10 border hover:bg-sky-400  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border bg-sky-600 text-white rounded-full flex items-center justify-center">
+                        <a href="#" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 borde bg-red-500 text-white rounded-full flex items-center justify-center">
+                        <a href="#" class="w-10 h-10 border hover:bg-red-500  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div> 
                 </div>
                 
-
-                <div class="w-1/4">
+              
+                <div class="w-1/4 py-16 px-4">
                     <h6 class="mb-2.5 font-bold uppercase">Links</h6>
 
                     <ul class="mb-0 list-none">
                         <li>
-                            <a href="#!" class="text-slate-400">Facebook</a>
+                            <a href="#home" class="text-slate-400 hover:text-blue-500">Home</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-slate-400">Twitter</a>
+                            <a href="#about" class="text-slate-400 hover:text-blue-500">About</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-slate-400">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-slate-400">YouTube</a>
+                            <a href="#contact" class="text-slate-400 hover:text-blue-500">Contact</a>
                         </li>
                     </ul>
                 </div>
 
 
             <!--Sign-up form-->
-            <div class="w-1/2">
+            <div class="w-1/2 py-16 px-4">
                 <form action="">
                 <div
                     class=" justify-right gap-4 ">
