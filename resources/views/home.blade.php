@@ -5,13 +5,13 @@
 
         <div class="p-6 mx-auto max-w-7xl lg:p-8">
 
-            <nav class="">
-                <div class="container mx-auto px-4 py-2">
+            <nav class="" x-data="{ open: false }">
+                <div class="cotainer mx-auto px-4 py-2">
                     <div class="flex items-center justify-between">
                     <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
                     <div class="hidden md:flex md:items-center space-x-4">
-                        <a href="#home" class=" hover:text-blue-500">Home</a>
+                        <a href="{{ route('admin.index', ['test' => 'test']) }}" class=" hover:text-blue-500">Home</a>
                         <a href="#about" class=" hover:text-blue-500">About</a>
                         <a href="#contact" class="hover:text-blue-500">Contact</a>
                         @if (Route::has('login'))
@@ -24,7 +24,7 @@
                     </div>
 
                     <!-- Mobile menu button -->
-                    <button class="md:hidden text-white focus:outline-none">
+                    <button class="md:hidden text-blue-700 focus:outline-none" @click="open = true"> 
                         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                         <path
                             d="M4 6h16M4 12h16M4 18h16"
@@ -39,28 +39,31 @@
                 </div>
 
                 <!-- Mobile menu -->
-                <div class="hidden md:hidden">
+
+                <div x-show="open" class="md:hidden">
                     <div class="px-2 pt-2 pb-4">
-                        <a href="#home" class="block text-white font-semibold hover:text-gray-300 py-2">Home</a>
-                        <a href="#about" class="block text-white font-semibold hover:text-gray-300 py-2">About</a>
-                        <a href="#contact" class="block text-white font-semibold hover:text-gray-300 py-2">Contact</a>
+                        <a href="#home" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Home</a>
+                        <a href="#about" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">About</a>
+                        <a href="#contact" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Contact</a>
                     </div>
                 </div>
             </nav>
 
             <div class="flex justify-center" id="home">
                 <div class="w-full py-12">
-                    <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between px-4 text-justify">
+                    <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between px-4">
                         <div class="w-full md:w-1/2">
                         <h1 class="text-1xl font-bold text-blue-500">Hi there <span class="wave">👋</span> I am</h1>
                         <h2 class="text-3xl font-bold mt-2">Sherwin Rhey Condez</h2>
                         <p class="mt-4"><span class="text-gray-400">Professional</span> Full-Stack Developer</p>
                         <p class="mt-4 text-gray-400">I am passionate about crafting high-quality web applications and bringing ideas to life through code. With a strong background in full-stack development, I love tackling complex challenges and building elegant solutions. Let's work together to create something amazing!</p>
                         <div class="mt-6">
-                            <a href="#" class="bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-4">Contact</a>
-                            <a href="#" class="text-blue-700 font-semibold py-2 px-4 border border-blue-500 rounded">Learn More</a>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-4 transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                            data-te-ripple-init data-te-ripple-color="dark">Contact</a>
+                            <a href="#" class="text-blue-700 font-semibold py-2 px-4 border border-blue-500 rounded transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                            data-te-ripple-init data-te-ripple-color="dark"">Learn More</a>
                         </div>
-                        </div>
+                        </div>  
                         <div class="w-full md:w-1/2 ">
                         <img src="{{asset('images/icon.jpg')}}" alt="Image Here" class="w-full h-auto">
                         </div>
@@ -75,21 +78,21 @@
                             <div class="flex-1">
                                 <h1 class="text-2xl font-bold text-blue-500 uppercase">About Me</h1>
                                 <h2 class="text-5xl font-bold mt-2">Crafting code, connecting worlds.</h2>
-                                <p class="mt-4 text-slate-500 text-justify">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
+                                <p class="mt-4 text-gray-400">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
                             </div>
                         </div>
                         <div class="w-full flex flex-col items-start px-4">
                             <div class="flex-1">
                                 <h1 class="text-3xl font-medium">Connect with me</h1>
-                                <p class="mt-4 text-slate-500 text-justify">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
+                                <p class="mt-4 text-gray-400 text-justify">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
                                 <div class="mt-5 flex space-x-4">
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="https://www.facebook.com/sherwinrheycondez" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-facebook"></i>
                                     </a>
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
-                                        <i class="fa-brands fa-twitter"></i>
+                                    <a href="https://twitter.com/SherwinRhey" class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
+                                        <i class="fa-brands fa-x-twitter"></i>
                                     </a>
-                                    <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                     <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
@@ -105,7 +108,7 @@
 
             <div class="flex justify-center" id="about">
                 <div class="w-full py-12">
-                    <div class="container margin:auto mx-auto flex justify-between text-justify">
+                    <div class="container margin:auto mx-auto flex justify-between">
                         <div class="w-full flex flex-col px-4">
                             <div class="flex-1"> 
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
@@ -113,10 +116,10 @@
                                 <p class="mt-4 text-gray-400 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
                  
                                 <!--Services-->           
-                                <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                                <div class="container mx-auto flex flex-col space-y-6 md:space-y-0 md:space-x-4 md:flex-row justify-between">
                                     <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
-                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                            <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-gears"></i>
                                             </div>
                                         </div>
@@ -128,7 +131,7 @@
 
                                     <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
-                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                            <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-hammer"></i>
                                         </div>
                                         </div>
@@ -140,7 +143,7 @@
 
                                     <div class="md:w-1/3 rounded-xl shadow-md py-16">
                                         <div class="">
-                                            <div class="rounded-full bg-blue-600 services-icon text-4xl text-white mx-auto">
+                                            <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-lightbulb"></i>
                                         </div>
                                         </div>
@@ -157,19 +160,55 @@
                 </div>
             </div>
 
-            <!--Footer-->
-            <footer class="container margin:auto flex space-y-4 px-4 py-12 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-                <div class="w-1/4 py-16 px-4">
-                    <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
+            <!--Showroom-->
+
+            <div class="flex justify-center" id="about">
+                <div class="w-full py-12">
+                    <div class="container margin:auto mx-auto flex justify-between">
+                        <div class="w-full flex flex-col px-4">
+                            <div class="flex-1"> 
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">Visit my</h1>
+                                <h2 class="text-5xl font-bold mt-2 text-center">Showroom</h2>
+                 
+                            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                                <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+                                <h2 class="text-2xl font-bold text-gray-900 text-center">showcasing...</h2>
+
+
+                <div class="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
+                        <div class="group relative flex flex-col flex-1">
+                            <div class="absolute h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-0">
+                                <img src="{{asset('images/hellodemo.png')}}" alt="Hello demo" class="h-full w-full object-cover object-center">
+                            </div>
+                                <p class="relative text-base font-semibold text-gray-900">Music exchange and management platform aimed to empower and connect artists and labels within the community.</p>
+                                    </div>
+
+                        <div class="group relative">
+                            <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64 z-10">
+                                <img src="" alt="Lorems" class="h-full w-full object-cover object-center">
+                            </div>
+                                <p class="text-base font-semibold text-gray-900">Lorem</p>
+                                    </div>
+
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+
+            <!--Footer--> 
+            <footer class="container margin:auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4  md:flex-row justify-between">
+                <div class="md:w-1/4 md:py-16 px-2 py-0">
+                    <a href="#home" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
                     <div class="mt-3 flex space-x-2">
-                        <a href="#" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
+                        <a href="https://www.facebook.com/sherwinrheycondez" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border hover:bg-sky-400  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
-                            <i class="fa-brands fa-twitter"></i>
+                        <a href="https://twitter.com/SherwinRhey" class="w-10 h-10 border hover:bg-sky-400  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
+                            <i class="fa-brands fa-x-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
+                        <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         <a href="#" class="w-10 h-10 border hover:bg-red-500  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
@@ -178,62 +217,58 @@
                     </div> 
                 </div>
                 
-              
-                <div class="w-1/4 py-16 px-4">
+                
+                <div class="ml-0 md:w-1/4 py-0 space-y-4 md:py-16 px-2">
                     <h6 class="mb-2.5 font-bold uppercase">Links</h6>
 
-                    <ul class="mb-0 list-none">
+                    <ul class="mb-0 list-none space-y-2">
                         <li>
-                            <a href="#home" class="text-slate-400 hover:text-blue-500">Home</a>
+                            <a href="#home" class="text-slate-400 hover:text-blue-700">Home</a>
                         </li>
                         <li>
-                            <a href="#about" class="text-slate-400 hover:text-blue-500">About</a>
+                            <a href="#about" class="text-slate-400 hover:text-blue-700">About</a>
                         </li>
                         <li>
-                            <a href="#contact" class="text-slate-400 hover:text-blue-500">Contact</a>
+                            <a href="#contact" class="text-slate-400 hover:text-blue-700">Contact</a>
                         </li>
                     </ul>
                 </div>
 
 
             <!--Sign-up form-->
-            <div class="w-1/2 py-16 px-4">
+            <div class="ml-0 md:w-1/2 py-0 md:py-16 px-2">
                 <form action="">
-                <div
-                    class=" justify-right gap-4 ">
+                 <div class=" justify-right gap-4 space-y-4 md:gap-2">
                     <div class="w-full md:ml-auto">
-                    <p class="text-secondary-800 dark:text-secondary-200">
-                        <strong>Join my Newsletter</strong>
-                    </p>
+                    <p class="text-secondary-800 dark:text-secondary-200"><strong>Join my newsletter</strong></p>
                     </div>
 
-                    <div class="relative" data-te-input-wrapper-init>
-                    <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="exampleFormControlInput1" placeholder="Email address"/>
+            <div class="relative" data-te-input-wrapper-init>
+                <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput1" placeholder="Email address"/>
                     <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200"
                         >Email address</label>
                     </div>
-                        <div class="w-1/3 md:mr-auto">
-                        <button type="button" class="inline-block rounded bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                            data-te-ripple-init data-te-ripple-color="dark">Join</button>
-                        </div>
+                        
+            <div class="w-1/3 md:mr-auto space-y-4">
+                <button type="button" class="inline-block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                    data-te-ripple-init data-te-ripple-color="dark">Join</button>
                     </div>
-                    </form>
                 </div>
-                    
-            </footer>
+            </form>
+        </div>    
+    </footer>
 
   <!--Copyright Section--->
-            <div class="flex justify-center px-4 mt-16 sm:items-center sm:justify-between">
-                <div class="text-sm text-center text-gray-500 dark:text-gray-400 sm:text-left">
+            <div class="flex flex-col md:flex-row justify-center px-4 mt-4 md:mt-16 sm:items-center sm:justify-between">
+                <div class="text-sm md:text-center text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
-                        <a href="https://github.com/sponsors/taylorotwell" class="inline-flex items-center group hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">
-                            
+                        <a href="https://github.com/sponsors/taylorotwell" class="inline-flex items-center group hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">  
                             Copyright &copy; 2023
                         </a>
                     </div>
                 </div>
-                <div class="ml-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
+                <div class="md:ml-4 text-sm md:text-center text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </div>
             </div>
