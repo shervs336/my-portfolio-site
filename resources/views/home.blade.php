@@ -89,7 +89,7 @@
                                     <a href="https://www.facebook.com/sherwinrheycondez" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-facebook"></i>
                                     </a>
-                                    <a href="https://twitter.com/SherwinRhey" class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
+                                    <a href="https://twitter.com/SherwinRhey" class="w-12 h-12 border text-gray-300 hover:bg-black hover:text-white rounded-full flex items-center justify-center">
                                         <i class="fa-brands fa-x-twitter"></i>
                                     </a>
                                     <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
@@ -205,7 +205,7 @@
                         <a href="https://www.facebook.com/sherwinrheycondez" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://twitter.com/SherwinRhey" class="w-10 h-10 border hover:bg-sky-400  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
+                        <a href="https://twitter.com/SherwinRhey" class="w-10 h-10 border hover:bg-black  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-white rounded-full flex items-center justify-center">
