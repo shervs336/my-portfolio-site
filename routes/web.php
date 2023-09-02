@@ -22,7 +22,10 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::view('/', 'home')->name('home');
+Route::get('/', function() {
+    $works = \App\Models\Work::all();
+    return view('home', compact('works'));
+})->name('home');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', function() { return redirect()->route('admin.dashboard'); })->name('admin.index');

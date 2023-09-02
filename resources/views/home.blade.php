@@ -106,14 +106,14 @@
                 </div>
             </div>
 
-            <div class="flex justify-center" id="about">
+            <div class="flex justify-center" id="services">
                 <div class="w-full py-12">
                     <div class="container margin:auto mx-auto flex justify-between">
                         <div class="w-full flex flex-col px-4">
                             <div class="flex-1"> 
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Services</h2>
-                                <p class="mt-4 text-gray-400 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
+                                <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
                  
                                 <!--Services-->           
                                 <div class="container mx-auto flex flex-col space-y-6 md:space-y-0 md:space-x-4 md:flex-row justify-between">
@@ -160,40 +160,31 @@
                 </div>
             </div>
 
-            <!--Showroom-->
+            <!--Showroom--> 
 
-            <div class="flex justify-center" id="about">
+            <div class="flex justify-center" id="showroom">
                 <div class="w-full py-12">
                     <div class="container margin:auto mx-auto flex justify-between">
-                        <div class="w-full flex flex-col px-4">
+                        <div class="w-full flex flex-col">
                             <div class="flex-1"> 
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">Visit my</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">Showroom</h2>
-                 
-                            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                                <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-                                <h2 class="text-2xl font-bold text-gray-900 text-center">showcasing...</h2>
 
+                                <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">Witness the seamless integration of technology and creativity in my showroom</p>
 
-                <div class="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
-                        <div class="group relative flex flex-col flex-1">
-                            <div class="absolute h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-0">
-                                <img src="{{asset('images/hellodemo.png')}}" alt="Hello demo" class="h-full w-full object-cover object-center">
-                            </div>
-                                <p class="relative text-base font-semibold text-gray-900">Music exchange and management platform aimed to empower and connect artists and labels within the community.</p>
-                                    </div>
+                                <div id="ShowroomContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-2 lg:gap-x-6">
+ 
+                                    @foreach($works as $work)
+                                        @include('components.showroom-content', ['work' => $work])
+                                    @endforeach
 
-                        <div class="group relative">
-                            <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64 z-10">
-                                <img src="" alt="Lorems" class="h-full w-full object-cover object-center">
-                            </div>
-                                <p class="text-base font-semibold text-gray-900">Lorem</p>
-                                    </div>
+                                </div><!-- Showroom Contents-->
 
-                                </div>
-                                </div>
-                            </div>
-                            </div>
+                            </div><!-- Flex 1 -->
+                        </div>
+                    </div> <!-- Container Block -->
+                </div>
+            </div>
 
 
             <!--Footer--> 
@@ -216,8 +207,8 @@
                         </a>
                     </div> 
                 </div>
-                
-                
+                    
+                    
                 <div class="ml-0 md:w-1/4 py-0 space-y-4 md:py-16 px-2">
                     <h6 class="mb-2.5 font-bold uppercase">Links</h6>
 
@@ -235,31 +226,28 @@
                 </div>
 
 
-            <!--Sign-up form-->
-            <div class="ml-0 md:w-1/2 py-0 md:py-16 px-2">
-                <form action="">
-                 <div class=" justify-right gap-4 space-y-4 md:gap-2">
-                    <div class="w-full md:ml-auto">
-                    <p class="text-secondary-800 dark:text-secondary-200"><strong>Join my newsletter</strong></p>
-                    </div>
+                <!--Sign-up form-->
+                <div class="ml-0 md:w-1/2 py-0 md:py-16 px-2">
+                    <form action="">
+                        <div class=" justify-right gap-4 space-y-4 md:gap-2">
+                            <div class="w-full md:ml-auto">
+                            <p class="text-secondary-800 dark:text-secondary-200"><strong>Join my newsletter</strong></p>
+                        </div>
 
-            <div class="relative" data-te-input-wrapper-init>
-                <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                    id="exampleFormControlInput1" placeholder="Email address"/>
-                    <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200"
-                        >Email address</label>
-                    </div>
-                        
-            <div class="w-1/3 md:mr-auto space-y-4">
-                <button type="button" class="inline-block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                    data-te-ripple-init data-te-ripple-color="dark">Join</button>
-                    </div>
+                        <div class="relative" data-te-input-wrapper-init>
+                            <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" id="exampleFormControlInput1" placeholder="Email address"/>
+                            <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200">Email address</label>
+                        </div>
+                                
+                        <div class="w-1/3 md:mr-auto space-y-4">
+                            <button type="button" class="inline-block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                                data-te-ripple-init data-te-ripple-color="dark">Join</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>    
-    </footer>
+            </footer>
 
-  <!--Copyright Section--->
+            <!--Copyright Section--->
             <div class="flex flex-col md:flex-row justify-center px-4 mt-4 md:mt-16 sm:items-center sm:justify-between">
                 <div class="text-sm md:text-center text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
@@ -274,9 +262,4 @@
             </div>
         </div>
     </div>
-
- 
-
-
-
 @endsection

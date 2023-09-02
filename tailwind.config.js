@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+    darkMode: false,
     theme: {
         extend: {
             fontFamily: {
@@ -23,6 +24,12 @@ module.exports = {
         './resources/**/*.php',
         './resources/**/*.vue',
         './resources/**/*.twig',
+        './resources/**/*.skip'
+    ],
+    safelist: [
+        {
+            pattern: /bg/,
+        }
     ],
     plugins: [
         require('@tailwindcss/forms'),
