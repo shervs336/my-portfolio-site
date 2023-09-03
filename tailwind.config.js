@@ -29,7 +29,8 @@ module.exports = {
     safelist: [
         {
             pattern: /bg/,
-        }
+            variants: ['hover']
+        },
     ],
     plugins: [
         require('@tailwindcss/forms'),

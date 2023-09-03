@@ -101,6 +101,9 @@ class Work extends Component
             } else {
                 $this->title = $work->title;
                 $this->caption = $work->caption;
+                $this->backgroundImagePath = $work->background_image_path;
+                $this->overlayColor = $work->overlay_color;
+                $this->websiteLink = $work->website_link;
                 $this->workId = $work->id;
                 $this->updateWork = true;
                 $this->addWork = false;
