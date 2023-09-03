@@ -3,10 +3,13 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\Models\Work as Works;
 
 class Work extends Component
 {
+    use WithFileUploads;
+
     public $works, $title, $caption, $workId, $overlayColor, $backgroundImagePath, $logoImagePath, $websiteLink, $updateWork = false, $addWork = false;
 
     /**
@@ -21,7 +24,7 @@ class Work extends Component
      */
     protected $rules = [
         'title' => 'required',
-        'caption' => 'required'
+        'caption' => 'required',
     ];
 
     /**
@@ -31,6 +34,9 @@ class Work extends Component
     public function resetFields(){
         $this->title = '';
         $this->caption = '';
+        $this->overlayColor = 'blue-500';
+        $this->website_link = '';
+        $this->backgroundImagePath = '';
     }
 
     /**
@@ -62,18 +68,26 @@ class Work extends Component
     {
         $this->validate();
         try {
+            $path = '';
+            if($this->backgroundImagePath) {
+                $path = $this->backgroundImagePath->store('works', 'public');
+            }
+
             Works::create([
                 'title' => $this->title,
-                'caption' => $this->caption
+                'caption' => $this->caption,
+                'overlay_color' => $this->overlayColor,
+                'background_image_path' => $path ? $path : NULL,
+                'website_link' => $this->websiteLink,
             ]);
             session()->flash('success','Work Created Successfully!!');
             $this->resetFields();
             $this->addWork = false;
         } catch (\Exception $ex) {
-            session()->flash('error','Something goes wrong!!');
+            session()->flash('error',$ex->getMessage());
         }
     }
-
+ 
         /**
      * show existing work data in edit work form
      * @param mixed $id
@@ -107,7 +121,10 @@ class Work extends Component
         try {
             Works::whereId($this->workId)->update([
                 'title' => $this->title,
-                'caption' => $this->caption
+                'caption' => $this->caption,
+                'overlay_color' => $this->overlayColor,
+                'background_image_path' => $this->backgroundImagePath,
+                'website_link' => $this->websiteLink,
             ]);
             session()->flash('success','Work Updated Successfully!!');
             $this->resetFields();

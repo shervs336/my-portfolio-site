@@ -18,6 +18,7 @@
         @endif
     </div>
     <div class="w-full">
+        @if(!$addWork && !$updateWork)
         <div class="bg-white shadow-lg py-4 px-4">
             <div class="card-body">
                 @if(!$addWork)
@@ -46,7 +47,7 @@
                                         </td>
                                         <td class="text-center p-3">
                                             <button class="bg-gray-500 py-2 px-4 text-white rounded-md" wire:click="editWork({{$work->id}})" class="btn btn-primary btn-sm">Edit</button>
-                                            <button class="bg-red-500 py-2 px-4 text-white rounded-md" onclick="deletePost({{$work->id}})" class="btn btn-danger btn-sm">Delete</button>
+                                            <button class="bg-red-500 py-2 px-4 text-white rounded-md" wire:click="deleteWork({{$work->id}})" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -62,6 +63,7 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
  
 </div>
