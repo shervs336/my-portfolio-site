@@ -37,7 +37,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::middleware('auth')->group(function () {    
         Route::group(['namespace' => 'App\Http\Controllers\Admin', 'as' => 'admin.'], function(){
             Route::get('dashboard', 'DashboardController')->name('dashboard');
-            Route::resource('works', 'WorksController')->name('*', 'works');
+            Route::get('works', 'WorksController')->name('works');
+            Route::get('blogs', 'BlogsController')->name('blogs');
         });
 
         Route::post('logout', LogoutController::class)->name('logout');
