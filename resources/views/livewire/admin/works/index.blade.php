@@ -23,12 +23,12 @@
             <div class="card-body">
                 @if(!$addWork)
                 <div class="w-full mb-3">
-                    <button wire:click="addWork()" class="bg-gray-500 rounded-md text-white py-2 px-4">Add New Work</button>
+                    <button wire:click="addWork()" class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Add New Work</button>
                 </div>
                 @endif
                 <div class="w-full">
                     <table class="table-auto w-full">
-                        <thead class="bg-blue-100">
+                        <thead class="bg-blue-100 uppercase text-xs">
                             <tr>
                                 <th class="text-left p-3">Title</th>
                                 <th class="text-left p-3">Caption</th>
@@ -38,7 +38,7 @@
                         <tbody>
                             @if (count($works) > 0)
                                 @foreach ($works as $work)
-                                    <tr>
+                                    <tr class="text-sm">
                                         <td class="p-3">
                                             {{$work->title}}
                                         </td>
@@ -46,8 +46,8 @@
                                             {{$work->caption}}
                                         </td>
                                         <td class="text-center p-3">
-                                            <button class="bg-gray-500 py-2 px-4 text-white rounded-md" wire:click="editWork({{$work->id}})" class="btn btn-primary btn-sm">Edit</button>
-                                            <button class="bg-red-500 py-2 px-4 text-white rounded-md" wire:click="deleteWork({{$work->id}})" class="btn btn-danger btn-sm">Delete</button>
+                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" wire:click="editWork({{$work->id}})" class="btn btn-primary btn-sm">Edit</button>
+                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" wire:click="deleteWork({{$work->id}})" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
