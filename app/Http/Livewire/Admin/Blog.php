@@ -10,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public $blogs, $title, $caption, $workId, $overlayColor, $backgroundImagePath, $logoImagePath, $websiteLink, $updateBlog = false, $addBlog = false;
+    public $blogs, $title, $excerpt, $content, $main_image, $meta_title, $meta_description, $updateBlog = false, $addBlog = false;
 
     /**
      * delete action listener
@@ -33,10 +33,11 @@ class Blog extends Component
      */
     public function resetFields(){
         $this->title = '';
-        $this->caption = '';
-        $this->overlayColor = 'blue-500';
-        $this->website_link = '';
-        $this->backgroundImagePath = '';
+        $this->excerpt = '';
+        $this->content = '';
+        $this->main_image = '';
+        $this->meta_title = '';
+        $this->meta_description = '';
     }
 
     /**
@@ -45,8 +46,8 @@ class Blog extends Component
      */
     public function render()
     {
-        $this->works = Blogs::select('id', 'title', 'caption', 'website_link')->get();
-        return view('livewire.admin.works.index');
+        $this->blogs = Blogs::select('id', 'title', 'excerpt', 'content', 'main_image', 'meta_title', 'meta_description')->get();
+        return view('livewire.admin.blogs.index');
     }
 
     /**
@@ -69,16 +70,17 @@ class Blog extends Component
         $this->validate();
         try {
             $path = '';
-            if($this->backgroundImagePath) {
-                $path = $this->backgroundImagePath->store('works', 'public');
+            if($this->main_image) {
+                $path = $this->main_image->store('blogs', 'public');
             }
 
             Blogs::create([
                 'title' => $this->title,
-                'caption' => $this->caption,
-                'overlay_color' => $this->overlayColor,
-                'background_image_path' => $path ? $path : NULL,
-                'website_link' => $this->websiteLink,
+                'excerpt' => $this->excerpt,
+                'content' => $this->content,
+                'main_image' => $path ? $path : NULL,
+                'meta_title' => $this -> mete_title,
+                'meta_description' => $this->meta_description,
             ]);
             session()->flash('success','Blog Created Successfully!!');
             $this->resetFields();
@@ -99,14 +101,13 @@ class Blog extends Component
             if( !$work) {
                 session()->flash('error','Post not found');
             } else {
-                $this->title = $work->title;
-                $this->caption = $work->caption;
-                $this->backgroundImagePath = $work->background_image_path;
-                $this->overlayColor = $work->overlay_color;
-                $this->websiteLink = $work->website_link;
-                $this->workId = $work->id;
-                $this->updateBlog = true;
-                $this->addBlog = false;
+                $this->title = $blogs->title;
+                $this->excerpt = $blogs->excerpt;
+                $this->content = $blogs->content;
+                $this->main_image = $blogs->main_image;
+                $this->meta_title = $blogs->meta_title;
+                $this->meta_description = $blogs->meta_description;
+              
             }
         } catch (\Exception $ex) {
             session()->flash('error','Something goes wrong!!');
@@ -122,12 +123,13 @@ class Blog extends Component
     {
         $this->validate();
         try {
-            Blogs::whereId($this->workId)->update([
+            Blogs::whereId($this->blogId)->update([
                 'title' => $this->title,
-                'caption' => $this->caption,
-                'overlay_color' => $this->overlayColor,
-                'background_image_path' => $this->backgroundImagePath,
-                'website_link' => $this->websiteLink,
+                'excerpt' => $this->excerpt,
+                'content' => $this->content,
+                'main_image' => $this->main_image,
+                'meta_title' => $this->meta_title,
+                'meta_description' => $this->meta_description,
             ]);
             session()->flash('success','Blog Updated Successfully!!');
             $this->resetFields();
