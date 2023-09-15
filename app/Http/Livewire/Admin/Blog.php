@@ -24,7 +24,7 @@ class Blog extends Component
      */
     protected $rules = [
         'title' => 'required',
-        'caption' => 'required',
+        'content' => 'required',
     ];
 
     /**
@@ -79,7 +79,7 @@ class Blog extends Component
                 'excerpt' => $this->excerpt,
                 'content' => $this->content,
                 'main_image' => $path ? $path : NULL,
-                'meta_title' => $this -> mete_title,
+                'meta_title' => $this ->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
             session()->flash('success','Blog Created Successfully!!');

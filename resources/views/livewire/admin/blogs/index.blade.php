@@ -31,8 +31,8 @@
                         <thead class="bg-blue-100 uppercase text-xs">
                             <tr>
                                 <th class="text-left p-3">Title</th>
-                                <th class="text-left p-3">Excerpt</th>
-                                <th class="p-3">Content</th>
+                                <th class="text-left p-3">Content</th>
+                                <th class="p-3">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,7 +43,7 @@
                                             {{$blog->title}}
                                         </td>
                                         <td class="p-3">
-                                            {{$blog->caption}}
+                                            {{$blog->content}}
                                         </td>
                                         <td class="text-center p-3">
                                             <button class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" wire:click="editBlog({{$blog->id}})" class="btn btn-primary btn-sm">Edit</button>

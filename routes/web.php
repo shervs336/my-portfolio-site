@@ -22,9 +22,12 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
+
+
 Route::get('/', function() {
     $works = \App\Models\Work::all();
-    return view('home', compact('works'));
+    $blogs = \App\Models\Blog::orderBy("created_at", "desc")->limit(4)->get();
+    return view('home', compact('works', 'blogs'));
 })->name('home');
 
 Route::group(['prefix' => 'admin'], function() {
