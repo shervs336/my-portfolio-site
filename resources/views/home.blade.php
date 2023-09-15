@@ -14,6 +14,7 @@
                         <a href="{{ route('admin.index', ['test' => 'test']) }}" class=" hover:text-blue-500">Home</a>
                         <a href="#about" class=" hover:text-blue-500">About</a>
                         <a href="#contact" class="hover:text-blue-500">Contact</a>
+                        <a href="#blog" class="hover:text-blue-500">Blog</a>
                         @if (Route::has('login'))
                             
                             @auth
@@ -45,6 +46,7 @@
                         <a href="#home" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Home</a>
                         <a href="#about" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">About</a>
                         <a href="#contact" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Contact</a>
+                        <a href="#blog" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
                     </div>
                 </div>
             </nav>
@@ -221,6 +223,9 @@
                         </li>
                         <li>
                             <a href="#contact" class="text-slate-400 hover:text-blue-700">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="text-slate-400 hover:text-blue-700">Blog</a>
                         </li>
                     </ul>
                 </div>

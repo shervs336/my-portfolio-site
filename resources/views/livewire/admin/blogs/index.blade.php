@@ -18,12 +18,12 @@
         @endif
     </div>
     <div class="w-full">
-        @if(!$addBlog && !$updateWork)
+        @if(!$addBlog && !$updateBlog)
         <div class="bg-white shadow-lg py-4 px-4">
             <div class="card-body">
-                @if(!$addWork)
+                @if(!$addBlog)
                 <div class="w-full mb-3">
-                    <button wire:click="addWork()" class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Add New Work</button>
+                    <button wire:click="addBlog()" class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Add New Blog</button>
                 </div>
                 @endif
                 <div class="w-full">
@@ -32,7 +32,7 @@
                             <tr>
                                 <th class="text-left p-3">Title</th>
                                 <th class="text-left p-3">Excerpt</th>
-                                <th class="p-3">Action</th>
+                                <th class="p-3">Content</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -9,33 +9,33 @@
                 @enderror
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="description">Caption:</label>
-                <textarea class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('caption') is-invalid @enderror" id="caption" wire:model="caption" placeholder="Enter Caption"></textarea>
-                @error('caption')
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="description">Excerpt:</label>
+                <textarea class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('caption') is-invalid @enderror" id="excerpt" wire:model="excerpt" placeholder="Enter excerpt"></textarea>
+                @error('excerpt')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="overlayColor">Overlay Color:</label>
-                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('overlayColor') is-invalid @enderror" id="overlayColor" wire:model="overlayColor" placeholder="Enter Overlay Color Eg [blue-500]">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="overlayColor">Content:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('overlayColor') is-invalid @enderror" id="content" wire:model="content" placeholder="Create a content">
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="websiteLink">Website Link:</label>
-                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('websiteLink') is-invalid @enderror" id="websiteLink" wire:model="websiteLink" placeholder="Enter Website Link">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_title">Meta Title:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_title" wire:model="meta_title" placeholder="Enter title">
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="backgroundImagePath">Backround Image:</label>
-                <input type="file" class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('backroundImagePath') is-invalid @enderror" id="backgroundImagePath" wire:model="backgroundImagePath" placeholder="Upload Image">
-                @if($backgroundImagePath)
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="main_image">Main image:</label>
+                <input type="file" class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('main_image') is-invalid @enderror" id="main_image" wire:model="main_image" placeholder="Upload Image">
+                @if($main_image)
                     <div>
                         Photo Preview:
-                        <img src="{{ asset('storage/'.$backgroundImagePath) }}" />
+                        <img src="{{ asset('storage/'.$main_image) }}" />
                     </div>
                 @endif
             </div>
             <div class="d-grid gap-2">
-                <button wire:click.prevent="updateWork()" class="shadow uppercase text-xs tracking-wide text-white bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Update</button>
-                <button wire:click.prevent="cancelWork()" class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Cancel</button>
+                <button wire:click.prevent="updateBlog()" class="shadow uppercase text-xs tracking-wide text-white bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Update</button>
+                <button wire:click.prevent="cancelBlog()" class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Cancel</button>
             </div>
         </form>
     </div>

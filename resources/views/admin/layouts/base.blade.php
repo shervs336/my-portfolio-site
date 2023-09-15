@@ -27,13 +27,13 @@
     <body class="bg-gray-100">
         <div class="flex w-screen">
             <!-- Sidebar -->
-            <div class=" w-1/5 flex flex-col bg-blue-900 items-start h-screen fixed p-4">
+            <div class=" w-1/5 flex flex-col bg-sky-800 items-start h-screen fixed p-4">
             
-                <h2 class="text-sm font-medium my-4 pb-6 text-blue-500 border-b-2 w-full">Sherwin Rhey Condez</h2>
+                <h2 class="text-sm font-medium my-4 pb-6 text-blue-50 border-b-2 w-full">Sherwin Rhey Condez</h2>
                 <!-- Add your sidebar links here -->
-                <a href="{{ route('admin.index') }}" class="text-sm font-medium text-blue-950 hover:text-blue-500 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
-                <a href="{{ route('admin.works') }}" class="text-sm font-medium text-blue-950 hover:text-blue-500 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
-                <a href="{{ route('admin.blogs') }}" class="text-sm font-medium text-blue-950 hover:text-blue-500 py-2"><i class="fa-solid fa-newspaper mr-2"></i> Blogs</a>
+                <a href="{{ route('admin.index') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
+                <a href="{{ route('admin.works') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
+                <a href="{{ route('admin.blogs') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-newspaper mr-2"></i> Blogs</a>
                 <!-- You can add more links as needed -->
 
                 <div class="w-full h-2 border-b-2 mb-3"></div>
