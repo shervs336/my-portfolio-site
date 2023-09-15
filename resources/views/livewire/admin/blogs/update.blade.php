@@ -9,19 +9,23 @@
                 @enderror
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="description">Excerpt:</label>
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="excerpt">Excerpt:</label>
                 <textarea class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('caption') is-invalid @enderror" id="excerpt" wire:model="excerpt" placeholder="Enter excerpt"></textarea>
                 @error('excerpt')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="overlayColor">Content:</label>
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="content">Content:</label>
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('overlayColor') is-invalid @enderror" id="content" wire:model="content" placeholder="Create a content">
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_title">Meta Title:</label>
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_title" wire:model="meta_title" placeholder="Enter title">
+            </div>
+            <div class="form-group mb-3">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_description">Meta description:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_description" wire:model="meta_description" placeholder="Enter description">
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="main_image">Main image:</label>
