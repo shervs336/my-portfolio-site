@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('works', function(Blueprint $table) {
-            $table->string('title')->after('overlay-color');
-            $table->renameColumn('`overlay-color`','`overlay_color`');
+            $table->string('title')->after('overlay_color');
         });
     }
 
@@ -24,7 +23,6 @@ return new class extends Migration
     {
         Schema::table('works', function(Blueprint $table) {
             $table->dropColumn(['title']);
-            $table->renameColumn('`overlay_color`','`overlay-color`');
         });
     }
 };

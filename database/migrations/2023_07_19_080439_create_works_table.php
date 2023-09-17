@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('background_image_path')->nullable();
             $table->string('logo_image_path')->nullable();
-            $table->string('overlay-color')->default('blue-500');
+            $table->string('overlay_color')->default('blue-500');
             $table->string('caption')->nullable();
             $table->string('website_link')->nullable();
             $table->timestamps();
