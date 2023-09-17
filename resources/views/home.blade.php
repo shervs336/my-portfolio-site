@@ -188,6 +188,32 @@
                 </div>
             </div>
 
+            <!--Blogs--> 
+
+            <div class="flex justify-center" id="latest-blog">
+                <div class="w-full py-12">
+                    <div class="container margin:auto mx-auto flex justify-between">
+                        <div class="w-full flex flex-col">
+                            <div class="flex-1"> 
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">Recent Posts</h1>
+                                <h2 class="text-5xl font-bold mt-2 text-center">My Dev Adventures</h2>
+
+                                <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">Learn about my day-to-day adventures as I tackle new problems and solutions along the way.</p>
+
+                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-2 lg:gap-x-6">
+ 
+                                    @foreach($blogs as $blog)
+                                        @include('components.showroom-content', ['blog' => $blog])
+                                    @endforeach
+
+                                </div><!-- Showroom Contents-->
+
+                            </div><!-- Flex 1 -->
+                        </div>
+                    </div> <!-- Container Block -->
+                </div>
+            </div>
+
 
             <!--Footer--> 
             <footer class="container margin:auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4  md:flex-row justify-between">
