@@ -20,12 +20,20 @@
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('overlayColor') is-invalid @enderror" id="content" wire:model="content" placeholder="Create a content">
             </div>
             <div class="form-group mb-3">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="slug">Enter slug:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('slug') is-invalid @enderror" id="slug" wire:model="slug" placeholder="Enter slug">
+            </div>
+            <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_title">Meta Title:</label>
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_title" wire:model="meta_title" placeholder="Enter title">
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_description">Meta description:</label>
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_description" wire:model="meta_description" placeholder="Enter description">
+            </div>
+            <div class="form-group mb-3">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="alt_image">Enter alt image:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('alt_image') is-invalid @enderror" id="alt_image" wire:model="alt_image" placeholder="Enter alt image">
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="main_image">Main image:</label>
