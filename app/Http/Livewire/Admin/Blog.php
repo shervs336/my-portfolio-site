@@ -10,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public $blogs, $title, $excerpt, $content, $main_image, $meta_title, $meta_description, $updateBlog = false, $addBlog = false;
+    public $blogs, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $updateBlog = false, $addBlog = false;
 
     /**
      * delete action listener
@@ -35,7 +35,9 @@ class Blog extends Component
         $this->title = '';
         $this->excerpt = '';
         $this->content = '';
+        $this->slug = '';
         $this->main_image = '';
+        $this->alt_image = '';
         $this->meta_title = '';
         $this->meta_description = '';
     }
@@ -46,7 +48,7 @@ class Blog extends Component
      */
     public function render()
     {
-        $this->blogs = Blogs::select('id', 'title', 'excerpt', 'content', 'main_image', 'meta_title', 'meta_description')->get();
+        $this->blogs = Blogs::select('id', 'title', 'excerpt', 'content', 'slug', 'main_image', 'alt_image', 'meta_title', 'meta_description')->get();
         return view('livewire.admin.blogs.index');
     }
 
@@ -78,7 +80,9 @@ class Blog extends Component
                 'title' => $this->title,
                 'excerpt' => $this->excerpt,
                 'content' => $this->content,
+                'slug' => $this->slug,
                 'main_image' => $path ? $path : NULL,
+                'alt_image' => $this->alt_image,
                 'meta_title' => $this ->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
@@ -104,7 +108,9 @@ class Blog extends Component
                 $this->title = $blogs->title;
                 $this->excerpt = $blogs->excerpt;
                 $this->content = $blogs->content;
+                $this->slug = $blogs->slug;
                 $this->main_image = $blogs->main_image;
+                $this->alt_image = $blogs->alt_image;
                 $this->meta_title = $blogs->meta_title;
                 $this->meta_description = $blogs->meta_description;
               
@@ -127,7 +133,9 @@ class Blog extends Component
                 'title' => $this->title,
                 'excerpt' => $this->excerpt,
                 'content' => $this->content,
+                'slug' => $this->slug,
                 'main_image' => $this->main_image,
+                'alt_image' => $this->alt_image,
                 'meta_title' => $this->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
