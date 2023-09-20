@@ -101,19 +101,20 @@ class Blog extends Component
      */
     public function editBlog($id){
         try {
-            $work = Blogs::findOrFail($id);
-            if( !$work) {
+            $blog = Blogs::findOrFail($id);
+            if( !$blog) {
                 session()->flash('error','Post not found');
             } else {
-                $this->title = $blogs->title;
-                $this->excerpt = $blogs->excerpt;
-                $this->content = $blogs->content;
-                $this->slug = $blogs->slug;
-                $this->main_image = $blogs->main_image;
-                $this->alt_image = $blogs->alt_image;
-                $this->meta_title = $blogs->meta_title;
-                $this->meta_description = $blogs->meta_description;
-              
+                $this->title = $blog->title;
+                $this->excerpt = $blog->excerpt;
+                $this->content = $blog->content;
+                $this->slug = $blog->slug;
+                $this->main_image = $blog->main_image;
+                $this->alt_image = $blog->alt_image;
+                $this->meta_title = $blog->meta_title;
+                $this->meta_description = $blog->meta_description;
+                $this->updateBlog = true;
+                $this->addBlog = false;              
             }
         } catch (\Exception $ex) {
             session()->flash('error','Something goes wrong!!');
