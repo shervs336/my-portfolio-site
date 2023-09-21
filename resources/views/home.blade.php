@@ -14,7 +14,7 @@
                         <a href="{{ route('admin.index', ['test' => 'test']) }}" class=" hover:text-blue-500">Home</a>
                         <a href="#about" class=" hover:text-blue-500">About</a>
                         <a href="#contact" class="hover:text-blue-500">Contact</a>
-                        <a href="#blog" class="hover:text-blue-500">Blog</a>
+                        <a href="#latest-blog" class="hover:text-blue-500">Blog</a>
                         @if (Route::has('login'))
                             
                             @auth
@@ -46,7 +46,7 @@
                         <a href="#home" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Home</a>
                         <a href="#about" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">About</a>
                         <a href="#contact" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Contact</a>
-                        <a href="#blog" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
+                        <a href="#latest-blog" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
                     </div>
                 </div>
             </nav>
@@ -200,13 +200,13 @@
 
                                 <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">Learn about my day-to-day adventures as I tackle new problems and solutions along the way.</p>
 
-                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-2 lg:gap-x-6">
+                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
  
                                     @foreach($blogs as $blog)
-                                        @include('components.showroom-content', ['blog' => $blog])
+                                        @include('components.blogs-content', ['blog' => $blog])
                                     @endforeach
 
-                                </div><!-- Showroom Contents-->
+                                </div><!-- blog Contents-->
 
                             </div><!-- Flex 1 -->
                         </div>
