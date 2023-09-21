@@ -32,7 +32,7 @@
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_description">Meta description:</label>
-                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_title') is-invalid @enderror" id="meta_description" wire:model="meta_description" placeholder="Enter description">
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('meta_description') is-invalid @enderror" id="meta_description" wire:model="meta_description" placeholder="Enter description">
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="meta_title">Alt image:</label>
