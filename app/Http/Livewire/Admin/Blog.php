@@ -10,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public $blogs, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $updateBlog = false, $addBlog = false;
+    public $blogs, $blogId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $updateBlog = false, $addBlog = false;
 
     /**
      * delete action listener
@@ -105,6 +105,7 @@ class Blog extends Component
             if( !$blog) {
                 session()->flash('error','Post not found');
             } else {
+                $this->blogId = $blog->id;
                 $this->title = $blog->title;
                 $this->excerpt = $blog->excerpt;
                 $this->content = $blog->content;
@@ -130,20 +131,23 @@ class Blog extends Component
     {
         $this->validate();
         try {
-            Blogs::whereId($this->blogId)->update([
+
+            $blog=Blogs::whereId($this->blogId)->update([
                 'title' => $this->title,
                 'excerpt' => $this->excerpt,
                 'content' => $this->content,
                 'slug' => $this->slug,
-                'main_image' => $this->main_image,
+                'main_image' =>$this->main_image,
                 'alt_image' => $this->alt_image,
-                'meta_title' => $this->meta_title,
+                'meta_title' => $this ->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
+            dd($this->blogId);
             session()->flash('success','Blog Updated Successfully!!');
             $this->resetFields();
             $this->updateBlog = false;
         } catch (\Exception $ex) {
+            dd($ex->getMessage());
             session()->flash('success','Something goes wrong!!');
         }
     }
