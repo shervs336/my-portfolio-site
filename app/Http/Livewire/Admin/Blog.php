@@ -83,7 +83,7 @@ class Blog extends Component
                 'slug' => $this->slug,
                 'main_image' => $path ? $path : NULL,
                 'alt_image' => $this->alt_image,
-                'meta_title' => $this ->meta_title,
+                'meta_title' => $this->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
             session()->flash('success','Blog Created Successfully!!');

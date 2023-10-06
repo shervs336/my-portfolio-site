@@ -31,6 +31,7 @@
                         <thead class="bg-blue-100 uppercase text-xs">
                             <tr>
                                 <th class="text-left p-3">Title</th>
+                                <th class="text-left p-3">Excerpt</th>
                                 <th class="text-left p-3">Content</th>
                                 <th class="p-3">Actions</th>
                             </tr>
@@ -41,6 +42,9 @@
                                     <tr class="text-sm">
                                         <td class="p-3">
                                             {{$blog->title}}
+                                        </td>
+                                        <td class="p-3">
+                                            {{$blog->excerpt}}
                                         </td>
                                         <td class="p-3">
                                             {{$blog->content}}
