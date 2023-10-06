@@ -34,6 +34,7 @@
                 <a href="{{ route('admin.index') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-gauge mr-2"></i> Dashboard</a>
                 <a href="{{ route('admin.works') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-briefcase mr-2"></i> Works</a>
                 <a href="{{ route('admin.blogs') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-newspaper mr-2"></i> Blogs</a>
+                <a href="{{ route('admin.labs') }}" class="text-sm font-medium text-blue-950 hover:text-blue-50 py-2"><i class="fa-solid fa-flask mr-2"></i> Labs</a>
                 <!-- You can add more links as needed -->
 
                 <div class="w-full h-2 border-b-2 mb-3"></div>
