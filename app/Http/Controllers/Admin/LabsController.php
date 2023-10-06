@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Blog;
+use App\Models\Lab;
 
-class BlogsController extends Controller
+class LabsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function __invoke()
     {
-        return view('admin.blogs.index');
+        return view('admin.labs.index');
     }
 }
