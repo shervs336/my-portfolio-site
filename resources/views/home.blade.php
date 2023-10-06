@@ -15,6 +15,7 @@
                         <a href="#about" class=" hover:text-blue-500">About</a>
                         <a href="#contact" class="hover:text-blue-500">Contact</a>
                         <a href="#latest-blog" class="hover:text-blue-500">Blog</a>
+                        <a href="#labs"  class="hover:text-blue-600 py-2">Labs</a>
                         @if (Route::has('login'))
                             
                             @auth
@@ -47,6 +48,8 @@
                         <a href="#about" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">About</a>
                         <a href="#contact" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Contact</a>
                         <a href="#latest-blog" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
+                        <a href="#labs" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Labs</a>
+                        
                     </div>
                 </div>
             </nav>
@@ -207,6 +210,32 @@
                                     @endforeach
 
                                 </div><!-- blog Contents-->
+
+                            </div><!-- Flex 1 -->
+                        </div>
+                    </div> <!-- Container Block -->
+                </div>
+            </div>
+
+            <!--Labs-->
+
+            <div class="flex justify-center" id="labs">
+                <div class="w-full py-12">
+                    <div class="container margin:auto mx-auto flex justify-between">
+                        <div class="w-full flex flex-col">
+                            <div class="flex-1"> 
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">My wokshop</h1>
+                                <h2 class="text-5xl font-bold mt-2 text-center">My Personal Projects</h2>
+
+                                <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">I am passionate about crafting high-quality web applications and bringing ideas to life through code.</p>
+
+                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
+ 
+                                    @foreach($labs as $labs)
+                                        @include('components.labs-content', ['labs' => $labs])
+                                    @endforeach
+
+                                </div><!-- labs Contents-->
 
                             </div><!-- Flex 1 -->
                         </div>
