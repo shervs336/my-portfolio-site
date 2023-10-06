@@ -224,15 +224,15 @@
                     <div class="container margin:auto mx-auto flex justify-between">
                         <div class="w-full flex flex-col">
                             <div class="flex-1"> 
-                                <h1 class="text-2xl font-bold text-blue-500 text-center">My wokshop</h1>
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">My workshop</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Personal Projects</h2>
 
                                 <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">I am passionate about crafting high-quality web applications and bringing ideas to life through code.</p>
 
-                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
+                                <div id="LabContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
  
-                                    @foreach($labs as $labs)
-                                        @include('components.labs-content', ['labs' => $labs])
+                                    @foreach($labs as $lab)
+                                        @include('components.labs-content', ['lab' => $lab])
                                     @endforeach
 
                                 </div><!-- labs Contents-->
@@ -280,7 +280,10 @@
                             <a href="#contact" class="text-slate-400 hover:text-blue-700">Contact</a>
                         </li>
                         <li>
-                            <a href="#blog" class="text-slate-400 hover:text-blue-700">Blog</a>
+                            <a href="#latest-blog" class="text-slate-400 hover:text-blue-700">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#labs" class="text-slate-400 hover:text-blue-700">Labs</a>
                         </li>
                     </ul>
                 </div>
