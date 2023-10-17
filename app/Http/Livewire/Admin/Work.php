@@ -35,7 +35,7 @@ class Work extends Component
         $this->title = '';
         $this->caption = '';
         $this->overlayColor = 'blue-500';
-        $this->website_link = '';
+        $this->websiteLink = '';
         $this->backgroundImagePath = '';
     }
 

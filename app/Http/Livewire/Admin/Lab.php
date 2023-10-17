@@ -4,13 +4,13 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Blog as Labs;
+use App\Models\Lab as Labs;
 
-class Blog extends Component
+class Lab extends Component
 {
     use WithFileUploads;
 
-    public $labs, $labId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $updateLab = false, $addLab = false;
+    public $labs, $labId, $title, $excerpt, $main_image, $link, $updateLab = false, $addLab = false;
 
     /**
      * delete action listener
@@ -34,12 +34,8 @@ class Blog extends Component
     public function resetFields(){
         $this->title = '';
         $this->excerpt = '';
-        $this->content = '';
-        $this->slug = '';
         $this->main_image = '';
-        $this->alt_image = '';
-        $this->meta_title = '';
-        $this->meta_description = '';
+        $this->link = '';
     }
 
     /**
@@ -48,7 +44,7 @@ class Blog extends Component
      */
     public function render()
     {
-        $this->labs = Labs::select('id', 'title', 'excerpt', 'content', 'slug', 'main_image', 'alt_image', 'meta_title', 'meta_description')->get();
+        $this->labs = Labs::select('id', 'title', 'excerpt', 'main_image', 'link')->get();
         return view('livewire.admin.labs.index');
     }
 
@@ -79,12 +75,8 @@ class Blog extends Component
             Labs::create([
                 'title' => $this->title,
                 'excerpt' => $this->excerpt,
-                'content' => $this->content,
-                'slug' => $this->slug,
                 'main_image' => $path ? $path : NULL,
-                'alt_image' => $this->alt_image,
-                'meta_title' => $this->meta_title,
-                'meta_description' => $this->meta_description,
+                'link' => $this->link
             ]);
             session()->flash('success','Labs Created Successfully!!');
             $this->resetFields();
@@ -105,15 +97,11 @@ class Blog extends Component
             if( !$lab) {
                 session()->flash('error','Post not found');
             } else {
-                $this->blogId = $lab->id;
+                $this->labId = $lab->id;
                 $this->title = $lab->title;
                 $this->excerpt = $lab->excerpt;
-                $this->content = $lab->content;
-                $this->slug = $lab->slug;
                 $this->main_image = $lab->main_image;
-                $this->alt_image = $lab->alt_image;
-                $this->meta_title = $lab->meta_title;
-                $this->meta_description = $lab->meta_description;
+                $this->link = $lab->link;
                 $this->updateLab = true;
                 $this->addLab = false;              
             }
@@ -135,12 +123,8 @@ class Blog extends Component
             $lab=Labs::whereId($this->labId)->update([
                 'title' => $this->title,
                 'excerpt' => $this->excerpt,
-                'content' => $this->content,
-                'slug' => $this->slug,
                 'main_image' =>$this->main_image,
-                'alt_image' => $this->alt_image,
-                'meta_title' => $this ->meta_title,
-                'meta_description' => $this->meta_description,
+                'link' => $this->link,
             ]);
             dd($this->labId);
             session()->flash('success','Blog Updated Successfully!!');
