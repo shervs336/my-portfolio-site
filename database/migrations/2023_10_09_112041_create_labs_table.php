@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('labs', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('excerpt')->nullable();
+            $table->string('main_image')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
