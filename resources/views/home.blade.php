@@ -224,7 +224,7 @@
                     <div class="container margin:auto mx-auto flex justify-between">
                         <div class="w-full flex flex-col">
                             <div class="flex-1"> 
-                                <h1 class="text-2xl font-bold text-blue-500 text-center">My workshop</h1>
+                                <h1 class="text-2xl font-bold text-blue-500 text-center">My Workshop</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Personal Projects</h2>
 
                                 <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">I am passionate about crafting high-quality web applications and bringing ideas to life through code.</p>
