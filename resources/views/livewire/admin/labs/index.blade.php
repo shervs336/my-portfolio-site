@@ -32,7 +32,6 @@
                             <tr>
                                 <th class="text-left p-3">Title</th>
                                 <th class="text-left p-3">Excerpt</th>
-                                <th class="text-left p-3">Content</th>
                                 <th class="p-3">Actions</th>
                             </tr>
                         </thead>

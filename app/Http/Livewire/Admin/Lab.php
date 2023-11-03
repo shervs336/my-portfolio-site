@@ -24,7 +24,7 @@ class Lab extends Component
      */
     protected $rules = [
         'title' => 'required',
-        'content' => 'required',
+        
     ];
 
     /**
