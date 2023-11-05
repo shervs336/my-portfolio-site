@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-    <div class="flex flex-col justify-center min-h-screen py-12 bg-gray-50 sm:px-6 lg:px-8">
-        Dashboard
+    <div class="flex flex-col min-h-screen py-12 bg-blue-50 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold mb-3">Dashboard</h1>
     </div>
 @endsection
