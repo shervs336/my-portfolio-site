@@ -16,7 +16,8 @@ class Blog extends Component
      * delete action listener
      */
     protected $listeners = [
-        'deleteBlogListner'=>'deleteBlog'
+        'deleteBlogListner'=>'deleteBlog',
+        'valueChanged' => 'runSomething'
     ];
 
     /**
@@ -26,6 +27,11 @@ class Blog extends Component
         'title' => 'required',
         'content' => 'required',
     ];
+    
+    public function runSomething($content)
+    {
+        $this->content = $content;
+    }
 
     /**
      * Reseting all inputted fields

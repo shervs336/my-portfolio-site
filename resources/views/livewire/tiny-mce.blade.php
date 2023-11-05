@@ -1,10 +1,25 @@
-<div>
+<div wire:ignore>
+    <div class="max-w-3xl mx-auto mb-2">
+        <div class="bg-white rounded-lg">
+
+            <div class="flex flex-col space-y-10">
+                <div>
+                    <textarea wire:model="value"
+                              class="min-h-fit h-48 tinymce"
+                              id="editor"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        let value
+    
         tinymce.init({
-            selector: "textarea.tinymce",
+            selector: "textarea#editor",
             menubar: false,
             statusbar: true,
-            height: "159px",
+            height: "200px",
 
             paste_data_images: true,
 
@@ -25,22 +40,17 @@
                 {title: "Header 6", format: "h6"},
                 {title: "paragraph", format: "p"},
             ],
-
+            forced_root_block: false,
+            setup: function (editor) {
+                editor.on('init change', function () {
+                    editor.save();
+                });
+                editor.on('change blur', function (e) {
+                    @this.emitUp('valueChanged', editor.getContent());
+                });
+            }
         });
+        
+
     </script>    
-
-    <div class="max-w-3xl mx-auto mb-2">
-        <div class="bg-white rounded-lg p-5">
-
-            <div class="flex flex-col space-y-10">
-                <div wire:ignore>
-                    <textarea wire:model="content"
-                              class="min-h-fit h-48 tinymce"
-                              name="content"
-                              id="content"></textarea>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>

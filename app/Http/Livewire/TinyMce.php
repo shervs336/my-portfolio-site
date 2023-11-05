@@ -6,13 +6,20 @@ use Livewire\Component;
 
 class TinyMce extends Component
 {
-    public $content;
+   
+    public $value;
+    
+    protected $listeners = ['valueChanged' => 'runSomething'];
+    
+    public function runSomething()
+    {
+        dd('test');
+    }
 
     public function render()
     {
-        return view('livewire.tiny-mce')
-            ->layout('layouts.tiny-mce');;
+        return view('livewire.tiny-mce');
     }
-
+    
 
 }

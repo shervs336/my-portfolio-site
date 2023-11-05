@@ -17,7 +17,7 @@
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="content">Content:</label>
-                <livewire:tiny-mce :content="$content"/>
+                <livewire:tiny-mce wire:model="content"/>
                 @error('content')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -54,5 +54,5 @@
                 <button wire:click.prevent="cancelBlog()" class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded">Cancel</button>
             </div>
         </form>
-    </div>
+    </div> 
 </div>
