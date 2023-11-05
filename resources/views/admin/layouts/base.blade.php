@@ -18,8 +18,8 @@
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
-        @livewireScripts
-
+       
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
@@ -61,6 +61,8 @@
                 @yield('body')
             </div>
         </div>
-        
+        @livewireScripts
+        @stack('scripts')
     </body>
+
 </html>
