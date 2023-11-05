@@ -69,8 +69,8 @@
                             data-te-ripple-init data-te-ripple-color="dark"">Learn More</a>
                         </div>
                         </div>  
-                        <div class="w-full md:w-1/2 ">
-                        <img src="{{asset('images/icon.jpg')}}" alt="Image Here" class="w-full h-auto">
+                        <div class="w-full md:w-1/2 flex justify-end">
+                        <img src="{{asset('images/hero-image.png')}}" alt="Image Here" class="w-90 rounded-full h-auto">
                         </div>
                     </div>
                 </div>
