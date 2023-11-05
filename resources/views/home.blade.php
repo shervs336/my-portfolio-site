@@ -70,7 +70,7 @@
                         </div>
                         </div>  
                         <div class="w-full md:w-1/2 flex justify-end">
-                        <img src="{{asset('images/hero-image.png')}}" alt="Image Here" class="w-90 rounded-full h-auto">
+                        <img src="{{asset('images/hero-image.png')}}" alt="Image Here" class="w-90 rounded-full h-auto shadow-md">
                         </div>
                     </div>
                 </div>
