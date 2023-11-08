@@ -17,6 +17,7 @@
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="content">Content:</label>
+                <livewire:tiny-mce wire:model="content"/>
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('content') is-invalid @enderror" id="content" wire:model="content" placeholder="Create a content">
             </div>
             <div class="form-group mb-3">
