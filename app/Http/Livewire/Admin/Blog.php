@@ -148,7 +148,7 @@ class Blog extends Component
                 'meta_title' => $this ->meta_title,
                 'meta_description' => $this->meta_description,
             ]);
-            dd($this->blogId);
+            
             session()->flash('success','Blog Updated Successfully!!');
             $this->resetFields();
             $this->updateBlog = false;
