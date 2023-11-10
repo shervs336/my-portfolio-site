@@ -88,7 +88,7 @@
                     <div class="container margin:auto mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
                         <div class="w-full flex flex-col px-4">
                             <div class="flex-1">
-                                <h1 class="text-2xl font-bold text-blue-500">Hi :)</h1>
+                                <h1 class="text-2xl font-bold text-blue-500">Get in touch</h1>
                                 <p class="mt-4 text-sm text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </div>
