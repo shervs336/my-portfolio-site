@@ -80,6 +80,44 @@
 
         @yield('body')
 
+        <br><br>
+
+       <!--Register Form section-->
+       <div class="flex justify-center" id="about" >
+                <div class="w-full py-12">
+                    <div class="container margin:auto mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                        <div class="w-full flex flex-col px-4">
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-bold text-blue-500">Hi :)</h1>
+                                <p class="mt-4 text-sm text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col items-start ">
+                            <form>
+                            <div class="mb-6">
+                                <label for="email" class="block ms-20 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                <input type="email" id="email" class="ms-20 peer block min-h-[auto] w-5/6 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="password" class="block ms-20 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+                                <input type="password" id="password" class="ms-20 peer block min-h-[auto] w-5/6 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block ms-20 text-sm font-medium text-gray-900 dark:text-gray-900">Your message</label>
+                                <textarea id="message" rows="6" class="ms-20 peer block min-h-[auto] w-5/6 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Type your message here..."></textarea>
+                            </div>
+                           
+                            <button type="submit" class="ms-20 -block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                                data-te-ripple-init data-te-ripple-color="dark">Send</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
             <!--Footer--> 
             <footer class="container margin:auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4  md:flex-row justify-between">
                 <div class="md:w-1/4 md:py-16 px-2 py-0">
@@ -124,22 +162,21 @@
                     </ul>
                 </div>
 
-
                 <!--Sign-up form-->
                 <div class="ml-0 md:w-1/2 py-0 md:py-16 px-2">
                     <form action="">
                         <div class=" justify-right gap-4 space-y-4 md:gap-2">
                             <div class="w-full md:ml-auto">
-                            <p class="text-secondary-800 dark:text-secondary-200"><strong>Join my newsletter</strong></p>
+                            <p class="text-secondary-800 dark:text-secondary-200 ms-20"><strong>Join my newsletter</strong></p>
                         </div>
 
                         <div class="relative" data-te-input-wrapper-init>
-                            <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-slate-100 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" id="exampleFormControlInput1" placeholder="Email address"/>
-                            <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200">Email address</label>
+                            <input type="text" class="ms-20 peer block min-h-[auto] w-5/6 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" id="exampleFormControlInput1" placeholder="Email address"/>
+                            <label for="exampleFormControlInput1" class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-slate-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-secondary-200 dark:peer-focus:text-secondary-200 ms-20">Email address</label>
                         </div>
                                 
                         <div class="w-1/3 md:mr-auto space-y-4">
-                            <button type="button" class="inline-block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                            <button type="button" class="ms-20 inline-block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                                 data-te-ripple-init data-te-ripple-color="dark">Join</button>
                         </div>
                     </form>
