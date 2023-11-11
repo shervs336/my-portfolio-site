@@ -4,18 +4,20 @@
 
             <div class="flex flex-col space-y-10">
                 <div>
-                    <textarea wire:model="value"
+                    <textarea 
                               class="min-h-fit h-48 tinymce"
-                              id="editor"></textarea>
+                              id="editor"
+                              name="editor"></textarea>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        let value
-    
+        let value = "{{ $value }}"
+
         tinymce.init({
+
             selector: "textarea#editor",
             menubar: false,
             statusbar: true,
@@ -42,14 +44,17 @@
             ],
             forced_root_block: false,
             setup: function (editor) {
-                editor.on('init change', function () {
-                    editor.save();
+                editor.on('init', function () {
+                    editor.setContent(value)
                 });
                 editor.on('change blur', function (e) {
+                    editor.save();
                     @this.emitUp('valueChanged', editor.getContent());
                 });
             }
         });
+
+
         
 
     </script>    
