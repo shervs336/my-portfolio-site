@@ -67,11 +67,11 @@
                             <div class="flex-1"> 
                                 <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
                                 <h2 class="text-5xl font-bold mt-2 text-center">My Services</h2>
-                                <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
+                                <p class="mt-4 mb-5 font-semibold text-gray-800 text-center max-w-1/2">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
                  
                                 <!--Services-->           
                                 <div class="container mx-auto flex flex-col space-y-6 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50">
                                         <div class="">
                                             <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-gears"></i>
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50">
                                         <div class="">
                                             <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-hammer"></i>
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="md:w-1/3 rounded-xl shadow-md py-16">
+                                    <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50">
                                         <div class="">
                                             <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-4xl text-white mx-auto">
                                                 <i class="fa-solid fa-lightbulb"></i>
