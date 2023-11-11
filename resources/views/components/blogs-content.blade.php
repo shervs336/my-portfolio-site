@@ -3,10 +3,10 @@
     <img class="w-full rounded-t-lg" src="{!! !empty($blog->main_image)? asset('storage/'.$blog->main_image): asset('images/default.webp')!!}" alt="" /></div>
     <div class="px-6 pt-6 pb-3">
     <h3 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">{{$blog->title}}</h3>
-    <p class="text-base text-neutral-600 dark:text-neutral-200">{{$blog->excerpt}}</p></div>
+    <p class="font-light text-neutral-600 dark:text-neutral-200">{{$blog->excerpt}}</p></div>
 
-  <div class="px-6 pt-3 pb-6">
-    <a type="button" href="#" class="text-right font-light text-blue-500 hover:text-blue-900 pointer-events-auto mr-5 inline-block cursor-pointer rounded text-base font-normal leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
+  <div class="px-6 pt-3 pb-6 float-right">
+    <a type="button" href="#" class=" text-blue-500 hover:text-blue-900 pointer-events-auto mr-5  cursor-pointer rounded text-base font-normal leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
       See more
     </a>
   
