@@ -8,7 +8,7 @@
             <div class="w-full h-full overflow-hidden flex justify-center items-center bg-cover bg-center"></div>
         </div>
         <div class="z-10 absolute w-full h-full flex justify-center items-center group hover:bg-{{$work->overlay_color}}">
-            <h1 class="group-hover:hidden text-3xl font-medium text-slate-100 tracking-wide border-solid border rounded-md p-3 px-6 border-slate-100 uppercase">{{$work->title}}</h1>
+            <h1 class="group-hover:hidden text-3xl font-medium w-4/5 text-center text-slate-100 tracking-wide border-solid border rounded-md p-3 px-6 border-slate-100 uppercase">{{$work->title}}</h1>
             <div class="p-2 absolute transform  duration-300 inset-y-full group-hover:inset-y-auto group-hover:bottom-8 w-full">
                 
                 <p class="w-full tracking-tight text-xl text-white text-center font-extralight">{{$work->caption}}</p>                             
