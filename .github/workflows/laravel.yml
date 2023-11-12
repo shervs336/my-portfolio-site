@@ -10,7 +10,10 @@ jobs:
   run_pull:
     name: run pull
     runs-on: ubuntu-latest
-    
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: ['8.1']
     steps:
     - name: Install ssh keys
       # check this thread to understand why its needed:
@@ -21,13 +24,7 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: Connect and pull
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
+    - name: Depedency installation and build
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && composer install && npm install && npm run build && exit"
     - name: Cleanup pulled files
-      run: rm -rf ~/.ssh 
-    - name: CD to project
-      run: cd ${{ secrets.WORK_DIR }}
-    - name: Install composer depedencies
-      run: composer i
-    - name: Install npm depedencies
-      run: npm i
-    - name: Build project
-      run: npm run build
+      run: rm -rf ~/.ssh
