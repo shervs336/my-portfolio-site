@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-    run_pull:
+  run_pull:
     name: run pull
     runs-on: ubuntu-latest
     
