@@ -7,7 +7,7 @@
             <div class="w-full flex flex-col px-4">
                 <div class="flex-1">
                         <h1 class="text-2xl font-bold text-blue-500">Get in touch 🤙</h1>
-                        <h2 class="text-5xl font-bold mt-2 text-center">Let's Collaborate!</h2>
+                        <h2 class="text-5xl font-bold mt-2">Let's Collaborate!</h2>
                         <p class="mt-4 text-sm text-gray-400">Have a Project in Mind or Just Want to Get in Touch?</p>
                 </div>
             </div>
