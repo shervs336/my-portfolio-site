@@ -21,5 +21,11 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: connect and pull
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
+    - name: Install composer depedencies
+      run: composer i
+    - name: Install npm depedencies
+      run: npm i
+    - name: Build project
+      run: npm run build
     - name: cleanup
       run: rm -rf ~/.ssh 
