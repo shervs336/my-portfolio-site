@@ -32,11 +32,8 @@ Route::get('/', function() {
 })->name('home');
 
 
-Route::get('/blog/{slug?}', function($slug) {
-    $blog  = \App\Models\Blog::where ('slug', $slug)->first();
+Route::get('/blog/{slug?}', 'App\Http\Controllers\BlogsController@show')->name('blog.view');
 
-    return view('blogs.view', compact('blog'));
-})->name('blog.view');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', function() { return redirect()->route('admin.dashboard'); })->name('admin.index');
