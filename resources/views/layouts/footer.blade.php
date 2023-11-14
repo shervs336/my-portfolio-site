@@ -11,22 +11,22 @@
                         <p class="mt-4 text-sm text-gray-400">Have a Project in Mind or Just Want to Get in Touch?</p>
                 </div>
             </div>
-            <div class="w-full flex flex-col items-start ">
+            <div class="w-2/5 flex flex-col items-start ">
                 <form>
                     <div class="mb-6">
-                        <label for="email" class="block ms-20 py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
-                        <input type="email" id="email" class="ms-20 pr-4 peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
+                        <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
+                        <input type="email" id="email" class="pr-4 peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
                     </div>
                     <div class="mb-6">
-                        <label for="password" class="block ms-20 py-2 text-sm font-bold text-gray-900 dark:text-white">Subject</label>
-                        <input type="password" id="password" class="ms-20 peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" required>
+                        <label for="password" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Subject</label>
+                        <input type="password" id="password" class="peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" required>
                     </div>
                     <div class="mb-6">
-                        <label for="message" class="block ms-20 py-2 text-sm font-bold text-gray-900 dark:text-gray-900">Your message</label>
-                        <textarea id="message" rows="6" class="ms-20 peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Type your message here..."></textarea>
+                        <label for="message" class="block py-2 text-sm font-bold text-gray-900 dark:text-gray-900">Your message</label>
+                        <textarea id="message" rows="6" class="peer block min-h-[auto] w-96 rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Type your message here..."></textarea>
                     </div>
                     
-                    <button type="submit" class="ms-20 -block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                    <button type="submit" class="block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                             data-te-ripple-init data-te-ripple-color="dark">Send</button>
                 </form>
             </div>
