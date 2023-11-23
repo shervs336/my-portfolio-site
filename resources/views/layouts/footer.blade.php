@@ -1,7 +1,3 @@
-<br><br>
-
-
-        
 <!--Footer--> 
 <footer class="container margin:auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4  md:flex-row justify-between">
     <div class="md:w-1/4 md:py-16 px-2 py-0">

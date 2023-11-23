@@ -3,7 +3,7 @@
 @section('content')
  
 
-            <div class="flex justify-center" id="home">
+            <div class="flex justify-center" id="contact">
                 <div class="w-full py-12">
                     <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between px-4">
                         <div class="w-full md:w-1/2">
@@ -152,7 +152,7 @@
 
                                 <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize">Learn about my day-to-day adventures as I tackle new problems and solutions along the way.</p>
 
-                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
+                                <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6 place-items-center">
  
                                     @foreach($blogs as $blog)
                                         @include('components.blogs-content', ['blog' => $blog])
@@ -196,16 +196,31 @@
             <!--Register Form section-->
             <div class="flex justify-center" id="about" >
                 <div class="w-full py-12">
-                    <div class="container margin:auto mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-                        <div class="w-full flex flex-col px-4">
+                    <div class="container -mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+                        <div class="md:w-1/2 flex flex-col px-2">
                             <div class="flex-1">
                                     <h1 class="text-2xl font-bold text-blue-500">Get in touch 🤙</h1>
                                     <h2 class="text-5xl font-bold mt-2">Let's Collaborate!</h2>
                                     <p class="mt-4 text-sm text-gray-400">Have a Project in Mind or Just Want to Get in Touch?</p>
+                                    <div class="mt-5 flex space-x-4">
+                                        <a href="https://www.facebook.com/sherwinrheycondez" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/SherwinRhey" class="w-12 h-12 border text-gray-300 hover:bg-black hover:text-white rounded-full flex items-center justify-center">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                        <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                        
+                                    </div>
                             </div>
                         </div>
-                        <div class="w-2/5 flex flex-col items-start ">
-                            <form>
+                        <div class="md:w-1/2 flex flex-col items-start px-2 md:px-0">
+                            <form class="w-full md:ml-auto">
                                 <div class="mb-6">
                                     <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
                                     <input type="email" id="email" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
@@ -226,8 +241,5 @@
                     </div>
                 </div>
             </div>
-
-            <br><br>
-
      
 @endsection
