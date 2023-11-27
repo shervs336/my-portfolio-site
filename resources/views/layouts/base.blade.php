@@ -18,7 +18,9 @@
 		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
@@ -29,17 +31,15 @@
     </head>
 
     <body>
-        <div class="relative min-h-screen bg-slate-50 bg-center sm:flex sm:justify-center sm:items-center selection:bg-indigo-500 selection:text-white">
+    
+        <div class="md:container md:mx-auto">
 
-            <div class="p-6 mx-auto w-full max-w-7xl lg:p-8">
+            @includeWhen(!request()->routeIs('login'), 'layouts.header')
 
-                @includeWhen(!request()->routeIs('login'), 'layouts.header')
+            @yield('body')
 
-                @yield('body')
+            @includeWhen(!request()->routeIs('login'), 'layouts.footer')
 
-                @includeWhen(!request()->routeIs('login'), 'layouts.footer')
-
-            </div>
         </div>
 
     </body>
