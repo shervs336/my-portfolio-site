@@ -2,15 +2,15 @@
 
 @section('content')
 
-<div class="flex flex-col">
-    <div class="bg-slate-50 py-8">
-        <div class="container mx-auto px-4">
+    <div class="flex justify-center" id="contact" >
+        <div class="container max-w-7xl py-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">{{$blog->title}}</h1>
             <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-normal text-sm text-blue-600 hover:bg-gray-100">Sherwin Rhey Condez</a>
             <time datetime="2023" class="text-gray-500 text-sm">Nov. 8, 2023</time>
         </div>
     </div>
-    <a href="#" class="text-blue-700 hover:text-indigo-600 text-right">View all Posts ></a>
+
+    <a href="#" class="text-blue-700 hover:text-indigo-600 text-right">View all Postssss ></a>
 
     <div class="bg-white py-8">
         <div class="container mx-auto px-4 flex flex-col md:flex-row">
@@ -45,6 +45,6 @@
         </div>
 
     </div>
-</div>
+
 
 @endsection('content')      

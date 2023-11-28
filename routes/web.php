@@ -31,8 +31,8 @@ Route::get('/', function() {
     return view('home', compact('works', 'blogs', 'labs'));
 })->name('home');
 
-
-Route::get('/blog/{slug?}', 'App\Http\Controllers\BlogsController@show')->name('blog.view');
+Route::get('/blogs', 'App\Http\Controllers\BlogsController@index')->name('blog.indes');
+Route::get('/blogs/{slug}', 'App\Http\Controllers\BlogsController@show')->name('blog.view');
 
 
 Route::group(['prefix' => 'admin'], function() {

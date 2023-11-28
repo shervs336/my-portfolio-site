@@ -12,7 +12,9 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        //
+        $blogs  = \App\Models\Blog::limit(10)->orderBy('id','desc')->get();
+
+        return view('blogs.index', compact('blogs'));
     }
 
     
