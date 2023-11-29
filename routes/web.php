@@ -31,7 +31,7 @@ Route::get('/', function() {
     return view('home', compact('works', 'blogs', 'labs'));
 })->name('home');
 
-Route::get('/blogs', 'App\Http\Controllers\BlogsController@index')->name('blog.indes');
+Route::get('/blogs', 'App\Http\Controllers\BlogsController@index')->name('blog.index');
 Route::get('/blogs/{slug}', 'App\Http\Controllers\BlogsController@show')->name('blog.view');
 
 
