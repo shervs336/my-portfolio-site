@@ -26,7 +26,7 @@
 
             <ul class="mb-0 list-none grid grid-cols-2 md:grid-cols-1">
                 <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="#home" class="text-blue-100 hover:text-blue-200">Home</a>
+                    <a href="{{ route('home') }}" class="text-blue-100 hover:text-blue-200">Home</a>
                 </li>
                 <li class="text-center md:text-left py-3 md:py-1"">
                     <a href="#about" class="text-blue-100 hover:text-blue-200">About</a>
