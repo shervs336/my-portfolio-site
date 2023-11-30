@@ -2,14 +2,16 @@
 
 @section('content')
 
-    <div class="flex justify-center" id="contact" >
-        <div class="container max-w-7xl py-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
+<div class="flex flex-col">
+    <div class="bg-slate-50 py-8">
+        <div class="container mx-auto px-4">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">Blogs</h1>
             <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-normal text-sm text-blue-600 hover:bg-gray-100">Sherwin Rhey Condez</a>
         </div>
     </div>
+<br>
+    <a href="#" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Post ></a>
 
-    <a href="#" class="text-blue-700 hover:text-indigo-600 text-right">View all Postssss ></a>
 
     <div class="bg-white py-8">
         <div class="container mx-auto px-4 flex flex-col md:flex-row">
@@ -41,9 +43,21 @@
                 <h5 class="text-base font-bold text-gray-800 mb-4">IT firms utilization rates rise as demand slows down</h5>
                 </div>
             </div>
+            <div class="bg-gray-100 p-4 mt-4">
+                <div class="bg-gray-100 p-4">       
+                <img src="https://st.adda247.com/https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/articles/wp-content/uploads/2023/03/20174711/Generative-AI.jpg" alt="Blog Featured Image" class="mb-6">
+                <p class="text-gray-500 text-xs">connect.comptia.org/</p>
+                <h5 class="text-base font-bold text-gray-800 mb-4">Generative AI and increased focus on explainable AI and ethical considerations</h5>
+                </div>
+            </div>
+            <div class="bg-gray-100 p-4 mt-4">
+                <div class="bg-gray-100 p-4">       
+                <img src="https://eu-images.contentstack.com/v3/assets/blt31d6b0704ba96e9d/blt91b45f3fdab97797/63abe78d6b0c2d603c1b7b7d/IoT-security-concept-art.jpg?width=850&auto=webp&quality=95&format=jpg&disable=upscale" alt="Blog Featured Image" class="mb-6">
+                <p class="text-gray-500 text-xs">google.com</p>
+                <h5 class="text-base font-bold text-gray-800 mb-4">Expansion of IoT devices in various industries and increased focus on cybersecurity</h5>
+                </div>
+            </div>
         </div>
-
-    </div>
-
-
+</div>
+</div>
 @endsection('content')      
