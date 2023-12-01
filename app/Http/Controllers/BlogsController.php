@@ -24,8 +24,10 @@ class BlogsController extends Controller
     public function show($slug)
     {
         $blog  = \App\Models\Blog::where ('slug', $slug)->first();
+        
+        $otherblogs = \App\Models\Blog::whereNot('id', $blog->id)->limit(5)->get();
 
-        return view('blogs.view', compact('blog'));
+        return view('blogs.show', compact('blog', 'otherblogs'));
     }
 
    
