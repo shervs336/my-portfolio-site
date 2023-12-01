@@ -21,7 +21,7 @@
                             <img src ="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-8 w-full aspect-[16/9]">
                             <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
                             <p class="text-gray-800">{{ $blog->excerpt }}</p>
-                            <time datetime="2023" class="text-blue-500 text-sm">Nov. 8, 2023</time>  
+                            <time datetime="2023" class="text-blue-500 text-sm">{{ $blog->created_at}}</time>  
                             
                         </div>
 
