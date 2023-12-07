@@ -175,7 +175,7 @@
 
                         <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize mb-12">I am passionate about crafting high-quality web applications and bringing ideas to life through code.</p>
 
-                        <div id="LabContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6">
+                        <div id="LabContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6 place-items-center">
 
                             @foreach($labs as $lab)
                                 @include('components.labs-content', ['lab' => $lab])
@@ -194,12 +194,12 @@
     <div class="flex justify-center" id="contact" >
         <div class="container max-w-7xl py-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
             <div class="w-full flex flex-col items-start px-2 md:px-0">
-                <form class="w-full md:ml-auto">
+                <form class="w-full md:mx-auto">
                     <h1 class="text-2xl font-bold text-blue-500 text-center">Get in touch 🤙</h1>
                     <h2 class="text-5xl font-bold mt-2 text-center">Let's Collaborate!</h2>
                     <p class="mt-4 text-sm text-gray-400 text-center">Have a Project in Mind or Just Want to Get in Touch?</p>
                     <div class="max-w-3xl mx-auto">
-                        <div class="w-full flex flex-wrap -mx-3">
+                        <div class="w-full flex flex-wrap">
                             <div class="mb-6 w-1/2 px-3">
                                 <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
                                 <input type="email" id="email" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
