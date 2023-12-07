@@ -28,16 +28,16 @@
                 <li class="text-center md:text-left py-3 md:py-1">
                     <a href="{{ route('home') }}" class="text-blue-100 hover:text-blue-200">Home</a>
                 </li>
-                <li class="text-center md:text-left py-3 md:py-1"">
+                <li class="text-center md:text-left py-3 md:py-1">
                     <a href="#about" class="text-blue-100 hover:text-blue-200">About</a>
                 </li>
-                <li class="text-center md:text-left py-3 md:py-1"">
+                <li class="text-center md:text-left py-3 md:py-1">
                     <a href="#contact" class="text-blue-100 hover:text-blue-200">Contact</a>
                 </li>
-                <li class="text-center md:text-left py-3 md:py-1"">
+                <li class="text-center md:text-left py-3 md:py-1">
                     <a href="#latest-blog" class="text-blue-100 hover:text-blue-200">Blog</a>
                 </li>
-                <li class="text-center md:text-left py-3 md:py-1"">
+                <li class="text-center md:text-left py-3 md:py-1">
                     <a href="#labs" class="text-blue-100 hover:text-blue-200">Labs</a>
                 </li>
             </ul>
