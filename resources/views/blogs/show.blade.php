@@ -3,37 +3,24 @@
 @section('content')
 
 <div class="flex justify-center" id="showroom">
-    <div class="container max-w-7xl py-24 border-b">
+    <div class="container max-w-7xl pt-4 pb-24 border-b">
         <div class="flex flex-col">
             <div class="bg-slate-50 py-8">
                 <div class="container mx-auto px-4">
                     <h1 class="text-4xl font-bold text-gray-800 mb-2">{{$blog->title}}</h1>
-                    <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-normal text-sm text-blue-600 hover:bg-gray-100">Sherwin Rhey Condez</a>
-                    <time datetime="2023" class="text-gray-500 text-sm">Nov. 8, 2023</time>
+                    <a href="#" class="relative z-10 rounded-full bg-gray-50 py-1.5 font-normal text-sm text-blue-600 hover:underline"><i class="fa-solid fa-at fa-fw"></i> Sherwin Rhey Condez</a>
+                    <time datetime="2023" class="text-gray-500 text-sm"><i class="fa-regular fa-clock fa-fw"></i>{{ $blog->created_at->diffForHumans() }}</time>
                 </div>
             </div>
             <br>
-            <a href="#" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Posts ></a>
+            <a href="#" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Posts >></a>
 
-            
-            
-            <div class="bg-white py-8">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row">
-                    <div class="w-full md:w-3/4 px-4">
-                        @forelse($blogs as $blog)
-                        <div>
-                            <img src ="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-8 w-full aspect-[16/9]">
-                            <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
-                            <p class="text-gray-800">{{ $blog->excerpt }}</p>
-                            <time datetime="2023" class="text-blue-500 text-sm">{{ $blog->created_at}}</time>  
-                            
+            <div class="bg-white py-8 -mx-4">
+                <div class="container mx-auto flex flex-col md:flex-row">
+                    <div class="w-full md:w-3/4">
+                        <div class="w-full px-4">
+                            {!! $blog->content !!}
                         </div>
-
-                        @empty
-                            
-                            <div>No Blogs Found</div>
-
-                        @endforelse
                     </div>    
                     
                     <div class="w-full md:w-1/4 px-4">

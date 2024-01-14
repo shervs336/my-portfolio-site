@@ -17,7 +17,7 @@ class Blog extends Component
      */
     protected $listeners = [
         'deleteBlogListner'=>'deleteBlog',
-        'valueChanged' => 'runSomething'
+        'contentChanged' => 'setContent'
     ];
 
     /**
@@ -28,7 +28,7 @@ class Blog extends Component
         'content' => 'required',
     ];
     
-    public function runSomething($content)
+    public function setContent($content)
     {
         $this->content = $content;
     }

@@ -14,7 +14,7 @@
     </div>
 
     <script>
-        let value = "{{ $value }}"
+        let value = "{!! $content !!}"
 
         tinymce.init({
 
@@ -45,11 +45,12 @@
             forced_root_block: false,
             setup: function (editor) {
                 editor.on('init', function () {
-                    editor.setContent(value)
-                });
-                editor.on('change blur', function (e) {
+                    if(value) { editor.setContent(value) }
                     editor.save();
-                    @this.emitUp('valueChanged', editor.getContent());
+                });
+                editor.on('change blur ', function (e) {
+                    @this.set('content', editor.getContent());
+                    @this.emitUp('contentChanged', editor.getContent());
                 });
             }
         });

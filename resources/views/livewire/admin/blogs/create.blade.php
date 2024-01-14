@@ -17,7 +17,7 @@
             </div>
             <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="content">Content:</label>
-                <livewire:tiny-mce wire:model="content"/>
+                <livewire:tiny-mce :content="$content"/>
                 @error('content')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror

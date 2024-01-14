@@ -7,14 +7,7 @@ use Livewire\Component;
 class TinyMce extends Component
 {
    
-    public $value;
-    
-    protected $listeners = ['valueChanged' => 'runSomething'];
-    
-    public function runSomething()
-    {
-        dd('test');
-    }
+    public $content;
 
     public function render()
     {
