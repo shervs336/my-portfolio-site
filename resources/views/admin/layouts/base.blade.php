@@ -20,7 +20,7 @@
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
        
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.tiny.cloud/1/yac5bqkf41lhr0ypm5i13iwf9ng228nt0r96igdfd9wmvy9m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
