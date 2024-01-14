@@ -6,7 +6,7 @@
     <p class="text-base text-neutral-600 dark:text-neutral-200">{{$lab->excerpt}}</p></div>
 
   <div class="p-6">
-    <a type="button" href="#" class=" text-blue-500 hover:text-blue-900 pointer-events-auto mr-5 inline-block cursor-pointer rounded text-base font-normal leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
+    <a type="button" href="#" class="text-right text-blue-500 hover:text-blue-900 pointer-events-auto mr-5 inline-block cursor-pointer rounded text-base font-normal leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
       See more
     </a>
   
