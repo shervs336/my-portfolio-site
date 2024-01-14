@@ -153,7 +153,6 @@ class Blog extends Component
             $this->resetFields();
             $this->updateBlog = false;
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             session()->flash('success','Something goes wrong!!');
         }
     }
