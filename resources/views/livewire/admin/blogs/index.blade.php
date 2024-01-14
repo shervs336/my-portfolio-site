@@ -46,8 +46,8 @@
                                             {{$blog->excerpt}}
                                         </td>
                                         <td class="text-center p-3">
-                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" wire:click="editBlog({{$blog->id}})" class="btn btn-primary btn-sm">Edit</button>
-                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" wire:click="deleteBlog({{$blog->id}})" class="btn btn-danger btn-sm">Delete</button>
+                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded mb-1" wire:click="editBlog({{$blog->id}})" class="btn btn-primary btn-sm">Edit</button>
+                                            <button class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded mb-1" wire:click="deleteBlog({{$blog->id}})" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
