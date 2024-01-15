@@ -5,6 +5,12 @@
             <a href="#home" class="text-2xl font-bold text-white">	&lt;/SRC&gt;</a>
 
             <div class="mt-3 flex space-x-2 justify-center md:justify-start">
+                <a href="https://www.upwork.com/freelancers/sherwinrheycondez" class="w-10 h-10 border hover:bg-lime-500 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                    <i class="fa-brands fa-upwork"></i>
+                </a>
+                <a href="https://github.com/shervs336" class="w-10 h-10 border hover:bg-gray-950  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                    </i><i class="fa-brands fa-github"></i>
+                </a>
                 <a href="https://www.facebook.com/sherwinrheycondez" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
                     <i class="fa-brands fa-facebook"></i>
                 </a>

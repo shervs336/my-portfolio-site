@@ -38,6 +38,12 @@
                         <h1 class="text-3xl font-medium">Connect with me</h1>
                         <p class="mt-4 text-gray-400 text-justify">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
                         <div class="mt-5 flex space-x-4">
+                            <a href="https://www.upwork.com/freelancers/sherwinrheycondez" class="w-12 h-12 border hover:bg-lime-500 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fa-brands fa-upwork"></i>
+                            </a>
+                            <a href="https://github.com/shervs336" class="w-12 h-12 border hover:bg-gray-900  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                                </i><i class="fa-brands fa-github"></i>
+                            </a>
                             <a href="https://www.facebook.com/sherwinrheycondez" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
