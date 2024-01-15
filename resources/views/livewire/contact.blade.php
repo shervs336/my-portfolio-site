@@ -21,23 +21,23 @@
                                     <p class="mt-4 text-sm text-gray-400 text-center"><i class="fa-solid fa-circle-exclamation fa-fw text-red-500"></i> {{ $errorMessage }}</p>
                                 </div>
                             @endif
-                            <div class="mb-6 w-1/2 px-3">
+                            <div class="mb-6 w-full md:w-1/2 px-3">
                                 <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
-                                <input wire:model="email" type="email" id="email" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
+                                <input wire:model="email" type="email" id="email" class="pr-4 peer block min-h-[auto] w-full  rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
                             </div>
-                            <div class="mb-6 w-1/2 px-3">
+                            <div class="mb-6 w-full md:w-1/2 px-3">
                                 <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Company Name (Optional)</label>
-                                <input wire:model="company" type="text" id="company" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
+                                <input wire:model="company" type="text" id="company" class="pr-4 peer block min-h-[auto] w-full  rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
                             </div>
-                            <div class="mb-6 w-1/2 px-3">
+                            <div class="mb-6 w-full md:w-1/2 px-3">
                                 <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Name</label>
                                 <input wire:model="name" type="text" id="name" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
                             </div>
-                            <div class="mb-6 w-1/2 px-3">
+                            <div class="mb-6 w-full md:w-1/2 px-3">
                                 <label for="phone" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Phone (Optional)</label>
                                 <input wire:model="phone" type="text" id="phone" class="peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" required>
                             </div>
-                            <div class="mb-6 w-full px-3">
+                            <div class="mb-6 w-full md:w-1/2 px-3">
                                 <label for="message" class="block py-2 text-sm font-bold text-gray-900 dark:text-gray-900">Your message</label>
                                 <textarea wire:model="message" id="message" rows="6" class="peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Type your message here..."></textarea>
                             </div>
