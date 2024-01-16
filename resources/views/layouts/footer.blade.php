@@ -1,56 +1,58 @@
 <!--Footer--> 
 <footer class="bg-blue-950 brightness-95">
-    <div class="container border-b max-w-7xl mx-auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4  md:flex-row justify-between">
-        <div class="md:w-1/4 py-16 px-2 text-center md:text-left">
-            <a href="#home" class="text-2xl font-bold text-white">	&lt;/SRC&gt;</a>
+    <div class="container border-b max-w-7xl mx-auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4 lg:flex-row justify-between">
+        <div class="lg:w-1/2 md:flex">
+            <div class="md:w-1/2 py-16 px-2 text-center lg:text-left">
+                <a href="#home" class="text-2xl font-bold text-white">	&lt;/SRC&gt;</a>
 
-            <div class="mt-3 flex space-x-2 justify-center md:justify-start">
-                <a href="https://www.upwork.com/freelancers/sherwinrheycondez" class="w-10 h-10 border hover:bg-lime-600 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    <i class="fa-brands fa-upwork"></i>
-                </a>
-                <a href="https://github.com/shervs336" class="w-10 h-10 border hover:bg-gray-950  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    </i><i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.facebook.com/sherwinrheycondez" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com/SherwinRhey" class="w-10 h-10 border hover:bg-black text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="#" class="w-10 h-10 border hover:bg-red-500  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div> 
+                <div class="mt-3 flex space-x-2 justify-center lg:justify-start">
+                    <a href="https://www.upwork.com/freelancers/sherwinrheycondez" class="w-10 h-10 border hover:bg-lime-600 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-upwork"></i>
+                    </a>
+                    <a href="https://github.com/shervs336" class="w-10 h-10 border hover:bg-gray-950  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        </i><i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sherwinrheycondez" class="w-10 h-10 border hover:bg-blue-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/SherwinRhey" class="w-10 h-10 border hover:bg-black text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-10 h-10 border hover:bg-sky-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border hover:bg-red-500  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div> 
+            </div>
+                
+                
+            <div class="ml-0 md:w-1/2 py-0 space-y-4 md:py-16 px-2">
+                <h6 class="mb-2.5 font-semibold text-white text-2xl text-center">Links</h6>
+
+                <ul class="mb-0 list-none grid grid-cols-2 lg:grid-cols-2">
+                    <li class="text-center py-3 md:py-1">
+                        <a href="{{ route('home') }}" class="text-blue-100 hover:text-blue-200">Home</a>
+                    </li>
+                    <li class="text-center py-3 md:py-1">
+                        <a href="#about" class="text-blue-100 hover:text-blue-200">About</a>
+                    </li>
+                    <li class="text-center py-3 md:py-1">
+                        <a href="#contact" class="text-blue-100 hover:text-blue-200">Contact</a>
+                    </li>
+                    <li class="text-center py-3 md:py-1">
+                        <a href="#latest-blog" class="text-blue-100 hover:text-blue-200">Blog</a>
+                    </li>
+                    <li class="text-center py-3 md:py-1">
+                        <a href="#labs" class="text-blue-100 hover:text-blue-200">Labs</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-            
-            
-        <div class="ml-0 md:w-1/4 py-0 space-y-4 md:py-16 px-2">
-            <h6 class="mb-2.5 font-semibold text-white text-2xl text-center md:text-left">Links</h6>
-
-            <ul class="mb-0 list-none grid grid-cols-2 md:grid-cols-1">
-                <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="{{ route('home') }}" class="text-blue-100 hover:text-blue-200">Home</a>
-                </li>
-                <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="#about" class="text-blue-100 hover:text-blue-200">About</a>
-                </li>
-                <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="#contact" class="text-blue-100 hover:text-blue-200">Contact</a>
-                </li>
-                <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="#latest-blog" class="text-blue-100 hover:text-blue-200">Blog</a>
-                </li>
-                <li class="text-center md:text-left py-3 md:py-1">
-                    <a href="#labs" class="text-blue-100 hover:text-blue-200">Labs</a>
-                </li>
-            </ul>
-        </div>
-
+        
         <!--Sign-up form-->
-        <div class="ml-0 md:w-1/2 py-16 md:py-16 px-2">
+        <div class="ml-0 lg:w-1/2 py-16 md:py-16 px-2">
             <form action="" class="justify-left md:justify-right space-y-4 gap-4 md:gap-2">
                 <div class="">
                     <div class="w-full ml-0 xl:ml-auto">
