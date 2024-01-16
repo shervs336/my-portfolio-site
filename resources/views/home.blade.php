@@ -34,28 +34,55 @@
                     </div>
                 </div>
                 <div class="w-full flex flex-col items-start">
-                    <div class="flex-1">
-                        <h1 class="text-3xl font-medium">Connect with me</h1>
-                        <p class="mt-4 text-gray-400 text-justify">Feel free to connect with me to discuss exciting opportunities, collaborate on projects, or simply have a chat about the ever-evolving world of technology. I'm always open to new connections and eager to engage with fellow enthusiasts. Let's connect and explore the endless possibilities together!</p>
+                    <div class="flex-1">                       
                         <div class="mt-5 flex space-x-4">
-                            <a href="https://www.upwork.com/freelancers/sherwinrheycondez" class="w-12 h-12 border hover:bg-lime-600 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-upwork"></i>
-                            </a>
-                            <a href="https://github.com/shervs336" class="w-12 h-12 border hover:bg-gray-900  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="https://www.facebook.com/sherwinrheycondez" class="w-12 h-12 border text-gray-300 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com/SherwinRhey" class="w-12 h-12 border text-gray-300 hover:bg-black hover:text-white rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/sherwinrheycondez/" class="w-12 h-12 border text-gray-300 hover:bg-sky-600 hover:text-white rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
+                            <span class="inline-gridgrid-cols-5 gap-3">
+                                <span class="w-12 h-12 border hover:bg-orange-600 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-html5"></i>
+                                </span>
+                                <span class="w-12 h-12 border hover:bg-blue-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-css3"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-indigo-400 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-php"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-laravel"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-yellow-400 hover:text-white rounded-full flex items-center justify-center">
+                                    </i><i class="fa-brands fa-js"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-emerald-400 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-vuejs"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-react"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-700 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-wordpress"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-cyan-950 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-python"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-violet-600 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-bootstrap"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-lime-500 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-node"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-pink-400 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-sass"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-git"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-300 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-golang"></i>
+                                </span>
+                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
+                                    <i class="fa-brands fa-npm"></i>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
