@@ -45,6 +45,9 @@
                         <div class="w-full">
                             <a href="{{ route('admin.labs') }}" class="block text-sm font-light text-gray-500 hover:bg-blue-100 py-2 w-full px-2 py-2 rounded"><i class="fa-solid fa-flask mr-2"></i> Labs</a>
                         </div>
+                        <div class="w-full">
+                            <a href="{{ route('admin.categories') }}" class="block text-sm font-light text-gray-500 hover:bg-blue-100 py-2 w-full px-2 py-2 rounded"><i class="fa-solid fa-flask mr-2"></i> Categories</a>
+                        </div>
                         <!-- You can add more links as needed -->
 
 
