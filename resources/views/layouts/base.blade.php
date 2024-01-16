@@ -31,7 +31,7 @@
 
     <body>
     
-        <div class="md:container md:mx-auto px-8 md:px-0">
+        <div class="md:container md:mx-auto px-8 lg:px-0">
 
             @includeWhen(!request()->routeIs('login'), 'layouts.header')
 
