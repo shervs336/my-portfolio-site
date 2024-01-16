@@ -36,51 +36,51 @@
                 <div class="w-full flex flex-col items-start">
                     <div class="flex-1">                       
                         <div class="mt-5 flex space-x-4">
-                            <span class="inline-gridgrid-cols-5 gap-3">
-                                <span class="w-12 h-12 border hover:bg-orange-600 text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-html5"></i>
+                            <span class="inline-grid grid-cols-5 gap-3">
+                                <span class="w-24 h-24 hover:bg-orange-600 text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
+                                    <i class="fa-brands fa-html5 text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border hover:bg-blue-600  text-gray-300 hover:text-blue-100 rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-css3"></i>
+                                <span class="w-24 h-24 hover:bg-blue-600  text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
+                                    <i class="fa-brands fa-css3 text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-indigo-400 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-php"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-indigo-400 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-php text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-laravel"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-laravel text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-yellow-400 hover:text-white rounded-full flex items-center justify-center">
-                                    </i><i class="fa-brands fa-js"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-yellow-400 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-js text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-emerald-400 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-vuejs"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-emerald-400 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-vuejs text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-400 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-react"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-sky-400 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-react text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-700 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-wordpress"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-sky-700 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-wordpress text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-cyan-950 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-python"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-cyan-950 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-python text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-violet-600 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-bootstrap"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-violet-600 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-bootstrap text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-lime-500 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-node"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-lime-500 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-node text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-pink-400 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-sass"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-pink-400 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-sass text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-git"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-git text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-sky-300 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-golang"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-sky-300 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-golang text-6xl"></i>
                                 </span>
-                                <span class="w-12 h-12 border text-gray-300 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center">
-                                    <i class="fa-brands fa-npm"></i>
+                                <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                                    <i class="fa-brands fa-npm text-6xl"></i>
                                 </span>
                             </span>
                         </div>
