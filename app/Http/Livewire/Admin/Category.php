@@ -10,7 +10,7 @@ class Category extends Component
 {
     use WithFileUploads;
 
-    public $categories, $categoryId, $parent_id, $name, $updateCategpry = false, $addCategory = false;
+    public $categories, $categoryId, $parent_id, $name, $parentOptions = [], $updateCategory = false, $addCategory = false;
 
     /**
      * delete action listener
@@ -23,7 +23,7 @@ class Category extends Component
      * List of add/edit form rules
      */
     protected $rules = [
-        'title' => 'required',
+        'name' => 'required',
         
     ];
 
@@ -33,6 +33,7 @@ class Category extends Component
      */
     public function resetFields(){
         $this->name = '';
+        $this->parent_id = '';
     }
 
     /**
@@ -51,6 +52,7 @@ class Category extends Component
      */
     public function addCategory()
     {
+        $this->parentOptions = Categories::select('id', 'parent_id', 'name')->get();
         $this->resetFields();
         $this->addCategory = true;
         $this->updateCategory = false;
@@ -64,15 +66,12 @@ class Category extends Component
     {
         $this->validate();
         try {
-            $path = '';
-            if($this->name) {
-                $path = $this->name->store('categories', 'public');
-            }
-
-            Categories::create([
+           
+            $category = Categories::create([
                 'name' => $this->name,
-               
-            ]);
+                'parent_id' => $this->parent_id
+            ]);    
+           
             session()->flash('success','Categories Created Successfully!!');
             $this->resetFields();
             $this->addCategory = false;
@@ -89,8 +88,9 @@ class Category extends Component
     public function editCategory($id){
         try {
             $category = Categories::findOrFail($id);
+            $this->parentOptions = Categories::where('id', '<>', $id)->select('id', 'parent_id', 'name')->get();
             if( !$category) {
-                session()->flash('error','Post not found');
+                session()->flash('error','Category not found');
             } else {
                 $this->categoryId = $category->id;
                 $this->parent_id = $category->parent_id;
@@ -113,11 +113,10 @@ class Category extends Component
         $this->validate();
         try {
 
-            $lab=Labs::whereId($this->categoryId)->update([
+            $category = Categories::whereId($this->categoryId)->update([
                 'parent_id' => $this->parent_id,
                 'name' => $this->name,
             ]);
-            dd($this->categoryId);
             session()->flash('success','Category Updated Successfully!!');
             $this->resetFields();
             $this->updateCategory = false;
@@ -146,7 +145,7 @@ class Category extends Component
     public function deleteCategory($id)
     {
         try{
-            Labs::find($id)->delete();
+            Categories::find($id)->delete();
             session()->flash('success',"Category Deleted Successfully!!");
         }catch(\Exception $e){
             session()->flash('error',"Something goes wrong!!");
