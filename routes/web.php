@@ -48,6 +48,7 @@ Route::group(['prefix' => 'admin'], function() {
             Route::get('works', 'WorksController')->name('works');
             Route::get('blogs', 'BlogsController')->name('blogs');
             Route::get('labs', 'LabsController')->name('labs');
+            Route::get('categories', 'CategoriesController')->name('categories');
         });
 
         Route::post('logout', LogoutController::class)->name('logout');
