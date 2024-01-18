@@ -13,36 +13,29 @@
                 </div>
             </div>
 
-        
-            <!-- Featured Image -->
-            <div class="w-full px-4 mb-6">
-                <img src="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="w-full h-auto" style="max-width: 600px; height: auto;">
-            </div>
-
-
-
-
-
             <br>
             <a href="#" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Posts >></a>
 
+            <!--Blog content-->
+           
             <div class="bg-white py-8 -mx-4">
                 <div class="container mx-auto flex flex-col md:flex-row">
                     <div class="w-full md:w-3/4">
-                        <div class="w-full px-4">
-                            {!! $blog->content !!}
+                        <div class="w-full px-4 mb-6">
+                            <img src="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-8 w-full aspect-[16/9]">
+                            <div class="w-full px-4">{!! $blog->content !!}</div>                    
                         </div>
                     </div>    
                     
                     <div class="w-full md:w-1/4 px-4">
                         <div class="bg-gray-100 p-4">       
-                        <img src="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-6">
-                        <p class="text-gray-500 text-xs">{{ $blog->created_at}}</p>
-                        <h5 class="text-base font-bold text-gray-800 mb-4">{{ $blog->title}}</h5>
+                            <img src="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-6">
+                            <p class="text-gray-500 text-xs">{{ $blog->created_at}}</p>
+                            <h5 class="text-base font-bold text-gray-800 mb-4">{{ $blog->title}}</h5>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>        
         </div>
     </div>
 </div>
