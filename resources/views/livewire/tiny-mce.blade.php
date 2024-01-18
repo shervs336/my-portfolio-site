@@ -14,7 +14,7 @@
     </div>
 
     <script>
-        let value = "{!! $content !!}"
+        let value = `{!! $content !!}`
 
         tinymce.init({
 
