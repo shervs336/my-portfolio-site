@@ -1,5 +1,21 @@
 @extends('layouts.app')
 
+@section('title', $blog->title)
+
+@section('custom_styles')
+    <style>
+        #blog-content p, #blog-content ul, #blog-content ol {
+            margin-bottom: 1rem
+        }
+        #blog-content p {
+            text-align: justify;
+        }
+        #blog-content ul > li, #blog-content ol > li {
+            margin-left: 1rem
+        }
+    </style>
+@endsection
+
 @section('content')
 
 <div class="flex justify-center" id="showroom">
@@ -25,7 +41,7 @@
                             @empty($blog->image_path())
                             <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-8 w-full">
                             @endempty
-                            <div class="w-full">{!! $blog->content !!}</div>                    
+                            <div class="w-full" id="blog-content">{!! $blog->content !!}</div>                    
                         </div>
                     </div>    
                     

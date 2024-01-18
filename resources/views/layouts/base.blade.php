@@ -8,7 +8,6 @@
         <meta name="robots" content="index,follow"/>
 
         @hasSection('title')
-
             <title>@yield('title') - {{ config('app.name') }}</title>
         @else
             <title>{{ config('app.name') }}</title>
@@ -24,6 +23,10 @@
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
+
+        @yield('custom_styles')
+
+        @yield('meta_data')
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
