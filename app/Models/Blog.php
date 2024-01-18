@@ -16,6 +16,6 @@ class Blog extends Model
 
     public function image_path() 
     {
-        return Storage::url($this->main_image);
+        return $this->main_image ? Storage::url($this->main_image) : '';
     }
 }
