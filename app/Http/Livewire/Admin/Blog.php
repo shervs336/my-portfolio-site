@@ -10,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public $blogs, $blogId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $published, $updateBlog = false, $addBlog = false;
+    public $blogs, $blogId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $published = 1, $updateBlog = false, $addBlog = false;
 
     /**
      * delete action listener
@@ -46,7 +46,7 @@ class Blog extends Component
         $this->alt_image = '';
         $this->meta_title = '';
         $this->meta_description = '';
-        $this->published = '';
+        $this->published = 1;
     }
 
     /**
