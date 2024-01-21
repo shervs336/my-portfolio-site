@@ -182,7 +182,7 @@
 
                         <p class="mt-4 font-semibold text-gray-800 text-center max-w-1/2 capitalize mb-12">Learn about my day-to-day adventures as I tackle new problems and solutions along the way.</p>
 
-                        <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6 place-items-center">
+                        <div id="BlogContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-3 lg:gap-x-6 justify-items-center">
 
                             @foreach($blogs as $blog)
                                 @include('components.blogs-content', ['blog' => $blog])
