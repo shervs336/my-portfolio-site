@@ -1,7 +1,7 @@
     <nav class="bg-white" x-data="{ open: false }">
         <div class="container max-w-7xl mx-auto py-4">
             <div class="flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
+            <a href="{{ route('home') }}" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
 
             <div class="hidden md:flex md:items-center space-x-4">
                 <a href="{{ route('home') }}" class=" hover:text-blue-500">Home</a>

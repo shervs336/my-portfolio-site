@@ -46,13 +46,15 @@
                     </div>    
                     
                     <div class="w-full md:w-1/4 px-4">
-                        <div class="bg-gray-100 p-4">
-                            @if($blog->image_path())       
-                            <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-6">
-                            @endif
-                            <p class="text-gray-500 text-xs">{{ $blog->created_at}}</p>
-                            <h5 class="text-base font-bold text-gray-800 mb-4">{{ $blog->title}}</h5>
-                        </div>
+                        @foreach ($otherBlogs as $blog)
+                            <div class="bg-gray-100 p-4 mb-4">
+                                @if($blog->image_path())       
+                                <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-6">
+                                @endif
+                                <p class="text-gray-500 text-xs">{{ $blog->created_at}}</p>
+                                <h5 class="text-base font-bold text-gray-800 mb-4">{{ $blog->title}}</h5>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>        
