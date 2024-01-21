@@ -92,7 +92,7 @@ class Blog extends Component
                 'alt_image' => $this->alt_image,
                 'meta_title' => $this->meta_title,
                 'meta_description' => $this->meta_description,
-                'published' => $this->published,
+                'published' => 1,
             ]);
             session()->flash('success','Blog Created Successfully!!');
             $this->resetFields();
