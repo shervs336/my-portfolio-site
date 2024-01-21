@@ -10,8 +10,6 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['published'];
-
     protected $guarded = [];
 
     public function image_path() 
