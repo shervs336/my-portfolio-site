@@ -35,50 +35,50 @@
                 </div>
                 <div class="w-full flex flex-col items-start">         
                     <div class="inline-grid grid-cols-5 gap-3 flex-1 lg:self-end self-center">
-                        <span class="w-24 h-24 hover:bg-orange-600 text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
-                            <i class="fa-brands fa-html5 text-6xl"></i>
+                        <span x-data="{ tooltip: 'HTML5' }" class="w-24 h-24 hover:bg-orange-600 text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-html5 text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 hover:bg-blue-600  text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
-                            <i class="fa-brands fa-css3 text-6xl"></i>
+                        <span x-data="{ tooltip: 'CSS3' }" class="w-24 h-24 hover:bg-blue-600  text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-css3 text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-indigo-400 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-php text-6xl"></i>
+                        <span x-data="{ tooltip: 'PHP' }" class="w-24 h-24 text-gray-300 hover:bg-indigo-400 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-php text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-laravel text-6xl"></i>
+                        <span x-data="{ tooltip: 'Laravel' }" class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-laravel text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-yellow-400 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-js text-6xl"></i>
+                        <span x-data="{ tooltip: 'Javascript' }" class="w-24 h-24 text-gray-300 hover:bg-yellow-400 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-js text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-emerald-400 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-vuejs text-6xl"></i>
+                        <span x-data="{ tooltip: 'VueJS' }" class="w-24 h-24 text-gray-300 hover:bg-emerald-400 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-vuejs text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-sky-400 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-react text-6xl"></i>
+                        <span x-data="{ tooltip: 'ReactJS' }" class="w-24 h-24 text-gray-300 hover:bg-sky-400 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-react text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-sky-700 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-wordpress text-6xl"></i>
+                        <span x-data="{ tooltip: 'WordPress' }" class="w-24 h-24 text-gray-300 hover:bg-sky-700 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-wordpress text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-cyan-950 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-python text-6xl"></i>
+                        <span x-data="{ tooltip: 'Python' }" class="w-24 h-24 text-gray-300 hover:bg-cyan-950 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-python text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-violet-600 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-bootstrap text-6xl"></i>
+                        <span x-data="{ tooltip: 'Bootstrap' }" class="w-24 h-24 text-gray-300 hover:bg-violet-600 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-bootstrap text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-lime-500 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-node text-6xl"></i>
+                        <span x-data="{ tooltip: 'NodeJS' }" class="w-24 h-24 text-gray-300 hover:bg-lime-500 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-node text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-pink-400 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-sass text-6xl"></i>
+                        <span x-data="{ tooltip: 'SASS' }" class="w-24 h-24 text-gray-300 hover:bg-pink-400 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-sass text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-git text-6xl"></i>
+                        <span x-data="{ tooltip: 'Git' }" class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-git text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-sky-300 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-golang text-6xl"></i>
+                        <span x-data="{ tooltip: 'GoLang' }" class="w-24 h-24 text-gray-300 hover:bg-sky-300 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-golang text-6xl"></i>
                         </span>
-                        <span class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
-                            <i class="fa-brands fa-npm text-6xl"></i>
+                        <span x-data="{ tooltip: 'Node Package Manager' }" class="w-24 h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center">
+                            <i x-tooltip="tooltip" class="fa-brands fa-npm text-6xl"></i>
                         </span>
                     </div>
                 </div>

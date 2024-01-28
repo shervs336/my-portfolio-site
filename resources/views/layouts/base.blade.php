@@ -20,6 +20,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
