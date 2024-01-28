@@ -82,7 +82,7 @@ class Blog extends Component
      */
     public function render()
     {
-        $this->blogs = Blogs::select('id', 'title', 'excerpt', 'content', 'slug', 'main_image', 'alt_image', 'meta_title', 'meta_description')->get();
+        $this->blogs = Blogs::select('id', 'title', 'excerpt', 'content', 'slug', 'main_image', 'alt_image', 'meta_title', 'meta_description', 'published')->get();
 
         return view('livewire.admin.blogs.index');
     }

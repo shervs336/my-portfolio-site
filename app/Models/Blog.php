@@ -24,7 +24,7 @@ class Blog extends Model
     /*
     * Insert custom scopes here
     */
-    public function scopePublished(Builder $query): void
+    public function scopeIsPublished(Builder $query): void
     {
         $query->where('published', 1);
     }

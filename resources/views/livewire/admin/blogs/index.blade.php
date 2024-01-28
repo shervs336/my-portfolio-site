@@ -32,6 +32,7 @@
                             <tr>
                                 <th class="text-left p-3">Title</th>
                                 <th class="text-left p-3">Excerpt</th>
+                                <th class="text-left p-3">Published</th>
                                 <th class="p-3">Actions</th>
                             </tr>
                         </thead>
@@ -45,7 +46,10 @@
                                         <td class="p-3">
                                             {{$blog->excerpt}}
                                         </td>
-                                        <td class="text-center p-3">
+                                        <td class="p-3">
+                                            <span class="px-6 py-2 rounded-full {{$blog->published ? 'bg-green-700' : 'bg-red-700'}} text-white">{{$blog->published ? "Yes" : "No"}}</span>
+                                        </td>
+                                        <td class="text-center p-3 w-48">
                                             <button class="shadow uppercase text-xs tracking-wide text-white bg-gray-500 hover:bg-bray-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded mb-1" wire:click="editBlog({{$blog->id}})" class="btn btn-primary btn-sm">Edit</button>
                                             <button class="shadow uppercase text-xs tracking-wide text-white bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded mb-1" wire:click="deleteBlog({{$blog->id}})" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
