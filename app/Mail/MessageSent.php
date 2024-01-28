@@ -4,7 +4,6 @@ namespace App\Mail;
 
 use App\Http\Livewire\ContactForm;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -19,7 +18,8 @@ class MessageSent extends Mailable
      */
     public function __construct(
         public ContactForm $contact)
-    {}
+    {
+    }
 
     /**
      * Get the message envelope.

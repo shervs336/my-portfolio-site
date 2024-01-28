@@ -2,20 +2,33 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Mail\MessageSent;
 use Illuminate\Support\Facades\Mail;
+use Livewire\Component;
 
 class ContactForm extends Component
 {
-    public $email, $company, $message, $name, $phone, $messageSent = false, $errorMessage = '';
+    public $email;
+
+    public $company;
+
+    public $message;
+
+    public $name;
+
+    public $phone;
+
+    public $messageSent = false;
+
+    public $errorMessage = '';
 
     public function render()
     {
         return view('livewire.contact');
     }
 
-    public function resetFields(){
+    public function resetFields()
+    {
         $this->email = '';
         $this->company = '';
         $this->message = '';
@@ -34,7 +47,7 @@ class ContactForm extends Component
             $this->messageSent = false;
             $this->errorMessage = $e->getMessage();
         }
-       
+
     }
 
     public function sendNewMessage()

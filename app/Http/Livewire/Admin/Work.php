@@ -2,21 +2,39 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Work as Works;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Work as Works;
 
 class Work extends Component
 {
     use WithFileUploads;
 
-    public $works, $title, $caption, $workId, $overlayColor, $backgroundImagePath, $logoImagePath, $websiteLink, $updateWork = false, $addWork = false;
+    public $works;
+
+    public $title;
+
+    public $caption;
+
+    public $workId;
+
+    public $overlayColor;
+
+    public $backgroundImagePath;
+
+    public $logoImagePath;
+
+    public $websiteLink;
+
+    public $updateWork = false;
+
+    public $addWork = false;
 
     /**
      * delete action listener
      */
     protected $listeners = [
-        'deleteWorkListner'=>'deleteWork'
+        'deleteWorkListner' => 'deleteWork',
     ];
 
     /**
@@ -29,9 +47,11 @@ class Work extends Component
 
     /**
      * Reseting all inputted fields
+     *
      * @return void
      */
-    public function resetFields(){
+    public function resetFields()
+    {
         $this->title = '';
         $this->caption = '';
         $this->overlayColor = 'blue-500';
@@ -41,16 +61,19 @@ class Work extends Component
 
     /**
      * render the post data
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function render()
     {
         $this->works = Works::select('id', 'title', 'caption', 'website_link')->get();
+
         return view('livewire.admin.works.index');
     }
 
     /**
      * Open Add Work form
+     *
      * @return void
      */
     public function addWork()
@@ -60,16 +83,17 @@ class Work extends Component
         $this->updateWork = false;
     }
 
-         /**
-      * store the user inputted work data in the works table
-      * @return void
-      */
+    /**
+     * store the user inputted work data in the works table
+     *
+     * @return void
+     */
     public function storeWork()
     {
         $this->validate();
         try {
             $path = '';
-            if($this->backgroundImagePath) {
+            if ($this->backgroundImagePath) {
                 $path = $this->backgroundImagePath->store('works', 'public');
             }
 
@@ -77,27 +101,29 @@ class Work extends Component
                 'title' => $this->title,
                 'caption' => $this->caption,
                 'overlay_color' => $this->overlayColor,
-                'background_image_path' => $path ? $path : NULL,
+                'background_image_path' => $path ? $path : null,
                 'website_link' => $this->websiteLink,
             ]);
-            session()->flash('success','Work Created Successfully!!');
+            session()->flash('success', 'Work Created Successfully!!');
             $this->resetFields();
             $this->addWork = false;
         } catch (\Exception $ex) {
-            session()->flash('error',$ex->getMessage());
+            session()->flash('error', $ex->getMessage());
         }
     }
- 
-        /**
+
+    /**
      * show existing work data in edit work form
-     * @param mixed $id
+     *
+     * @param  mixed  $id
      * @return void
      */
-    public function editWork($id){
+    public function editWork($id)
+    {
         try {
             $work = Works::findOrFail($id);
-            if( !$work) {
-                session()->flash('error','Post not found');
+            if (! $work) {
+                session()->flash('error', 'Post not found');
             } else {
                 $this->title = $work->title;
                 $this->caption = $work->caption;
@@ -109,13 +135,14 @@ class Work extends Component
                 $this->addWork = false;
             }
         } catch (\Exception $ex) {
-            session()->flash('error','Something goes wrong!!');
+            session()->flash('error', 'Something goes wrong!!');
         }
- 
+
     }
 
-        /**
+    /**
      * update the work data
+     *
      * @return void
      */
     public function updateWork()
@@ -129,16 +156,17 @@ class Work extends Component
                 'background_image_path' => $this->backgroundImagePath,
                 'website_link' => $this->websiteLink,
             ]);
-            session()->flash('success','Work Updated Successfully!!');
+            session()->flash('success', 'Work Updated Successfully!!');
             $this->resetFields();
             $this->updateWork = false;
         } catch (\Exception $ex) {
-            session()->flash('success','Something goes wrong!!');
+            session()->flash('success', 'Something goes wrong!!');
         }
     }
 
-        /**
+    /**
      * Cancel Add/Edit form and redirect to post listing page
+     *
      * @return void
      */
     public function cancelWork()
@@ -147,19 +175,20 @@ class Work extends Component
         $this->updateWork = false;
         $this->resetFields();
     }
- 
+
     /**
      * delete specific post data from the posts table
-     * @param mixed $id
+     *
+     * @param  mixed  $id
      * @return void
      */
     public function deleteWork($id)
     {
-        try{
+        try {
             Works::find($id)->delete();
-            session()->flash('success',"Work Deleted Successfully!!");
-        }catch(\Exception $e){
-            session()->flash('error',"Something goes wrong!!");
+            session()->flash('success', 'Work Deleted Successfully!!');
+        } catch (\Exception $e) {
+            session()->flash('error', 'Something goes wrong!!');
         }
     }
 }

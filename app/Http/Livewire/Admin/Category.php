@@ -2,21 +2,33 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Category as Categories;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Category as Categories;
 
 class Category extends Component
 {
     use WithFileUploads;
 
-    public $categories, $categoryId, $parent_id, $name, $parentOptions = [], $updateCategory = false, $addCategory = false;
+    public $categories;
+
+    public $categoryId;
+
+    public $parent_id;
+
+    public $name;
+
+    public $parentOptions = [];
+
+    public $updateCategory = false;
+
+    public $addCategory = false;
 
     /**
      * delete action listener
      */
     protected $listeners = [
-        'deleteCategoryListner'=>'deleteCategory'
+        'deleteCategoryListner' => 'deleteCategory',
     ];
 
     /**
@@ -24,30 +36,35 @@ class Category extends Component
      */
     protected $rules = [
         'name' => 'required',
-        
+
     ];
 
     /**
      * Reseting all inputted fields
+     *
      * @return void
      */
-    public function resetFields(){
+    public function resetFields()
+    {
         $this->name = '';
         $this->parent_id = '';
     }
 
     /**
      * render the post data
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function render()
     {
         $this->categories = Categories::select('id', 'parent_id', 'name')->get();
+
         return view('livewire.admin.categories.index');
     }
 
     /**
      * Open Add Blog form
+     *
      * @return void
      */
     public function addCategory()
@@ -58,54 +75,58 @@ class Category extends Component
         $this->updateCategory = false;
     }
 
-         /**
-      * store the user inputted work data in the works table
-      * @return void
-      */
+    /**
+     * store the user inputted work data in the works table
+     *
+     * @return void
+     */
     public function storeCategory()
     {
         $this->validate();
         try {
-           
+
             $category = Categories::create([
                 'name' => $this->name,
-                'parent_id' => $this->parent_id
-            ]);    
-           
-            session()->flash('success','Categories Created Successfully!!');
+                'parent_id' => $this->parent_id,
+            ]);
+
+            session()->flash('success', 'Categories Created Successfully!!');
             $this->resetFields();
             $this->addCategory = false;
         } catch (\Exception $ex) {
-            session()->flash('error',$ex->getMessage());
+            session()->flash('error', $ex->getMessage());
         }
     }
- 
-        /**
+
+    /**
      * show existing work data in edit work form
-     * @param mixed $id
+     *
+     * @param  mixed  $id
      * @return void
      */
-    public function editCategory($id){
+    public function editCategory($id)
+    {
         try {
             $category = Categories::findOrFail($id);
             $this->parentOptions = Categories::where('id', '<>', $id)->select('id', 'parent_id', 'name')->get();
-            if( !$category) {
-                session()->flash('error','Category not found');
+            if (! $category) {
+                session()->flash('error', 'Category not found');
             } else {
                 $this->categoryId = $category->id;
                 $this->parent_id = $category->parent_id;
                 $this->name = $category->name;
                 $this->updateCategory = true;
-                $this->addCategory = false;              
+                $this->addCategory = false;
             }
         } catch (\Exception $ex) {
-            session()->flash('error','Something goes wrong!!');
+            session()->flash('error', 'Something goes wrong!!');
         }
- 
+
     }
 
-        /**
+    /**
      * update the work data
+     *
      * @return void
      */
     public function updateCategory()
@@ -117,17 +138,18 @@ class Category extends Component
                 'parent_id' => $this->parent_id,
                 'name' => $this->name,
             ]);
-            session()->flash('success','Category Updated Successfully!!');
+            session()->flash('success', 'Category Updated Successfully!!');
             $this->resetFields();
             $this->updateCategory = false;
         } catch (\Exception $ex) {
             dd($ex->getMessage());
-            session()->flash('success','Something goes wrong!!');
+            session()->flash('success', 'Something goes wrong!!');
         }
     }
 
-        /**
+    /**
      * Cancel Add/Edit form and redirect to post listing page
+     *
      * @return void
      */
     public function cancelCategory()
@@ -136,19 +158,20 @@ class Category extends Component
         $this->updateCategory = false;
         $this->resetFields();
     }
- 
+
     /**
      * delete specific post data from the posts table
-     * @param mixed $id
+     *
+     * @param  mixed  $id
      * @return void
      */
     public function deleteCategory($id)
     {
-        try{
+        try {
             Categories::find($id)->delete();
-            session()->flash('success',"Category Deleted Successfully!!");
-        }catch(\Exception $e){
-            session()->flash('error',"Something goes wrong!!");
+            session()->flash('success', 'Category Deleted Successfully!!');
+        } catch (\Exception $e) {
+            session()->flash('error', 'Something goes wrong!!');
         }
     }
 }
