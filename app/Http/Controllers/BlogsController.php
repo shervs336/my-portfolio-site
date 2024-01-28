@@ -9,7 +9,7 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        $blogs = \App\Models\Blog::is_published()->limit(10)->orderBy('id', 'desc')->get();
+        $blogs = \App\Models\Blog::isPublished()->limit(10)->orderBy('id', 'desc')->get();
 
         return view('blogs.index', compact('blogs'));
     }
@@ -19,9 +19,9 @@ class BlogsController extends Controller
      */
     public function show($slug)
     {
-        $blog = \App\Models\Blog::where('slug', $slug)->is_published()->first();
+        $blog = \App\Models\Blog::where('slug', $slug)->isPublished()->first();
 
-        $otherBlogs = \App\Models\Blog::whereNot('id', $blog->id)->is_published()->limit(5)->get();
+        $otherBlogs = \App\Models\Blog::whereNot('id', $blog->id)->isPublished()->limit(5)->get();
 
         return view('blogs.show', compact('blog', 'otherBlogs'));
     }
