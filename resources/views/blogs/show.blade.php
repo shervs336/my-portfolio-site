@@ -30,7 +30,7 @@
             </div>
 
             <br>
-            <a href="#" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Posts >></a>
+            <a href="{{ route('blog.index') }}" class="text-blue-700 hover:text-indigo-600 text-right mr-6 pt-6">View all Posts >></a>
 
             <!--Blog content-->
            

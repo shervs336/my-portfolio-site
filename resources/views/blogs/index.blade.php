@@ -7,8 +7,8 @@
         <div class="flex flex-col">
             <div class="bg-slate-50 py-8">
                 <div class="container mx-auto px-4">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-2">Blogs</h1>
-                    
+                    <h1 class="text-4xl font-bold text-gray-800 mb-2">My Blog</h1>
+                    <h2 class="text-lg text-gray-500 font-semi-bold mt-2">Let's code and learn together. Join me in my adventures as a freelance developer.</h2>
                 </div>
             </div>
             
@@ -22,7 +22,7 @@
                             <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
                             <p class="text-gray-800">{{ $blog->excerpt }}</p>
                             <time datetime="2023" class="text-blue-500 text-sm">{{ $blog->created_at}}</time>  
-                            
+                            <hr class="mt-6"/>
                         </div>
 
                         @empty
