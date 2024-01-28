@@ -10,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public $blogs, $blogId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $published = 1, $updateBlog = false, $addBlog = false;
+    public $blogs, $blogId, $title, $excerpt, $content, $slug, $main_image, $alt_image, $meta_title, $meta_description, $published, $updateBlog = false, $addBlog = false;
 
     /**
      * delete action listener
@@ -46,7 +46,7 @@ class Blog extends Component
         $this->alt_image = '';
         $this->meta_title = '';
         $this->meta_description = '';
-        $this->published = 1;
+        $this->published = 0;
     }
 
     /**
@@ -92,7 +92,7 @@ class Blog extends Component
                 'alt_image' => $this->alt_image,
                 'meta_title' => $this->meta_title,
                 'meta_description' => $this->meta_description,
-                'published' => 1,
+                'published' => $this->published,
             ]);
             session()->flash('success','Blog Created Successfully!!');
             $this->resetFields();
@@ -122,7 +122,7 @@ class Blog extends Component
                 $this->alt_image = $blog->alt_image;
                 $this->meta_title = $blog->meta_title;
                 $this->meta_description = $blog->meta_description;
-                $this->publish = false;
+                $this->published = $blog->published;
                 $this->updateBlog = true;
                 $this->addBlog = false;              
             }
@@ -150,7 +150,7 @@ class Blog extends Component
                 'alt_image' => $this->alt_image,
                 'meta_title' => $this ->meta_title,
                 'meta_description' => $this->meta_description,
-                'publish' => $this->publish
+                'published' => $this->published
             ]);
             
             session()->flash('success','Blog Updated Successfully!!');

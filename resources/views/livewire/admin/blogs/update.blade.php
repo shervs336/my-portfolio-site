@@ -49,9 +49,10 @@
                 @endif
             </div>
             <div class="form-group mb-3">
-                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="alt_image">Publish:</label>
-                <select class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white @error('publish') is-invalid @enderror" id="publish" wire:model="publish" wire:init="publish">
-                    <option value="no">{{ $blog->publish ? “Yes” : “No” }}</option>   
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="alt_image">Published:</label>
+                <select class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white @error('published') is-invalid @enderror" id="published" wire:model="published">
+                    <option value="0">No</option>  
+                    <option value="1">Yes</option> 
                 </select>
             </div>
 

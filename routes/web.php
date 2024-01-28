@@ -26,7 +26,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function() {
     $works  = \App\Models\Work::all();
-    $blogs  = \App\Models\Blog::orderBy("created_at", "desc")->limit(4)->get();
+    $blogs  = \App\Models\Blog::orderBy("created_at", "desc")->published()->limit(4)->get();
     $labs   = \App\Models\Lab::orderBy("created_at", "desc")->limit(4)->get();
     return view('home', compact('works', 'blogs', 'labs'));
 })->name('home');
