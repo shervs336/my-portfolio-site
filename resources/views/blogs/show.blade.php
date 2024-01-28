@@ -2,7 +2,7 @@
 
 @section('title', $blog->title)
 
-@section('meta')
+@section('meta_data')
     <meta name="description" content="{{ $blog->meta_description }}" />
     <meta property="og:title" content="{{ $blog->meta_title }}" />
     <meta property="og:description" content="{{ $blog->meta_description }}" />
