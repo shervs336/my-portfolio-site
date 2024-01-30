@@ -21,7 +21,7 @@
                             <img src ="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-4 w-full aspect-[16/9]">
                             <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
                             <p class="text-gray-800">{{ $blog->excerpt }}</p>
-                            <time datetime="2023" class="text-blue-500 text-sm">{{ $blog->created_at}}</time>  
+                            <time datetime="2023" class="text-neutral-400 text-xs">{{ $blog->created_at}}</time>  
                             <hr class="mt-6"/>
                         </div>
 
@@ -32,11 +32,11 @@
                         @endforelse
                     </div>    
                         
-            
+                    
                     <div class="w-full md:w-1/4 px-4">
                         <div class="bg-gray-100 p-4">       
-                            <img src="" alt="Featured Image" class="mb-6">
-                            <p class="text-gray-500 text-xs">google.com</p>
+                            <img src="{{ asset($blog->image_path()) }}" alt="Featured Image" class="mb-6">
+                            <p class="text-gray-500 text-xs">{{ $blog->created_at }}</p>
                             <h5 class="text-base font-bold text-gray-800 mb-4"></h5>
                         </div>    
                     </div> 
