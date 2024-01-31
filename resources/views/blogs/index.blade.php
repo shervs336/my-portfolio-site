@@ -17,12 +17,14 @@
                 <div class="container mx-auto px-4 flex flex-col md:flex-row">
                     <div class="w-full md:w-3/4 px-4">
                         @forelse($blogs as $blog)
-                        <div class="mb-8">
-                            <img src ="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-4 w-full aspect-[16/9]">
-                            <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
-                            <p class="text-gray-800">{{ $blog->excerpt }}</p>
-                            <time datetime="2023" class="text-neutral-400 text-xs font-semibold">{{ $blog->created_at}}</time>  
-                            <hr class="mt-6"/>
+                        <div class="mb-8 cursor-pointer" x-data="{ url: '{{ route('blog.view', $blog->slug) }}' }">
+                            <div x-on:click="window.open(url, '_self')">
+                                <img src ="{{ asset($blog->image_path()) }}" alt="Blog Featured Image" class="mb-4 w-full aspect-[16/9]">
+                                <h2 class="text-xl font-bold mb-2">{{ $blog->title}}</h2>
+                                <p class="text-gray-800">{{ $blog->excerpt }}</p>
+                                <time datetime="2023" class="text-neutral-400 text-xs font-semibold">{{ $blog->created_at}}</time>  
+                                <hr class="mt-6"/>
+                            </div>
                         </div>
 
                         @empty
