@@ -62,8 +62,8 @@
                                 @if($blog->image_path())       
                                 <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-6">
                                 @endif
-                                <p class="text-gray-500 text-xs">{{ $blog->created_at}}</p>
-                                <h5 class="text-base font-bold text-gray-800 mb-4">{{ $blog->title}}</h5>
+                                <p class="text-neutral-400 text-xs font-semibold">{{ $blog->created_at}}</p>
+                                <h5 class="text-base font-semibold text-gray-800 mb-4">{{ $blog->title}}</h5>
                             </div>
                         @endforeach
                     </div>
