@@ -40,7 +40,7 @@
                 <a href="{{ route('home') }}" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Home</a>
                 <a href="#about" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">About</a>
                 <a href="#contact" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Contact</a>
-                <a href="{{ route('blog.index', $blog->id) }}" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
+                <a href="{{ route('blog.index') }}" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Blog</a>
                 <a href="#labs" class="block text-slate-300 font-semibold hover:text-blue-600 py-2">Labs</a>
                 
             </div>
