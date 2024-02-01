@@ -35,11 +35,7 @@
                     </div>    
                     
                     <div class="w-full md:w-1/4 px-4">
-                        <div class="bg-gray-100 p-4">       
-                            <img src="{{ asset($blog->image_path()) }}" alt="Featured Image" class="mb-6">
-                            <p class="text-neutral-400 text-xs font-semibold">{{ $blog->created_at }}</p>
-                            <h5 class="text-base font-bold text-gray-800 mb-4"></h5>
-                        </div>    
+ 
                     </div> 
                 </div>
             </div>
