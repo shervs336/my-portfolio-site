@@ -26,6 +26,8 @@ class Work extends Component
 
     public $websiteLink;
 
+    public $stack;
+
     public $updateWork = false;
 
     public $addWork = false;
@@ -57,6 +59,7 @@ class Work extends Component
         $this->overlayColor = 'blue-500';
         $this->websiteLink = '';
         $this->backgroundImagePath = '';
+        $this->stack = '';
     }
 
     /**
@@ -66,7 +69,7 @@ class Work extends Component
      */
     public function render()
     {
-        $this->works = Works::select('id', 'title', 'caption', 'website_link')->get();
+        $this->works = Works::select('id', 'title', 'caption', 'website_link', 'stack')->get();
 
         return view('livewire.admin.works.index');
     }
@@ -103,6 +106,7 @@ class Work extends Component
                 'overlay_color' => $this->overlayColor,
                 'background_image_path' => $path ? $path : null,
                 'website_link' => $this->websiteLink,
+                'stack' => $this->stack,
             ]);
             session()->flash('success', 'Work Created Successfully!!');
             $this->resetFields();
@@ -130,6 +134,7 @@ class Work extends Component
                 $this->backgroundImagePath = $work->background_image_path;
                 $this->overlayColor = $work->overlay_color;
                 $this->websiteLink = $work->website_link;
+                $this->stack = $work->stack;
                 $this->workId = $work->id;
                 $this->updateWork = true;
                 $this->addWork = false;
@@ -155,6 +160,7 @@ class Work extends Component
                 'overlay_color' => $this->overlayColor,
                 'background_image_path' => $this->backgroundImagePath,
                 'website_link' => $this->websiteLink,
+                'stack' => $this->stack,
             ]);
             session()->flash('success', 'Work Updated Successfully!!');
             $this->resetFields();
