@@ -1,6 +1,6 @@
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg brightness-95">
-    <img class="w-full rounded-lg h-64" src="{!!asset('storage/'.$work->background_image_path)!!}" alt="Sunset in the mountains">
+<div class="max-w-sm rounded overflow-hidden shadow-lg brightness-95 ">
+    <img class="w-full md:w-full rounded-lg h-64" src="{!!asset('storage/'.$work->background_image_path)!!}" alt="work">
         <div class="px-6 py-4">
             <div class="font-semibold text-xl mb-2">{{$work->title}}</div>
             <p class="text-gray-400 text-base">{{$work->caption}}</p>
@@ -11,6 +11,5 @@
 </div>
                                
 
-                            
-   
+                        
                 
