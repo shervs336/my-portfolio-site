@@ -8,7 +8,7 @@
   <div class="px-6 pt-4 pb-2"> 
     @if($work->stack)
       @foreach(explode(',', $work->stack) as $tech)
-        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-500 mr-2 mb-2 tag-{{$tech ?? 'default'}}">{{ $tech }}</span> 
+        <span class="inline-block rounded-full px-3 py-1 uppercase text-xs tracking-wider font-semibold mr-2 mb-2 tag-default tag-{{$tech ?? 'default'}}">{{ $tech }}</span> 
       @endforeach
     @endif
   </div>

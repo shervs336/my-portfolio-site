@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .tag-default {
+        @apply bg-gray-500 text-white
+    }
+
+    .tag-default.tag-php {
+        @apply bg-indigo-500 text-white
+    }
+
+    .tag-default.tag-css, .tag-default.tag-css3 {
+        @apply bg-blue-500 text-white
+    }
+
+    .tag-default.tag-html, .tag-default.tag-html5 {
+        @apply bg-orange-500 text-white
+    }
+
+    .tag-default.tag-laravel{
+      @apply bg-red-500 text-white
+    }
+
+    .tag-default.tag-javascript {
+      @apply bg-yellow-500 text-white
+    }
+
+    .tag-default.tag-vue, .tag-default.tag-vuejs {
+      @apply bg-emerald-500 text-white
+    }
+
+    .tag-default.tag-react, .tag-default.tag-reactjs {
+      @apply bg-sky-500 text-white
+    }
+
+    .tag-default.tag-python {
+      @apply bg-cyan-950 text-white
+    }
+
+    .tag-default.tag-bootstrap {
+      @apply bg-violet-600 text-white
+    }
+
+    .tag-default.tag-node, .tag-default.tag-nodejs {
+      @apply bg-lime-500 text-white
+    }
+}
