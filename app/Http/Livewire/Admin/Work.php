@@ -37,6 +37,7 @@ class Work extends Component
      */
     protected $listeners = [
         'deleteWorkListner' => 'deleteWork',
+        'contentChanged' => 'setContent',
     ];
 
     /**
@@ -46,6 +47,11 @@ class Work extends Component
         'title' => 'required',
         'caption' => 'required',
     ];
+
+    public function setContent($content)
+    {
+        $this->stack = $content;
+    }
 
     /**
      * Reseting all inputted fields

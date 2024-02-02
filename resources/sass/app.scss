@@ -1,4 +1,5 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import "@yaireo/tagify/src/tagify.scss";
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -73,4 +74,15 @@
         padding-left: 20%;
     }
     /* ... */
+    .tagify-custom-class {
+        @apply bg-white border border-solid border-gray-500
+    }
+
+    .tagify-custom-class.tagify--empty {
+        @apply bg-gray-200 border border-solid border-gray-500
+    }
+
+    .tagify-custom-class.tagify--focus {
+        @apply bg-white border-blue-600 border-2
+    }
   }
