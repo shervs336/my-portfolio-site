@@ -24,6 +24,10 @@
                 <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('websiteLink') is-invalid @enderror" id="websiteLink" wire:model="websiteLink" placeholder="Enter Website Link">
             </div>
             <div class="form-group mb-3">
+                <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="stack">Stack:</label>
+                <input class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('stack') is-invalid @enderror" id="stack" wire:model="stack" placeholder="Enter Stack">
+            </div>
+            <div class="form-group mb-3">
                 <label class="block tracking-wide uppercase text-gray-700 font-bold text-xs mb-2" for="backgroundImagePath">Backround Image:</label>
                 <input type="file" class="apperance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  @error('backroundImagePath') is-invalid @enderror" id="backgroundImagePath" wire:model="backgroundImagePath" placeholder="Upload Image">
                 @if($backgroundImagePath)
