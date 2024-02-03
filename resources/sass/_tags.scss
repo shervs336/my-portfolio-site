@@ -12,11 +12,11 @@
     }
 
     .tag-default.tag-css, .tag-default.tag-css3 {
-        @apply bg-blue-500 text-white
+        @apply bg-blue-600 text-white
     }
 
     .tag-default.tag-html, .tag-default.tag-html5 {
-        @apply bg-orange-500 text-white
+        @apply bg-orange-600 text-white
     }
 
     .tag-default.tag-laravel{
@@ -24,15 +24,15 @@
     }
 
     .tag-default.tag-javascript {
-      @apply bg-yellow-500 text-white
+      @apply bg-yellow-400 text-white
     }
 
     .tag-default.tag-vue, .tag-default.tag-vuejs {
-      @apply bg-emerald-500 text-white
+      @apply bg-emerald-400 text-white
     }
 
     .tag-default.tag-react, .tag-default.tag-reactjs {
-      @apply bg-sky-500 text-white
+      @apply bg-sky-400 text-white
     }
 
     .tag-default.tag-python {
@@ -45,5 +45,25 @@
 
     .tag-default.tag-node, .tag-default.tag-nodejs {
       @apply bg-lime-500 text-white
+    }
+
+    .tag-default.tag-wordpress {
+      @apply bg-sky-700 text-white 
+    }
+
+    .tag-default.tag-sass {
+      @apply bg-pink-400 text-white
+    }
+
+    .tag-default.tag-git {
+      @apply bg-red-500 text-white
+    }
+
+    .tag-default.tag-golang {
+      @apply bg-sky-300 text-white
+    }
+
+    .tag-default.tag-npm {
+      @apply bg-red-500 text-white
     }
 }
