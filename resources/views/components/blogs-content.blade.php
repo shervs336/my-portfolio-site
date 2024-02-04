@@ -1,4 +1,4 @@
-<div class="max-w-[18rem] md:max-w-[20rem] lg:max-w-[24rem] rounded-lg bg-white shadow-lg">
+<div class="max-w-[18rem] md:max-w-[20rem] lg:max-w-[24rem] rounded-lg bg-white shadow-lg wow animate__animated animate__fadeInUp">
     <div class="relative overflow-hidden bg-cover bg-no-repeat">
         <img class="w-full rounded-t-lg" src="{!! !empty($blog->main_image)? asset('storage/'.$blog->main_image): asset('images/default.webp')!!}" alt="" />
     </div>

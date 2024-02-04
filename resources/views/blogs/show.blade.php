@@ -30,20 +30,16 @@
 <div class="flex justify-center" id="showroom">
     <div class="container max-w-7xl pt-4 pb-24 border-b">
         <div class="flex flex-col">
-            <div class="bg-slate-50 py-8">
-                <div class="container mx-auto px-4">
-                    <h1 class="text-4xl font-bold text-gray-800 w-2/3 mb-4 leading-snug">{{$blog->title}}</h1>
-                    <a href="#" class="relative z-10 rounded-full bg-gray-50 py-1.5 font-normal text-sm text-blue-600 hover:underline"><i class="fa-solid fa-at fa-fw"></i> Sherwin Rhey Condez</a>
-                    <time datetime="2023" class="text-gray-500 text-sm"><i class="fa-regular fa-clock fa-fw"></i>{{ $blog->created_at->diffForHumans() }}</time>
-                </div>
-            </div>
-
             <!--Blog content-->
            
             <div class="bg-white py-8 -mx-4">
                 <div class="container mx-auto flex flex-col md:flex-row">
                     <div class="w-full md:w-3/4">
                         <div class="w-full px-4 mb-6">
+                            <div class="mb-4">
+                                <h1 class="text-4xl font-bold text-gray-800 mb-4 leading-snug">{{$blog->title}}</h1>
+                                <time datetime="2023" class="text-gray-500 text-sm"><i class="fa-regular fa-clock fa-fw"></i>{{ $blog->created_at->diffForHumans() }}</time>
+                            </div>
                             @if($blog->image_path())
                             <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-8 w-full">
                             @endif

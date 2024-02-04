@@ -1,25 +1,25 @@
-    <nav class="bg-white" x-data="{ open: false }">
+    <nav class="bg-blue-700" x-data="{ open: false }">
         <div class="container max-w-7xl mx-auto py-4">
             <div class="flex items-center justify-between">
-            <a href="{{ route('home') }}" class="text-2xl font-bold">	&lt;/SRC&gt;</a>
+            <a href="{{ route('home') }}" class="text-2xl font-bold tracking-wide text-white hover:text-slate-200 hover:animate-pulse">	&lt;/SRC&gt;</a>
 
             <div class="hidden md:flex md:items-center space-x-4">
-                <a href="{{ route('home') }}" class=" hover:text-blue-500">Home</a>
-                <a href="#about" class=" hover:text-blue-500">About</a>
-                <a href="#contact" class="hover:text-blue-500">Contact</a>
-                <a href="{{ route('blog.index') }}" class="hover:text-blue-500">Blog</a>
-                <a href="#labs"  class="hover:text-blue-600 py-2">Labs</a>
+                <a href="{{ route('home') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Home</a>
+                <a href="#about" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">About</a>
+                <a href="#contact" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Contact</a>
+                <a href="{{ route('blog.index') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Blog</a>
+                <a href="#labs"  class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Labs</a>
                 @if (Route::has('login'))
     
                     @auth
-                        <a href="{{ route('admin.index') }}" class="hover:text-gray-100 hover:bg-blue-900 bg-blue-700 text-white py-2 px-4 rounded-full">Dashboard</a>
+                        <a href="{{ route('admin.index') }}" class="hover:text-gray-100 hover:bg-blue-900 bg-slate-300 text-gray-700 py-2 px-4 rounded-full">Dashboard</a>
                     @endauth
                     
                 @endif
             </div>
 
             <!-- Mobile menu button -->
-            <button class="md:hidden text-blue-700 focus:outline-none" @click="open = true"> 
+            <button class="md:hidden text-white focus:outline-none" @click="open = true"> 
                 <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                 <path
                     d="M4 6h16M4 12h16M4 18h16"
