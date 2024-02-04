@@ -75,7 +75,7 @@
 </footer>
 
 <!--Copyright Section--->
-<div class="bg-blue-950 brightness-95 py-12">
+<div class="bg-blue-950 brightness-95 py-12 -mx-8 md:mx-0">
     <div class="container max-w-7xl mx-auto py-4 flex flex-col md:flex-row justify-center px-4">
         <div class="text-xl text-gray-500 dark:text-gray-400 text-center font-semibold">
             <a href="https://github.com/shervs336" class="mx-auto hover:text-blue-200 text-blue-100 focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">  
