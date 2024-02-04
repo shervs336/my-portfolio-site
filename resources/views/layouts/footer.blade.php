@@ -1,6 +1,6 @@
 <!--Footer--> 
-<footer class="bg-blue-950 brightness-95">
-    <div class="container border-b max-w-7xl mx-auto flex flex-col space-y-4 space-x-2 md:space-y-0 md:space-x-4 lg:flex-row justify-between">
+<footer class="bg-blue-950 brightness-95 -mx-8 md:mx-0">
+    <div class="container border-b max-w-7xl mx-auto flex flex-col space-y-4 space-x-0 lg:space-y-0 lg:space-x-4 lg:flex-row justify-between">
         <div class="lg:w-1/2 md:flex">
             <div class="md:w-1/2 py-16 px-2 text-center lg:text-left">
                 <a href="#home" class="text-2xl font-bold text-white">	&lt;/SRC&gt;</a>
