@@ -1,4 +1,4 @@
-<div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+<div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 wow animate__animated animate__fadeInUp">
   <div class="relative overflow-hidden bg-cover bg-no-repeat">
     <img class="w-full aspect-[4/3] rounded-t-lg" src="{!! !empty($labs->main_image)? asset('storage/'.$labs->main_image): asset('images/default.webp')!!}" alt="" /></div>
     <div class="p-6">
