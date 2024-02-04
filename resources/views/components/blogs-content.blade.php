@@ -7,7 +7,7 @@
             <a href="{{ route('blog.view', ['slug' => $blog->slug]) }}">{{$blog->title}}</a>
         </h3>
         <small class="text-gray-500">
-            <i class="fa-regular fa-clock fa-fw"></i></i> {{ $blog->updated_at->diffForHumans() }}
+            <i class="fa-regular fa-clock fa-fw"></i></i> {{ $blog->created_at->diffForHumans() }}
         </small>
     </div>
 </div>
