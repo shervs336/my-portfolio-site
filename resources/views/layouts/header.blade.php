@@ -4,15 +4,15 @@
             <a href="{{ route('home') }}" class="text-2xl font-bold tracking-wide text-white hover:text-slate-200 hover:animate-pulse">	&lt;/SRC&gt;</a>
 
             <div class="hidden md:flex md:items-center space-x-4">
-                <a href="{{ route('home') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Home</a>
-                <a href="#about" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">About</a>
-                <a href="#contact" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Contact</a>
-                <a href="{{ route('blog.index') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Blog</a>
-                <a href="#labs"  class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse">Labs</a>
+                <a href="{{ route('home') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse hover:underline-offset-8 hover:decoration-solid hover:underline hover:decoration-2 hover:decoration-inherit">Home</a>
+                <a href="#about" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse hover:underline-offset-8 hover:decoration-solid hover:underline hover:decoration-2 hover:decoration-inherit">About</a>
+                <a href="#contact" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse hover:underline-offset-8 hover:decoration-solid hover:underline hover:decoration-2 hover:decoration-inherit">Contact</a>
+                <a href="{{ route('blog.index') }}" class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse hover:underline-offset-8 hover:decoration-solid hover:underline hover:decoration-2 hover:decoration-inherit">Blog</a>
+                <a href="#labs"  class="tracking-wide font-medium text-white hover:text-slate-200 hover:animate-pulse hover:underline-offset-8 hover:decoration-solid hover:underline hover:decoration-2 hover:decoration-inherit">Labs</a>
                 @if (Route::has('login'))
     
                     @auth
-                        <a href="{{ route('admin.index') }}" class="hover:text-gray-100 hover:bg-blue-900 bg-slate-300 text-gray-700 py-2 px-4 rounded-full">Dashboard</a>
+                        <a href="{{ route('admin.index') }}" class="hover:text-gray-100 hover:bg-blue-900 bg-slate-300 text-gray-700 py-2 px-4 rounded-full hover:animate-pulse">Dashboard</a>
                     @endauth
                     
                 @endif
