@@ -193,7 +193,7 @@
 
     <!--Labs-->
 
-    <div class="flex justify-center" id="labs">
+    <div class="@if($labs->count()) flex @else hidden @endif justify-center " id="labs">
         <div class="container max-w-7xl py-12 md:py-24 border-b">
             <div class="container margin:auto mx-auto flex justify-between">
                 <div class="w-full flex flex-col">
