@@ -14,7 +14,7 @@
                     <h1 class="text-2xl font-bold text-blue-500 text-center">Get in touch 🤙</h1>
                     <h2 class="text-4xl lg:text-5xl font-bold mt-2 text-center">Let's Collaborate!</h2>
                     <p class="mt-4 text-sm text-gray-400 text-center">Have a Project in Mind or Just Want to Get in Touch?</p>
-                    <div class="max-w-3xl mx-auto">
+                    <div class="max-w-3xl mx-auto wow animate__animated animate__fadeInUp">
                         <div class="w-full flex flex-wrap">
                             @if($errorMessage)
                                 <div class="mb-6 w-full px-3">

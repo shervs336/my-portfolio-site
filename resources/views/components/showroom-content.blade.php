@@ -1,5 +1,5 @@
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg brightness-95 ">
+<div class="max-w-sm rounded overflow-hidden shadow-lg brightness-95 wow animate__animated animate__fadeInUp">
   <img class="w-full md:w-full rounded-lg h-64" src="{!!asset('storage/'.$work->background_image_path)!!}" alt="work">
   <div class="px-6 py-4">
       <div class="font-semibold text-xl mb-2">{{$work->title}}</div>
