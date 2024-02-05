@@ -21,8 +21,8 @@ class BlogsController extends Controller
     {
         $blog = \App\Models\Blog::where('slug', $slug)->isPublished()->first();
 
-        $otherBlogs = \App\Models\Blog::whereNot('id', $blog->id)->isPublished()->limit(5)->get();
+       // $otherBlogs = \App\Models\Blog::whereNot('id', $blog->id)->isPublished()->limit(5)->get();
 
-        return view('blogs.show', compact('blog', 'otherBlogs'));
+        return view('blogs.show', compact('blog'));
     }
 }
