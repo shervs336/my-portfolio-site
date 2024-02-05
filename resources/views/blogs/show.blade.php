@@ -33,11 +33,11 @@
             <!--Blog content-->
            
             <div class="bg-white py-8 -mx-4">
-                <div class="container mx-auto flex flex-col md:flex-row">
+                <div class="container mx-auto flex justify-center flex-col md:flex-row">
                     <div class="w-full md:w-3/4">
                         <div class="w-full px-4 mb-6">
                             <div class="mb-4">
-                                <h1 class="text-4xl font-bold text-gray-800 mb-4 leading-snug">{{$blog->title}}</h1>
+                                <h1 class="text-4xl font-bold text-gray-800 text-center mb-4 leading-snug">{{$blog->title}}</h1>
                                 <time datetime="2023" class="text-gray-500 text-sm"><i class="fa-regular fa-clock fa-fw"></i>{{ $blog->created_at->diffForHumans() }}</time>
                             </div>
                             @if($blog->image_path())
@@ -47,22 +47,7 @@
                         </div>
                     </div>    
                     
-                    <div class="w-full md:w-1/4 px-4">
-                        <div class="mb-4">
-                            <a href="{{ route('blog.index') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-4 transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
-                                View all Posts
-                            </a>
-                        </div>
-                        @foreach ($otherBlogs as $blog)
-                            <div class="bg-gray-100 p-4 mb-4">
-                                @if($blog->image_path())       
-                                <img src="{{ asset($blog->image_path()) }}" alt="{{ $blog->alt_image }}" class="mb-6">
-                                @endif
-                                <p class="text-neutral-400 text-xs font-semibold">{{ $blog->created_at}}</p>
-                                <h5 class="text-base font-semibold text-gray-800 mb-4">{{ $blog->title}}</h5>
-                            </div>
-                        @endforeach
-                    </div>
+                    
                 </div>
             </div>        
         </div>
