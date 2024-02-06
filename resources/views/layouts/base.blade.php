@@ -33,7 +33,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <body>
+    <body class="bg-slate-50">
     
         <div class="xl:container xl:mx-auto px-8 xl:px-0">
 
