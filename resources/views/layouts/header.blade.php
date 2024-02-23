@@ -1,4 +1,4 @@
-    <nav class="bg-blue-700 -mx-8 px-4 xl:-mx-0 xl:px-0" x-data="{ open: false }">
+    <nav class="bg-blue-700" x-data="{ open: false }">
         <div class="container max-w-7xl mx-auto py-4">
             <div class="flex items-center justify-between">
             <a href="{{ route('home') }}" class="text-2xl font-bold tracking-wide text-white hover:text-slate-200 hover:animate-pulse">	&lt;/SRC&gt;</a>

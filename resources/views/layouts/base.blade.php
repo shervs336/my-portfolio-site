@@ -34,16 +34,15 @@
     </head>
 
     <body class="bg-slate-50">
-    
-        <div class="xl:container xl:mx-auto px-8 xl:px-0">
+        @includeWhen(!request()->routeIs('login'), 'layouts.header')
 
-            @includeWhen(!request()->routeIs('login'), 'layouts.header')
+        <div class="xl:container xl:mx-auto px-8 xl:px-0">
 
             @yield('body')
 
-            @includeWhen(!request()->routeIs('login'), 'layouts.footer')
-
         </div>
+
+        @includeWhen(!request()->routeIs('login'), 'layouts.footer')
 
     </body>
 

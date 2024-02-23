@@ -1,5 +1,5 @@
 <!--Footer--> 
-<footer class="bg-blue-950 brightness-95 -mx-8 md:mx-0">
+<footer class="bg-blue-950 brightness-95">
     <div class="container border-b max-w-7xl mx-auto flex flex-col space-y-4 space-x-0 lg:space-y-0 lg:space-x-4 lg:flex-row justify-between">
         <div class="lg:w-1/2 md:flex">
             <div class="md:w-1/2 py-16 px-2 text-center lg:text-left">
@@ -75,7 +75,7 @@
 </footer>
 
 <!--Copyright Section--->
-<div class="bg-blue-950 brightness-95 py-12 -mx-8 md:mx-0">
+<div class="bg-blue-950 brightness-95 py-12">
     <div class="container max-w-7xl mx-auto py-4 flex flex-col md:flex-row justify-center px-4">
         <div class="text-xl text-gray-500 dark:text-gray-400 text-center font-semibold">
             <a href="https://github.com/shervs336" class="mx-auto hover:text-blue-200 text-blue-100 focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">  
