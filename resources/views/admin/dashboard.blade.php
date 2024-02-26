@@ -4,92 +4,56 @@
     <div class="flex flex-col min-h-screen py-12 bg-blue-50 sm:px-6 lg:px-8">
         <h1 class="text-4xl font-bold mb-3">Dashboard</h1>
 
-        <div class="flex flex-wrap -m-4">
-            <!-- Card 1-->
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="80" height="80" viewBox="0 0 256 256" xml:space="preserve">
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(32,196,203); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                        <path d="M 46.865 48.003 c 0.002 0.056 0.017 0.108 0.017 0.164 c 0 2.771 -2.247 5.018 -5.018 5.018 s -5.018 -2.247 -5.018 -5.018 c 0 -0.056 0.015 -0.109 0.017 -0.164 H 13.5 v 20.523 c 0 1.165 0.953 2.118 2.118 2.118 h 52.491 c 1.165 0 2.118 -0.953 2.118 -2.118 V 48.003 H 46.865 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 70.227 44.086 V 31.737 c 0 -1.165 -0.953 -2.118 -2.118 -2.118 H 15.618 c -1.165 0 -2.118 0.953 -2.118 2.118 v 12.348 H 70.227 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 51.987 42.854 h -4 V 27.75 c 0 -2.853 -2.321 -5.174 -5.174 -5.174 h -1.899 c -2.853 0 -5.174 2.321 -5.174 5.174 v 15.103 h -4 V 27.75 c 0 -5.059 4.116 -9.174 9.174 -9.174 h 1.899 c 5.059 0 9.174 4.115 9.174 9.174 V 42.854 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 50.138 44.73 c 0.002 0.056 0.017 0.108 0.017 0.164 c 0 2.771 -2.247 5.018 -5.018 5.018 s -5.018 -2.247 -5.018 -5.018 c 0 -0.056 0.015 -0.109 0.017 -0.164 H 16.773 v 20.523 c 0 1.165 0.953 2.118 2.118 2.118 h 52.491 c 1.165 0 2.118 -0.953 2.118 -2.118 V 44.73 H 50.138 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 73.5 40.813 V 28.465 c 0 -1.165 -0.953 -2.118 -2.118 -2.118 H 18.891 c -1.165 0 -2.118 0.953 -2.118 2.118 v 12.348 H 73.5 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 55.26 39.581 h -4 V 24.478 c 0 -2.853 -2.321 -5.174 -5.174 -5.174 h -1.899 c -2.853 0 -5.174 2.321 -5.174 5.174 v 15.103 h -4 V 24.478 c 0 -5.059 4.115 -9.174 9.174 -9.174 h 1.899 c 5.059 0 9.174 4.116 9.174 9.174 V 39.581 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
-                    <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
-                    <p class="leading-relaxed">Works</p>
+           
+        <div class="flex flex-wrap">
+            <!--Card 1-->
+            <div class="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div class="border-2 border-blue-500 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 96c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H80c-44.2 0-80-35.8-80-80V128c0-17.7 14.3-32 32-32s32 14.3 32 32V400c0 8.8 7.2 16 16 16s16-7.2 16-16V96zm64 24v80c0 13.3 10.7 24 24 24H296c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24H184c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" fill="#4299e1"/></svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-600">2.7K</h2>
+                    <p class="leading-relaxed">Blog Visits</p>
                 </div>
             </div>
 
             <!-- Card 2-->
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="80" height="80" viewBox="0 0 256 256" xml:space="preserve">
-                        <defs>
-                        </defs>
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 76.225 14.44 V 3.41 c 0 -1.884 -1.527 -3.41 -3.41 -3.41 H 3.924 c -1.884 0 -3.41 1.527 -3.41 3.41 V 86.59 c 0 1.884 1.527 3.41 3.41 3.41 h 79.643 l -0.056 -0.104 c 3.389 -0.558 5.976 -3.493 5.976 -7.04 V 17.851 c 0 -1.883 -1.527 -3.41 -3.41 -3.41 H 76.225" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(229,228,209); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 78.712 81.237 L 78.712 81.237 c 1.374 0 2.487 -1.114 2.487 -2.487 V 14.44 h -4.975 v 64.309 C 76.225 80.123 77.339 81.237 78.712 81.237 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 38.883 25.7 H 9.215 c -0.552 0 -1 0.448 -1 1 v 24.473 c 0 0.553 0.448 1 1 1 h 29.667 c 0.552 0 1 -0.447 1 -1 V 26.7 C 39.883 26.148 39.435 25.7 38.883 25.7 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(249,187,75); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 27.7 H 48.252 c -0.553 0 -1 -0.448 -1 -1 s 0.447 -1 1 -1 h 19.052 c 0.553 0 1 0.448 1 1 S 67.856 27.7 67.304 27.7 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 39.937 H 48.252 c -0.553 0 -1 -0.448 -1 -1 s 0.447 -1 1 -1 h 19.052 c 0.553 0 1 0.448 1 1 S 67.856 39.937 67.304 39.937 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 52.173 H 48.252 c -0.553 0 -1 -0.447 -1 -1 c 0 -0.552 0.447 -1 1 -1 h 19.052 c 0.553 0 1 0.448 1 1 C 68.304 51.726 67.856 52.173 67.304 52.173 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 64.409 H 9.215 c -0.552 0 -1 -0.447 -1 -1 s 0.448 -1 1 -1 h 58.088 c 0.553 0 1 0.447 1 1 S 67.856 64.409 67.304 64.409 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 76.646 H 9.215 c -0.552 0 -1 -0.447 -1 -1 s 0.448 -1 1 -1 h 58.088 c 0.553 0 1 0.447 1 1 S 67.856 76.646 67.304 76.646 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 47.726 14.407 H 9.215 c -0.552 0 -1 -0.448 -1 -1 s 0.448 -1 1 -1 h 38.51 c 0.553 0 1 0.448 1 1 S 48.278 14.407 47.726 14.407 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 67.304 14.407 H 58.16 c -0.553 0 -1 -0.448 -1 -1 s 0.447 -1 1 -1 h 9.144 c 0.553 0 1 0.448 1 1 S 67.856 14.407 67.304 14.407 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(186,184,162); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        </g>
-                    </svg>
-                    <h2 class="title-font font-medium text-3xl text-gray-900">99</h2>
-                    <p class="leading-relaxed">Blogs</p>
+            <div class="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div class="border-2 border-blue-500 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zm64 32v64c0 17.7 14.3 32 32 32H416c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H96c-17.7 0-32 14.3-32 32zM80 320c-13.3 0-24 10.7-24 24s10.7 24 24 24h56c13.3 0 24-10.7 24-24s-10.7-24-24-24H80zm136 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H216z" fill="#4299e1"/>
+                </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-600">99</h2>
+                    <p class="leading-relaxed">Total Page Visits</p>
                 </div>
             </div>
 
             <!-- Card 3-->
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="80" height="80" viewBox="0 0 256 256" xml:space="preserve">
-                        <defs>
-                        </defs>
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(32,196,203); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                        <path d="M 68.914 52.114 H 19.563 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 49.351 c 1.657 0 3 1.343 3 3 S 70.571 52.114 68.914 52.114 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 68.914 66.515 H 19.563 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 49.351 c 1.657 0 3 1.343 3 3 S 70.571 66.515 68.914 66.515 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 68.914 37.714 H 38.192 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 30.722 c 1.657 0 3 1.343 3 3 S 70.571 37.714 68.914 37.714 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <circle cx="23.143" cy="34.713" r="5.143" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,167,173); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                        <path d="M 72 49.028 H 22.649 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 H 72 c 1.657 0 3 1.343 3 3 C 75 47.686 73.657 49.028 72 49.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 72 63.429 H 22.649 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 H 72 c 1.657 0 3 1.343 3 3 S 73.657 63.429 72 63.429 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 72 34.628 H 41.278 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 H 72 c 1.657 0 3 1.343 3 3 S 73.657 34.628 72 34.628 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <circle cx="26.233" cy="31.623" r="5.143" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                        </g>
-                    </svg>
-                    <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
-                    <p class="leading-relaxed">Categories</p>
+            <div class="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div class="border-2 border-blue-500 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="#4299e1"/></svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-600">74</h2>
+                    <p class="leading-relaxed">Newsletter</p>
                 </div>
             </div>
 
             <!-- Card 4-->
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="80" height="80" viewBox="0 0 256 256" xml:space="preserve">
-                        <defs>
-                        </defs>
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 52.431 25.486 V 9.755 l 5.209 -5.918 C 58.612 2.734 57.828 1 56.358 1 h -3.927 H 37.569 h -3.927 c -1.47 0 -2.254 1.734 -1.282 2.837 l 5.209 5.918 v 15.736 c 0 1.827 -1.14 3.464 -2.861 4.079 c -12.233 4.367 -20.874 16.296 -20.284 30.161 c 0.658 15.475 13.106 28.216 28.563 29.204 c 17.813 1.139 32.616 -12.971 32.616 -30.54 c 0 -13.315 -8.504 -24.639 -20.376 -28.848 C 53.529 28.945 52.431 27.289 52.431 25.486 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 45.026 90.001 c -0.698 0 -1.398 -0.022 -2.102 -0.067 c -15.865 -1.015 -28.822 -14.262 -29.499 -30.159 c -0.593 -13.945 7.825 -26.461 20.947 -31.146 c 1.314 -0.469 2.197 -1.729 2.197 -3.137 V 10.133 l -4.959 -5.635 c -0.712 -0.809 -0.879 -1.922 -0.436 -2.905 C 31.618 0.61 32.564 0 33.642 0 h 22.715 c 1.078 0 2.024 0.61 2.468 1.593 c 0.444 0.982 0.278 2.096 -0.434 2.905 l -4.961 5.635 v 15.354 c 0 1.414 0.856 2.667 2.132 3.119 c 12.586 4.462 21.042 16.434 21.042 29.79 c 0 8.698 -3.64 17.101 -9.986 23.055 C 60.695 87.006 53.094 90.001 45.026 90.001 z M 33.642 2 c -0.413 0 -0.589 0.292 -0.646 0.417 c -0.057 0.125 -0.159 0.45 0.114 0.76 l 5.458 6.201 v 16.114 c 0 2.25 -1.416 4.268 -3.524 5.021 C 22.753 34.9 14.868 46.625 15.423 59.689 c 0.633 14.89 12.769 27.298 27.628 28.248 c 8.283 0.525 16.17 -2.291 22.198 -7.946 c 6.032 -5.659 9.354 -13.328 9.354 -21.596 c 0 -12.511 -7.921 -23.726 -19.71 -27.905 c -2.072 -0.734 -3.464 -2.746 -3.464 -5.004 V 9.378 l 5.459 -6.201 c 0.272 -0.31 0.17 -0.635 0.113 -0.76 C 56.946 2.292 56.771 2 56.357 2 H 33.642 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,210,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 64.829 54.012 h -1.053 c -0.897 0 -1.716 -0.553 -2.009 -1.4 c -0.235 -0.681 -0.511 -1.343 -0.824 -1.984 c -0.392 -0.802 -0.207 -1.767 0.424 -2.398 l 0.755 -0.755 c 0.331 -0.331 0.331 -0.867 0 -1.198 l -5.002 -5.002 c -0.331 -0.331 -0.867 -0.331 -1.198 0 l -0.755 0.755 c -0.631 0.631 -1.596 0.815 -2.398 0.424 c -0.64 -0.313 -1.303 -0.589 -1.983 -0.824 c -0.848 -0.293 -1.4 -1.112 -1.4 -2.009 v -1.053 c 0 -0.468 -0.379 -0.847 -0.847 -0.847 h -7.075 c -0.468 0 -0.847 0.379 -0.847 0.847 v 1.053 c 0 0.897 -0.553 1.716 -1.4 2.009 c -0.681 0.235 -1.343 0.511 -1.983 0.824 c -0.802 0.392 -1.767 0.207 -2.398 -0.424 l -0.755 -0.755 c -0.331 -0.331 -0.867 -0.331 -1.198 0 l -5.002 5.002 c -0.331 0.331 -0.331 0.867 0 1.198 l 0.755 0.755 c 0.631 0.631 0.815 1.596 0.424 2.398 c -0.313 0.641 -0.589 1.303 -0.824 1.984 c -0.293 0.848 -1.112 1.4 -2.009 1.4 h -1.054 c -0.468 0 -0.847 0.379 -0.847 0.847 v 7.075 c 0 0.468 0.379 0.847 0.847 0.847 h 1.053 c 0.897 0 1.716 0.553 2.009 1.4 c 0.235 0.681 0.511 1.343 0.824 1.983 c 0.392 0.802 0.207 1.767 -0.424 2.398 l -0.755 0.755 c -0.331 0.331 -0.331 0.867 0 1.198 l 5.002 5.002 c 0.331 0.331 0.867 0.331 1.198 0 l 0.755 -0.755 c 0.631 -0.631 1.596 -0.815 2.398 -0.424 c 0.64 0.313 1.303 0.589 1.983 0.824 c 0.848 0.293 1.4 1.112 1.4 2.009 v 1.053 c 0 0.468 0.379 0.847 0.847 0.847 h 7.075 c 0.468 0 0.847 -0.379 0.847 -0.847 v -1.053 c 0 -0.897 0.553 -1.716 1.4 -2.009 c 0.681 -0.235 1.343 -0.511 1.983 -0.824 c 0.802 -0.392 1.767 -0.207 2.398 0.424 l 0.755 0.755 c 0.331 0.331 0.867 0.331 1.198 0 l 5.002 -5.002 c 0.331 -0.331 0.331 -0.867 0 -1.198 l -0.755 -0.755 c -0.631 -0.631 -0.815 -1.596 -0.424 -2.398 c 0.313 -0.64 0.589 -1.303 0.824 -1.983 c 0.293 -0.848 1.112 -1.4 2.009 -1.4 h 1.053 c 0.468 0 0.847 -0.379 0.847 -0.847 v -7.075 C 65.676 54.391 65.296 54.012 64.829 54.012 z M 45.886 69.273 c -6.724 0.53 -12.293 -5.039 -11.763 -11.763 c 0.417 -5.289 4.703 -9.575 9.992 -9.992 c 6.724 -0.53 12.293 5.039 11.763 11.763 C 55.461 64.571 51.175 68.856 45.886 69.273 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,100,100); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 75.576 59.731 c -0.727 16.942 -15.228 30.315 -32.588 29.204 C 27.53 87.947 15.082 75.207 14.424 59.731 c 9.678 3.531 19.663 3.148 30.576 0 c 10.785 -2.941 20.925 -3.235 30.574 0 L 75.576 59.731 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,210,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        </g>
-                    </svg>
-                    <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
-                    <p class="leading-relaxed">Labs</p>
+            <div class="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div class="border-2 border-blue-500 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96l576 0c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96zm0 32V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128H0zM64 405.3c0-29.5 23.9-53.3 53.3-53.3H234.7c29.5 0 53.3 23.9 53.3 53.3c0 5.9-4.8 10.7-10.7 10.7H74.7c-5.9 0-10.7-4.8-10.7-10.7zM176 192a64 64 0 1 1 0 128 64 64 0 1 1 0-128zm176 16c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16z" fill="#4299e1"/></svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-600">46</h2>
+                    <p class="leading-relaxed">Subscription</p>
                 </div>
             </div>
+
+            <!-- Card 5-->
+            <div class="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div class="border-2 border-blue-500 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" fill="#4299e1"/></svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-600">46</h2>
+                    <p class="leading-relaxed">Contacts Received</p>
+                </div>
+            </div>
+
         </div>
     </div>
 @endsection
