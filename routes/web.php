@@ -26,25 +26,3 @@ Route::get('/', function () {
 
 Route::get('/blogs', 'App\Http\Controllers\BlogsController@index')->name('blog.index');
 Route::get('/blogs/{slug}', 'App\Http\Controllers\BlogsController@show')->name('blog.view');
-
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', function () {
-        return redirect()->route('admin.dashboard');
-    })->name('admin.index');
-
-    Route::middleware('guest')->group(function () {
-        Route::get('login', Login::class)->name('login');
-    });
-
-    Route::middleware('auth')->group(function () {
-        Route::group(['namespace' => 'App\Http\Controllers\Admin', 'as' => 'admin.'], function () {
-            Route::get('dashboard', 'DashboardController')->name('dashboard');
-            Route::get('works', 'WorksController')->name('works');
-            Route::get('blogs', 'BlogsController')->name('blogs');
-            Route::get('labs', 'LabsController')->name('labs');
-            Route::get('categories', 'CategoriesController')->name('categories');
-        });
-
-        Route::post('logout', LogoutController::class)->name('logout');
-    });
-});
