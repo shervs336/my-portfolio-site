@@ -156,25 +156,46 @@ class Work extends Component
      *
      * @return void
      */
-    public function updateWork()
-    {
-        $this->validate();
-        try {
-            Works::whereId($this->workId)->update([
-                'title' => $this->title,
-                'caption' => $this->caption,
-                'overlay_color' => $this->overlayColor,
-                'background_image_path' => $this->backgroundImagePath,
-                'website_link' => $this->websiteLink,
-                'stack' => $this->stack,
-            ]);
-            session()->flash('success', 'Work Updated Successfully!!');
-            $this->resetFields();
-            $this->updateWork = false;
-        } catch (\Exception $ex) {
-            session()->flash('success', 'Something goes wrong!!');
+    
+public function updateWork()
+{
+    $this->validate([
+        'title' => 'required',
+        'caption' => 'required',
+        'backgroundImagePath' => 'nullable|image|max:2048',
+    ]);
+
+    try {
+        $work = Works::findOrFail($this->workId);
+
+        // Keep the existing image path by default.
+        $path = $work->background_image_path;
+
+        // Store a new image only if one was uploaded.
+        if ($this->backgroundImagePath instanceof \Livewire\TemporaryUploadedFile) {
+            $path = $this->backgroundImagePath->store('works', 'public');
         }
+
+        // Update the work record.
+        $work->update([
+            'title' => $this->title,
+            'caption' => $this->caption,
+            'overlay_color' => $this->overlayColor,
+            'background_image_path' => $path,
+            'website_link' => $this->websiteLink,
+            'stack' => $this->stack,
+        ]);
+
+        session()->flash('success', 'Work Updated Successfully!');
+
+        $this->resetFields();
+        $this->updateWork = false;
+
+    } catch (\Exception $ex) {
+        session()->flash('error', 'Unable to update work: ' . $ex->getMessage());
     }
+}
+
 
     /**
      * Cancel Add/Edit form and redirect to post listing page

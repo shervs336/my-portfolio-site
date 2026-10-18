@@ -15,12 +15,15 @@
 		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+/>
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-        @livewireStyles
+        @livewireStyles(['nonce'=>csp_nonce()])
        
-        <script src="https://cdn.tiny.cloud/1/yac5bqkf41lhr0ypm5i13iwf9ng228nt0r96igdfd9wmvy9m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script nonce="{{csp_nonce()}}" src="https://cdn.tiny.cloud/1/yac5bqkf41lhr0ypm5i13iwf9ng228nt0r96igdfd9wmvy9m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
@@ -66,7 +69,7 @@
                 @yield('body')
             </div>
         </div>
-        @livewireScripts
+        @livewireScripts(['nonce'=>csp_nonce()])
         @stack('scripts')
     </body>
 
