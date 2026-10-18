@@ -17,9 +17,7 @@ class MessageSent extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        public ContactForm $contact)
-    {
-    }
+        public ContactForm $contact) {}
 
     /**
      * Get the message envelope.

@@ -32,11 +32,11 @@ class CustomCspPolicy extends Basic
 
         // External stylesheets and <style> elements.
         $this->addDirective('style-src-elem', [
-		Keyword::SELF,
-		Keyword::UNSAFE_INLINE,
+            Keyword::SELF,
+            Keyword::UNSAFE_INLINE,
             'https://fonts.googleapis.com',
-	    'https://unpkg.com',
-	    "'sha256-AcmLFkgL9OfyMDw/bEywPdEgPprfzKlNPCLpd+5VdvQ='",
+            'https://unpkg.com',
+            "'sha256-AcmLFkgL9OfyMDw/bEywPdEgPprfzKlNPCLpd+5VdvQ='",
         ]);
 
         // Inline style="" attributes.
@@ -69,8 +69,7 @@ class CustomCspPolicy extends Basic
             'data:',
             'https://sp.tinymce.com',
             'https://cdnjs.buymeacoffee.com',
-		'https://cdn.buymeacoffee.com',
-	]);
+            'https://cdn.buymeacoffee.com',
+        ]);
     }
 }
-

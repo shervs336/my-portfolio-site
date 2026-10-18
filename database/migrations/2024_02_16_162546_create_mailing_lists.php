@@ -17,7 +17,7 @@ return new class extends Migration
             $table->boolean('isBlocked')->default(0)->nullable();
             $table->timestamps();
         });
-            
+
     }
 
     /**
