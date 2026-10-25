@@ -151,7 +151,7 @@
                         <h2 class="text-4xl lg:text-5xl font-bold mt-2 text-center">Showroom</h2>
                         <p class="mt-4 font-semibold text-gray-400 text-center max-w-1/2 capitalize mb-12">Witness the seamless integration of technology and creativity in my showroom</p>
 
-                        <div id="ShowroomContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-4 lg:gap-x-6">
+                        <div id="ShowroomContents" class="mt-6 gap-y-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 lg:gap-x-6">
 
                             @foreach($works as $work)
                                 @include('components.showroom-content', ['work' => $work])
