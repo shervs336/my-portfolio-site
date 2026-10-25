@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: ['8.1']
+        php-versions: ['8.3']
     steps:
     - name: Install ssh keys
       # check this thread to understand why its needed:
