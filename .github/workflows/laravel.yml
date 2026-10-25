@@ -1,30 +1,81 @@
+
 name: "Sherwin Rhey Condez Portfolio Website"
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-production-deploy
+  cancel-in-progress: false
 
 jobs:
   run_pull:
-    name: run pull
+    name: Deploy Laravel Portfolio
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-versions: ['8.3']
+
     steps:
-    - name: Install ssh keys
-      # check this thread to understand why its needed:
-      # https://stackoverflow.com/a/70447517
-      run: |
-        install -m 120 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-    - name: Connect and pull
-      run: ssh -o ServerAliveInterval=600 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
-    - name: Depedency installation and build
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && composer install && npm install && npm run build && exit"
-    - name: Cleanup pulled files
-      run: rm -rf ~/.ssh
+      - name: Install SSH keys
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          set -eu
+
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+
+          install -m 600 /dev/null "$HOME/.ssh/id_rsa"
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
+
+          ssh-keyscan -H "$SSH_HOST" >> "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Connect and pull
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          WORK_DIR: ${{ secrets.WORK_DIR }}
+          MAIN_BRANCH: ${{ secrets.MAIN_BRANCH }}
+        run: |
+          set -eu
+
+          ssh -i "$HOME/.ssh/id_rsa" \
+            -o IdentitiesOnly=yes \
+            "$SSH_USER@$SSH_HOST" \
+            "cd '$WORK_DIR' && git checkout '$MAIN_BRANCH' && git pull origin '$MAIN_BRANCH'"
+
+      - name: Install dependencies and build
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          WORK_DIR: ${{ secrets.WORK_DIR }}
+        run: |
+          set -eu
+
+          ssh -i "$HOME/.ssh/id_rsa" \
+            -o IdentitiesOnly=yes \
+            "$SSH_USER@$SSH_HOST" \
+            "cd '$WORK_DIR' && composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader && npm ci && npm run build"
+
+      - name: Clear and rebuild Laravel caches
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          WORK_DIR: ${{ secrets.WORK_DIR }}
+        run: |
+          set -eu
+
+          ssh -i "$HOME/.ssh/id_rsa" \
+            -o IdentitiesOnly=yes \
+            "$SSH_USER@$SSH_HOST" \
+            "cd '$WORK_DIR' && php artisan optimize:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+
+      - name: Cleanup SSH keys
+        if: always()
+        run: rm -rf "$HOME/.ssh"
