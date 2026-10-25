@@ -1,23 +1,41 @@
 @extends('layouts.app')
 
+@section('title', 'Laravel & PHP Developer')
+
+@section('meta_description', 'Sherwin Rhey Condez is a Laravel and PHP developer specializing in custom web applications, REST APIs, database systems, and full-stack development.')
+
+@section('canonical_url', 'https://sherwinrheycondez.com/')
+
+@section('og_title', 'Sherwin Rhey Condez | Laravel & PHP Developer')
+
+@section('og_description', 'Explore my web development portfolio, Laravel projects, API integrations, and full-stack development experience.')
+
+@section('og_image', asset('images/og-image.jpg'))
+
+@section('og_type', 'website')
+
 @section('content')
     <div class="flex justify-center" id="hero">
         <div class="container max-w-7xl py-12 md:py-24 border-b">
             <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between">
                 <div class="w-full md:w-1/2 order-2 md:order-1 wow animate__animated animate__fadeInLeft">
-                    <h1 class="text-1xl font-bold text-blue-500">Hi there <span class="wave">👋</span> I am</h1>
-                    <h2 class="text-3xl font-bold mt-2">Sherwin Rhey Condez</h2>
-                    <p class="mt-4"><span class="text-gray-400">Professional</span> Full-Stack Developer</p>
-                    <p class="mt-4 text-gray-400 text-justify md:text-left">I am passionate about crafting high-quality web applications and bringing ideas to life through code. With a strong background in full-stack development, I love tackling complex challenges and building elegant solutions. Let's work together to create something amazing!</p>
+                    <h1 class="text-1xl font-bold text-blue-500">Hi, I'm Sherwin Rhey Condez.</h1>
+                    <h2 class="text-3xl font-bold mt-2">Senior Laravel & PHP Developer</h2>
+                    <p class="mt-4">I build reliable, scalable web applications and backend systems that help businesses streamline operations and grow.</p>
+                    <p class="mt-4">With 10 years of experience in web development, I specialize in Laravel, PHP, API integrations, database-driven applications, and modern web technologies.</p>
                     <div class="mt-6">
                         <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-4 transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                        data-te-ripple-init data-te-ripple-color="dark">Contact</a>
+                        data-te-ripple-init data-te-ripple-color="dark">View My Projects</a>
                         <a href="#" class="text-blue-700 font-semibold py-2 px-4 border border-blue-500 rounded transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                        data-te-ripple-init data-te-ripple-color="dark"">Learn More</a>
+                        data-te-ripple-init data-te-ripple-color="dark"">Download Resume</a>
                     </div>
                 </div>  
-                <div class="w-full md:w-1/2 flex justify-end order-1 md:order-2 wow animate__animated animate__zoomIn">
-                    <img src="{{asset('images/hero-image.png')}}" alt="Image Here" class="w-75 lg:w-90 rounded-full h-auto shadow-md mb-8 md:mb-0">
+                <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 wow animate__animated animate__zoomIn">
+                    <img
+                        src="{{ asset('images/hero-image.png') }}"
+                        alt="Sherwin Rhey Condez - Full-Stack Web Developer"
+                        class="w-64 sm:w-72 md:w-75 lg:w-90 max-w-full h-auto object-contain rounded-full shadow-md mb-8 md:mb-0"
+                    >
                 </div>
             </div>
         </div>
@@ -87,55 +105,126 @@
     </div>
 
     <div class="flex justify-center" id="services">
-        <div class="container max-w-7xl py-12 md:py-24 border-b">
-            <div class="container margin:auto mx-auto flex justify-between">
-                <div class="w-full flex flex-col">
-                    <div class="flex-1"> 
-                        <h1 class="text-2xl font-bold text-blue-500 text-center">What I Offer?</h1>
-                        <h2 class="text-4xl lg:text-5xl font-bold mt-2 text-center">My Services</h2>
-                        <p class="mt-4 font-semibold text-gray-400 text-center max-w-1/2 mb-12">Unlocking Your Full Potential: My Comprehensive Range of Services</p>
-            
-                        <!--Services-->           
-                        <div class="container mx-auto flex flex-col space-y-6 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-                            <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50 wow animate__animated animate__fadeInUp">
-                                <div class="">
-                                    <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-3xl lg:text-4xl text-white mx-auto">
-                                        <i class="fa-solid fa-gears"></i>
-                                    </div>
-                                </div>
-                                <h2 class="text-2xl lg:text-3xl font-bold mt-12 text-center">Design</h2>
-                                <div class="text-center mt-8 text-gray-400 px-8">
-                                    Your Vision, Our Code: Crafting Custom Solutions for Your Programming Needs
-                                </div>
-                            </div>
+        <div class="container max-w-7xl py-12 md:py-20 border-b px-4">
 
-                            <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50 wow animate__animated animate__fadeInUp">
-                                <div class="">
-                                    <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-3xl lg:text-4xl text-white mx-auto">
-                                        <i class="fa-solid fa-hammer"></i>
-                                </div>
-                                </div>
-                                <h2 class="text-2xl lg:text-3xl font-bold mt-12 text-center">Develop</h2>
-                                <div class="text-center mt-8 text-gray-400 px-8">
-                                    Turning Ideas into Reality: Empowering Your Business through Customized Programming Solutions
-                                </div>
-                            </div>
+            {{-- Section Heading --}}
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <p class="text-lg font-semibold text-blue-500">
+                    What I Do
+                </p>
 
-                            <div class="md:w-1/3 rounded-xl shadow-md py-16 bg-blue-50 wow animate__animated animate__fadeInUp">
-                                <div class="">
-                                    <div class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-700 services-icon text-3xl lg:text-4xl text-white mx-auto">
-                                        <i class="fa-solid fa-lightbulb"></i>
-                                </div>
-                                </div>
-                                <h2 class="text-2xl lg:text-3xl font-bold mt-12 text-center">Solution</h2>
-                                <div class="text-center mt-8 text-gray-400 px-8">
-                                    Elevate, Innovate, Excel: Your Path to Success with Tailored Programming Solutions
-                                </div>
-                            </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-2">
+                    My Services
+                </h2>
 
-                        </div>
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                    I build, integrate, and maintain reliable web applications
+                    that help businesses solve real-world problems.
+                </p>
+            </div>
+
+            {{-- Service Cards --}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                {{-- Laravel & PHP Development --}}
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700
+                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            hover:shadow-lg hover:-translate-y-1
+                            transition duration-300
+                            wow animate__animated animate__fadeInUp">
+
+                    <div class="w-14 h-14 rounded-xl
+                                bg-gradient-to-r from-cyan-500 to-blue-700
+                                text-white flex items-center justify-center
+                                text-2xl">
+                        <i class="fa-solid fa-code"></i>
                     </div>
+
+                    <h3 class="text-xl font-bold mt-5">
+                        Laravel & PHP Development
+                    </h3>
+
+                    <p class="mt-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Custom web applications, backend systems, and scalable
+                        business solutions built with Laravel and PHP.
+                    </p>
                 </div>
+
+                {{-- API & System Integration --}}
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700
+                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            hover:shadow-lg hover:-translate-y-1
+                            transition duration-300
+                            wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.1s">
+
+                    <div class="w-14 h-14 rounded-xl
+                                bg-gradient-to-r from-cyan-500 to-blue-700
+                                text-white flex items-center justify-center
+                                text-2xl">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-5">
+                        API & System Integration
+                    </h3>
+
+                    <p class="mt-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Connect third-party services, payment gateways, and
+                        external APIs to streamline business workflows.
+                    </p>
+                </div>
+
+                {{-- Application Maintenance --}}
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700
+                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            hover:shadow-lg hover:-translate-y-1
+                            transition duration-300
+                            wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.2s">
+
+                    <div class="w-14 h-14 rounded-xl
+                                bg-gradient-to-r from-cyan-500 to-blue-700
+                                text-white flex items-center justify-center
+                                text-2xl">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-5">
+                        Application Maintenance
+                    </h3>
+
+                    <p class="mt-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Troubleshoot bugs, improve performance, update existing
+                        features, and keep applications running reliably.
+                    </p>
+                </div>
+
+                {{-- Deployment & Cloud Support --}}
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700
+                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            hover:shadow-lg hover:-translate-y-1
+                            transition duration-300
+                            wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.3s">
+
+                    <div class="w-14 h-14 rounded-xl
+                                bg-gradient-to-r from-cyan-500 to-blue-700
+                                text-white flex items-center justify-center
+                                text-2xl">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-5">
+                        Deployment & Cloud Support
+                    </h3>
+
+                    <p class="mt-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Deploy and maintain web applications with server
+                        configuration, database management, and cloud services.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
