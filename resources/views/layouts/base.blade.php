@@ -32,7 +32,7 @@
         @endphp
 
         <!-- SEO Meta Tags -->
-        <title>{{ $fullTitle }}</title>
+        <title>{!! $fullTitle !!}</title>
 
         <meta name="description" content="{{ $metaDescription }}">
         <meta name="robots" content="index,follow">
