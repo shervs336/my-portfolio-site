@@ -20,9 +20,9 @@
             <div class="container mx-auto flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center justify-between">
                 <div class="w-full md:w-1/2 order-2 md:order-1 wow animate__animated animate__fadeInLeft">
                     <h1 class="text-1xl font-bold text-blue-500">Hi, I'm Sherwin Rhey Condez.</h1>
-                    <h2 class="text-3xl font-bold mt-2">Senior Laravel & PHP Developer</h2>
-                    <p class="mt-4">I build reliable, scalable web applications and backend systems that help businesses streamline operations and grow.</p>
-                    <p class="mt-4">With 10 years of experience in web development, I specialize in Laravel, PHP, API integrations, database-driven applications, and modern web technologies.</p>
+                    <h2 class="text-gray-900 dark:text-slate-100 text-3xl font-bold mt-2">Senior Laravel & PHP Developer</h2>
+                    <p class="mt-4 text-gray-600 dark:text-slate-300">I build reliable, scalable web applications and backend systems that help businesses streamline operations and grow.</p>
+                    <p class="mt-4 text-gray-600 dark:text-slate-30">With 10 years of experience in web development, I specialize in Laravel, PHP, API integrations, database-driven applications, and modern web technologies.</p>
                     <div class="mt-6">
                         <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-4 transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                         data-te-ripple-init data-te-ripple-color="dark">View My Projects</a>
@@ -34,7 +34,7 @@
                     <img
                         src="{{ asset('images/hero-image.png') }}"
                         alt="Sherwin Rhey Condez - Full-Stack Web Developer"
-                        class="w-64 sm:w-72 md:w-75 lg:w-90 max-w-full h-auto object-contain rounded-full shadow-md mb-8 md:mb-0"
+                        class="bg-white dark:bg-slate-800/70 w-64 sm:w-72 md:w-75 lg:w-90 max-w-full h-auto object-contain rounded-full shadow-md mb-8 md:mb-0"
                     >
                 </div>
             </div>
@@ -47,55 +47,55 @@
                 <div class="w-full flex flex-col wow animate__animated animate__fadeInLeft">
                     <div class="flex-1">
                         <h1 class="text-2xl font-bold text-blue-500 uppercase">About Me</h1>
-                        <h2 class="text-4xl xl:text-5xl font-bold mt-2">Crafting code, connecting worlds.</h2>
-                        <p class="mt-4 text-gray-400">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
+                        <h2 class="text-4xl xl:text-5xl font-bold mt-2 text-gray-900 dark:text-slate-100">Crafting code, connecting worlds.</h2>
+                        <p class="mt-4 text-gray-400 text-gray-600 dark:text-slate-30">Passionate and Dedicated Full Stack Developer with a Strong Drive for Excellence, Leveraging Cutting-edge Technologies to Craft Innovative, Seamless, and Scalable Solutions that Empower Businesses, Delight Users, and Drive Digital Transformation in a Connected World.</p>
                     </div>
                 </div>
                 <div class="w-full flex flex-col items-start wow animate__animated animate__zoomIn">         
                     <div class="inline-grid grid-cols-5 gap-3 flex-1 lg:self-end self-center">
-                        <span x-data="{ tooltip: 'HTML5' }" class="w-16 h-16 md:w-24 md:h-24 hover:bg-orange-600 text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'HTML5' }" class="w-16 h-16 md:w-24 md:h-24 hover:bg-orange-600 text-gray-900 dark:text-slate-100 rounded-full hover:text-blue-100 flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-html5 text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'CSS3' }" class="w-16 h-16 md:w-24 md:h-24 hover:bg-blue-600  text-gray-300 rounded-full hover:text-blue-100 flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'CSS3' }" class="w-16 h-16 md:w-24 md:h-24 hover:bg-blue-600  text-gray-900 dark:text-slate-100 rounded-full hover:text-blue-100 flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-css3 text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'PHP' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-indigo-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'PHP' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-indigo-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-php text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Laravel' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Laravel' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-laravel text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Javascript' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-yellow-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Javascript' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-yellow-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-js text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'VueJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-emerald-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'VueJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-emerald-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-vuejs text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'ReactJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-sky-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'ReactJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-sky-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-react text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'WordPress' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-sky-700 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'WordPress' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-sky-700 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-wordpress text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Python' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-cyan-950 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Python' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-cyan-950 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-python text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Bootstrap' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-violet-600 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Bootstrap' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-violet-600 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-bootstrap text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'NodeJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-lime-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'NodeJS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-lime-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-node text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'SASS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-pink-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'SASS' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-pink-400 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-sass text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Git' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Git' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-git text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'GoLang' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-sky-300 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'GoLang' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-sky-300 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-golang text-4xl md:text-6xl"></i>
                         </span>
-                        <span x-data="{ tooltip: 'Node Package Manager' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-300 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
+                        <span x-data="{ tooltip: 'Node Package Manager' }" class="w-16 h-16 md:w-24 md:h-24 text-gray-900 dark:text-slate-100 hover:bg-red-500 rounded-full hover:text-white flex items-center justify-center hover:animate-pulse">
                             <i x-tooltip="tooltip" class="fa-brands fa-npm text-4xl md:text-6xl"></i>
                         </span>
                     </div>
@@ -128,7 +128,7 @@
 
                 {{-- Laravel & PHP Development --}}
                 <div class="rounded-xl border border-gray-200 dark:border-gray-700
-                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            bg-white dark:bg-slate-800/70 p-6 shadow-sm
                             hover:shadow-lg hover:-translate-y-1
                             transition duration-300
                             wow animate__animated animate__fadeInUp">
@@ -152,7 +152,7 @@
 
                 {{-- API & System Integration --}}
                 <div class="rounded-xl border border-gray-200 dark:border-gray-700
-                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            bg-white dark:bg-slate-800/70 p-6 shadow-sm
                             hover:shadow-lg hover:-translate-y-1
                             transition duration-300
                             wow animate__animated animate__fadeInUp"
@@ -177,7 +177,7 @@
 
                 {{-- Application Maintenance --}}
                 <div class="rounded-xl border border-gray-200 dark:border-gray-700
-                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            bg-white dark:bg-slate-800/70 p-6 shadow-sm
                             hover:shadow-lg hover:-translate-y-1
                             transition duration-300
                             wow animate__animated animate__fadeInUp"
@@ -202,7 +202,7 @@
 
                 {{-- Deployment & Cloud Support --}}
                 <div class="rounded-xl border border-gray-200 dark:border-gray-700
-                            bg-white dark:bg-gray-800 p-6 shadow-sm
+                            bg-white dark:bg-slate-800/70 p-6 shadow-sm
                             hover:shadow-lg hover:-translate-y-1
                             transition duration-300
                             wow animate__animated animate__fadeInUp"

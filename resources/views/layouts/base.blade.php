@@ -81,7 +81,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <body class="bg-slate-50">
+    <body class="bg-white dark:bg-[#0B1120]">
         @includeWhen(!request()->routeIs('login'), 'layouts.header')
 
         <div class="xl:container xl:mx-auto px-8 xl:px-0">
