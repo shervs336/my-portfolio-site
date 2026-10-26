@@ -1,54 +1,142 @@
+
 <div>
-    <div class="flex justify-center" id="contact" >
-        <div class="container max-w-7xl py-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row justify-between">
-            <div class="w-full flex flex-col items-start px-2 md:px-0">
+    <div id="contact" class="flex justify-center bg-white text-gray-900 dark:bg-[#0B1120] transition-colors duration-300 dark:text-slate-100">
+        <div class="container flex max-w-7xl flex-col justify-between space-y-4 py-12 md:flex-row md:space-y-0 md:space-x-4">
+            <div class="flex w-full flex-col items-start px-2 md:px-0">
+
                 @if($messageSent)
-                    <div class="w-full text-3xl font-bold text-center text-gray mb-1">🎊 Thank you contacting me!</div>
-                    <div class="w-full text-2xl font-bold text-center text-gray-500">I will send you a response once I read your message.</div>
+                    <div class="mb-1 w-full text-center text-3xl font-bold text-gray-900 dark:text-slate-100">
+                        🎊 Thank you for contacting me!
+                    </div>
+
+                    <div class="w-full text-center text-2xl font-bold text-gray-600 dark:text-slate-300">
+                        I will send you a response once I read your message.
+                    </div>
+
                     <div class="mt-6 w-full px-3">
-                        <button wire:click.prevent="sendNewMessage()" type="button" class=" mx-auto block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                                    data-te-ripple-init data-te-ripple-color="dark">Send a New Message</button>
+                        <button
+                            wire:click.prevent="sendNewMessage()"
+                            type="button"
+                            class="mx-auto block rounded bg-blue-600 px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-sm transition duration-200 hover:bg-blue-700 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-[#111827]"
+                        >
+                            Send a New Message
+                        </button>
                     </div>
                 @else
-                <form class="w-full md:mx-auto">
-                    <h1 class="text-2xl font-bold text-blue-500 text-center">Get in touch 🤙</h1>
-                    <h2 class="text-4xl lg:text-5xl font-bold mt-2 text-center">Let's Collaborate!</h2>
-                    <p class="mt-4 text-sm text-gray-400 text-center">Have a Project in Mind or Just Want to Get in Touch?</p>
-                    <div class="max-w-3xl mx-auto wow animate__animated animate__fadeInUp">
-                        <div class="w-full flex flex-wrap">
-                            @if($errorMessage)
-                                <div class="mb-6 w-full px-3">
-                                    <p class="mt-4 text-sm text-gray-400 text-center"><i class="fa-solid fa-circle-exclamation fa-fw text-red-500"></i> {{ $errorMessage }}</p>
+                    <form class="w-full md:mx-auto" wire:submit.prevent="sendMessage">
+                        <h1 class="text-center text-2xl font-bold text-blue-700 dark:text-blue-400">
+                            Get in touch 🤙
+                        </h1>
+
+                        <h2 class="mt-2 text-center text-4xl font-bold text-gray-900 dark:text-slate-100 lg:text-5xl">
+                            Let's Collaborate!
+                        </h2>
+
+                        <p class="mt-4 text-center text-sm text-gray-600 dark:text-slate-300">
+                            Have a Project in Mind or Just Want to Get in Touch?
+                        </p>
+
+                        <div class="mx-auto max-w-3xl wow animate__animated animate__fadeInUp">
+                            <div class="flex w-full flex-wrap">
+
+                                @if($errorMessage)
+                                    <div class="mb-6 w-full px-3">
+                                        <p role="alert" class="mt-4 text-center text-sm text-red-600 dark:text-red-400">
+                                            <i class="fa-solid fa-circle-exclamation fa-fw" aria-hidden="true"></i>
+                                            {{ $errorMessage }}
+                                        </p>
+                                    </div>
+                                @endif
+
+                                <div class="mb-6 w-full px-3 md:w-1/2">
+                                    <label for="email" class="block py-2 text-sm font-bold text-gray-800 dark:text-slate-200">
+                                        Email
+                                    </label>
+                                    <input
+                                        wire:model="email"
+                                        type="email"
+                                        id="email"
+                                        autocomplete="email"
+                                        placeholder="you@example.com"
+                                        required
+                                        class="block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-400"
+                                    >
                                 </div>
-                            @endif
-                            <div class="mb-6 w-full md:w-1/2 px-3">
-                                <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Email</label>
-                                <input wire:model="email" type="email" id="email" class="pr-4 peer block min-h-[auto] w-full  rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
-                            </div>
-                            <div class="mb-6 w-full md:w-1/2 px-3">
-                                <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Company Name (Optional)</label>
-                                <input wire:model="company" type="text" id="company" class="pr-4 peer block min-h-[auto] w-full  rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
-                            </div>
-                            <div class="mb-6 w-full md:w-1/2 px-3">
-                                <label for="email" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Name</label>
-                                <input wire:model="name" type="text" id="name" class="pr-4 peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="youremail@example.com" required>
-                            </div>
-                            <div class="mb-6 w-full md:w-1/2 px-3">
-                                <label for="phone" class="block py-2 text-sm font-bold text-gray-900 dark:text-white">Phone (Optional)</label>
-                                <input wire:model="phone" type="text" id="phone" class="peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" required>
-                            </div>
-                            <div class="mb-6 w-full px-3">
-                                <label for="message" class="block py-2 text-sm font-bold text-gray-900 dark:text-gray-900">Your message</label>
-                                <textarea wire:model="message" id="message" rows="6" class="peer block min-h-[auto] w-full rounded border border-gray-300 bg-slate-50 px-1 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-secondary-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Type your message here..."></textarea>
-                            </div>
-                            <div class="mb-6 w-full px-3">
-                                <button wire:click.prevent="sendMessage()" type="button" class=" mx-auto block rounded bg-blue-600 hover:bg-blue-700 px-6 pb-2 pt-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                                    data-te-ripple-init data-te-ripple-color="dark">Send</button>
+
+                                <div class="mb-6 w-full px-3 md:w-1/2">
+                                    <label for="company" class="block py-2 text-sm font-bold text-gray-800 dark:text-slate-200">
+                                        Company Name (Optional)
+                                    </label>
+                                    <input
+                                        wire:model="company"
+                                        type="text"
+                                        id="company"
+                                        autocomplete="organization"
+                                        placeholder="Your company"
+                                        class="block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-400"
+                                    >
+                                </div>
+
+                                <div class="mb-6 w-full px-3 md:w-1/2">
+                                    <label for="name" class="block py-2 text-sm font-bold text-gray-800 dark:text-slate-200">
+                                        Name
+                                    </label>
+                                    <input
+                                        wire:model="name"
+                                        type="text"
+                                        id="name"
+                                        autocomplete="name"
+                                        placeholder="Your name"
+                                        required
+                                        class="block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-400"
+                                    >
+                                </div>
+
+                                <div class="mb-6 w-full px-3 md:w-1/2">
+                                    <label for="phone" class="block py-2 text-sm font-bold text-gray-800 dark:text-slate-200">
+                                        Phone (Optional)
+                                    </label>
+                                    <input
+                                        wire:model="phone"
+                                        type="tel"
+                                        id="phone"
+                                        autocomplete="tel"
+                                        placeholder="Your phone number"
+                                        class="block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-400"
+                                    >
+                                </div>
+
+                                <div class="mb-6 w-full px-3">
+                                    <label for="message" class="block py-2 text-sm font-bold text-gray-800 dark:text-slate-200">
+                                        Your message
+                                    </label>
+                                    <textarea
+                                        wire:model="message"
+                                        id="message"
+                                        rows="6"
+                                        placeholder="Type your message here..."
+                                        required
+                                        class="block w-full resize-y rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-400"
+                                    ></textarea>
+                                </div>
+
+                                <div class="mb-6 w-full px-3">
+                                    <button
+                                        type="submit"
+                                        wire:loading.attr="disabled"
+                                        wire:target="sendMessage"
+                                        class="mx-auto block rounded bg-blue-600 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition duration-200 hover:bg-blue-700 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus-visible:ring-offset-[#111827]"
+                                    >
+                                        <span wire:loading.remove wire:target="sendMessage">Send Message</span>
+                                        <span wire:loading wire:target="sendMessage">Sending...</span>
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 @endif
+
             </div>
         </div>
     </div>

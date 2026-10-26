@@ -84,7 +84,7 @@
     <body class="bg-white dark:bg-[#0B1120]">
         @includeWhen(!request()->routeIs('login'), 'layouts.header')
 
-        <div class="xl:container xl:mx-auto px-8 xl:px-0">
+        <div class="xl:container xl:mx-auto">
             @yield('body')
         </div>
 
